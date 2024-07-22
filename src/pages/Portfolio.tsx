@@ -5,7 +5,9 @@ export default function Portfolio() {
     return (
         <div className="min-h-screen flex bg-gray-900">
             <Sidebar />
-            <Home />
+            <div className="flex flex-col">
+                <Home />
+            </div>
         </div>
     )
 }
