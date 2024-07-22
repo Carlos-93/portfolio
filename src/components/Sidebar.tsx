@@ -1,7 +1,7 @@
 export default function Sidebar() {
     return (
-        <nav className="hidden lg:flex flex-col bg-gray-800 w-72 h-screen text-white text-lg select-none overflow-y-auto">
-            <ul className="flex flex-col gap-8 py-16">
+        <nav className="hidden lg:flex flex-col bg-gray-800 w-72 h-screen text-white text-lg select-none overflow-y-auto fixed">
+            <ul className="flex flex-col gap-6 py-16">
                 <li>
                     <a href="/home" className="flex gap-2 hover:bg-gray-700 rounded py-2 pl-16 hover:pl-20 hover:text-cyan-400 transition-all ease-in-out duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-home">
