@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Experience() {
     return (
         <div className="flex gap-16 p-16 lg:ml-72">
             <div className="flex flex-col gap-5">
