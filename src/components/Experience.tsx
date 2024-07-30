@@ -8,7 +8,7 @@ export default function Experience() {
                 <p className="text-gray-300">Soy un apasionado de la tecnología y la programación. Me encanta aprender cosas nuevas y compartir mis conocimientos con los demás.</p>
             </div>
             <div>
-                <img src="assets/profile.jpg" alt="Imagen de perfil de Carlos Araujo Galván" className="w-2/3 m-auto" />
+                <img src="assets/profile.jpg" alt="Imagen de perfil de Carlos Araujo Galván" className="w-2/3 m-auto rounded-xl" />
             </div>
         </div>
     );
