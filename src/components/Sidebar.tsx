@@ -15,7 +15,7 @@ export default function Sidebar() {
                             <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
                             <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
                         </svg>
-                        Home
+                        Inicio
                     </a>
                 </li>
                 <li>
@@ -28,7 +28,7 @@ export default function Sidebar() {
                             <path d="M16 22l5 -5" />
                             <path d="M21 21.5v-4.5h-4.5" />
                         </svg>
-                        About Me
+                        Acerca de mí
                     </a>
                 </li>
                 <li>
@@ -38,7 +38,7 @@ export default function Sidebar() {
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
                         </svg>
-                        Skills
+                        Habilidades
                     </a>
                 </li>
                 <li>
@@ -51,7 +51,7 @@ export default function Sidebar() {
                             <path d="M12 12l0 .01" />
                             <path d="M3 13a20 20 0 0 0 18 0" />
                         </svg>
-                        Experience
+                        Experiencia
                     </a>
                 </li>
                 <li>
@@ -62,7 +62,7 @@ export default function Sidebar() {
                             <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
                             <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
                         </svg>
-                        Education
+                        Educación
                     </a>
                 </li>
                 <li>
@@ -77,7 +77,7 @@ export default function Sidebar() {
                             <path d="M6 12l3 0" />
                             <path d="M6 15l2 0" />
                         </svg>
-                        Certifications
+                        Certificaciones
                     </a>
                 </li>
                 <li>
@@ -91,7 +91,7 @@ export default function Sidebar() {
                             <path d="M9 20l6 0" />
                             <path d="M8 12l3 -3l2 2l3 -3" />
                         </svg>
-                        Projects
+                        Proyectos
                     </a>
                 </li>
                 <li>
@@ -103,7 +103,7 @@ export default function Sidebar() {
                             <path d="M15 7a2 2 0 0 1 2 2" />
                             <path d="M15 3a6 6 0 0 1 6 6" />
                         </svg>
-                        Contact
+                        Contacto
                     </a>
                 </li>
             </ul>
