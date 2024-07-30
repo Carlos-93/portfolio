@@ -19,7 +19,7 @@ export default function Sidebar() {
                     </a>
                 </li>
                 <li>
-                    <a href="#about" onClick={() => setActiveLink('#about')} className={`flex gap-2 hover:bg-gray-700 rounded py-2 pl-16 hover:pl-20 hover:text-cyan-400 transition-all ease-in-out duration-300
+                    <a href="#about" onClick={() => setActiveLink('#about')} className={`flex gap-2 rounded py-2 pl-16 transition-all ease-in-out duration-300
                         ${activeLink === '#about' ? 'bg-gray-700 text-cyan-400 pl-20' : 'hover:bg-gray-700 hover:pl-20 hover:text-cyan-400'}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-user-share">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -32,7 +32,7 @@ export default function Sidebar() {
                     </a>
                 </li>
                 <li>
-                    <a href="#skills" onClick={() => setActiveLink('#skills')} className={`flex gap-2 hover:bg-gray-700 rounded py-2 pl-16 hover:pl-20 hover:text-cyan-400 transition-all ease-in-out duration-300
+                    <a href="#skills" onClick={() => setActiveLink('#skills')} className={`flex gap-2 rounded py-2 pl-16 transition-all ease-in-out duration-300
                         ${activeLink === '#skills' ? 'bg-gray-700 text-cyan-400 pl-20' : 'hover:bg-gray-700 hover:pl-20 hover:text-cyan-400'}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-star">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -42,7 +42,7 @@ export default function Sidebar() {
                     </a>
                 </li>
                 <li>
-                    <a href="#experience" onClick={() => setActiveLink('#experience')} className={`flex gap-2 hover:bg-gray-700 rounded py-2 pl-16 hover:pl-20 hover:text-cyan-400 transition-all ease-in-out duration-300
+                    <a href="#experience" onClick={() => setActiveLink('#experience')} className={`flex gap-2 rounded py-2 pl-16 transition-all ease-in-out duration-300
                         ${activeLink === '#experience' ? 'bg-gray-700 text-cyan-400 pl-20' : 'hover:bg-gray-700 hover:pl-20 hover:text-cyan-400'}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-briefcase">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -55,7 +55,7 @@ export default function Sidebar() {
                     </a>
                 </li>
                 <li>
-                    <a href="#education" onClick={() => setActiveLink('#education')} className={`flex gap-2 hover:bg-gray-700 rounded py-2 pl-16 hover:pl-20 hover:text-cyan-400 transition-all ease-in-out duration-300
+                    <a href="#education" onClick={() => setActiveLink('#education')} className={`flex gap-2 rounded py-2 pl-16 transition-all ease-in-out duration-300
                         ${activeLink === '#education' ? 'bg-gray-700 text-cyan-400 pl-20' : 'hover:bg-gray-700 hover:pl-20 hover:text-cyan-400'}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-school">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -66,7 +66,7 @@ export default function Sidebar() {
                     </a>
                 </li>
                 <li>
-                    <a href="#certifications" onClick={() => setActiveLink('#certifications')} className={`flex gap-2 hover:bg-gray-700 rounded py-2 pl-16 hover:pl-20 hover:text-cyan-400 transition-all ease-in-out duration-300
+                    <a href="#certifications" onClick={() => setActiveLink('#certifications')} className={`flex gap-2 rounded py-2 pl-16 transition-all ease-in-out duration-300
                         ${activeLink === '#certifications' ? 'bg-gray-700 text-cyan-400 pl-20' : 'hover:bg-gray-700 hover:pl-20 hover:text-cyan-400'}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-certificate">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -81,7 +81,7 @@ export default function Sidebar() {
                     </a>
                 </li>
                 <li>
-                    <a href="#projects" onClick={() => setActiveLink('#projects')} className={`flex gap-2 hover:bg-gray-700 rounded py-2 pl-16 hover:pl-20 hover:text-cyan-400 transition-all ease-in-out duration-300
+                    <a href="#projects" onClick={() => setActiveLink('#projects')} className={`flex gap-2 rounded py-2 pl-16 transition-all ease-in-out duration-300
                         ${activeLink === '#projects' ? 'bg-gray-700 text-cyan-400 pl-20' : 'hover:bg-gray-700 hover:pl-20 hover:text-cyan-400'}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-presentation">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -95,7 +95,7 @@ export default function Sidebar() {
                     </a>
                 </li>
                 <li>
-                    <a href="#contact" onClick={() => setActiveLink('#contact')} className={`flex gap-2 hover:bg-gray-700 rounded py-2 pl-16 hover:pl-20 hover:text-cyan-400 transition-all ease-in-out duration-300
+                    <a href="#contact" onClick={() => setActiveLink('#contact')} className={`flex gap-2 rounded py-2 pl-16 transition-all ease-in-out duration-300
                         ${activeLink === '#contact' ? 'bg-gray-700 text-cyan-400 pl-20' : 'hover:bg-gray-700 hover:pl-20 hover:text-cyan-400'}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-phone-call">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
