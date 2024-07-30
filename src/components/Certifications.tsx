@@ -1,5 +1,5 @@
 export default function Certifications() {
-    
+
     return (
         <div className="flex gap-16 p-16 lg:ml-72">
             <div className="flex flex-col gap-5">
@@ -8,7 +8,7 @@ export default function Certifications() {
                 <p className="text-gray-300">Soy un apasionado de la tecnología y la programación. Me encanta aprender cosas nuevas y compartir mis conocimientos con los demás.</p>
             </div>
             <div>
-                <img src="assets/profile.jpg" alt="Imagen de perfil de Carlos Araujo Galván" className="rounded-full w-96" />
+                <img src="assets/profile.jpg" alt="Imagen de perfil de Carlos Araujo Galván" className="w-2/4" />
             </div>
         </div>
     );
