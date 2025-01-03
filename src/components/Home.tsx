@@ -1,7 +1,7 @@
 export default function Home() {
 
     return (
-        <div className="flex flex-col sm:flex-row gap-16 p-11 sm:p-16 lg:ml-72">
+        <div className="flex flex-col sm:flex-row gap-16 p-10 sm:p-16 lg:ml-72">
             <div className="flex flex-col gap-5 w-full">
                 <h1 className="text-gray-100 text-xl"><p>¡Bienvenido/a!</p> <p>Soy <span className="text-cyan-400 text">Carlos Araujo Galván 👋</span></p></h1>
                 <h2 className="text-lg text-gray-200 font-medium">Desarrollador Full Stack</h2>
