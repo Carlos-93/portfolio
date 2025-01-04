@@ -12,7 +12,7 @@ export default function Portfolio() {
     return (
         <div className="min-h-screen flex bg-gray-900">
             <Sidebar />
-            <div className="flex flex-col flex-grow">
+            <div className="flex flex-col gap-16 p-4 sm:p-6 md:p-8 lg:p-10 lg:ml-72 w-full">
                 <section id="home"><Home /></section>
                 <section id="about"><About /></section>
                 <section id="skills"><Skills /></section>
