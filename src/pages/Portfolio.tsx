@@ -7,21 +7,25 @@ import Education from '../components/Education';
 import Certifications from '../components/Certifications';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 export default function Portfolio() {
     return (
-        <div className="min-h-screen flex bg-gray-900">
-            <Sidebar />
-            <div className="flex flex-col gap-16 p-4 sm:p-6 md:p-8 lg:p-10 lg:ml-72 w-full">
-                <section id="home"><Home /></section>
-                <section id="about"><About /></section>
-                <section id="skills"><Skills /></section>
-                <section id="experience"><Experience /></section>
-                <section id="education"><Education /></section>
-                <section id="certifications"><Certifications /></section>
-                <section id="projects"><Projects /></section>
-                <section id="contact"><Contact /></section>
+        <div className="min-h-screen flex flex-col bg-gray-900">
+            <div className="flex flex-1">
+                <Sidebar />
+                <div className="flex flex-col gap-16 p-6 sm:p-8 md:p-10 lg:p-12 lg:ml-72 w-full">
+                    <section id="home"><Home /></section>
+                    <section id="about"><About /></section>
+                    <section id="skills"><Skills /></section>
+                    <section id="experience"><Experience /></section>
+                    <section id="education"><Education /></section>
+                    <section id="certifications"><Certifications /></section>
+                    <section id="projects"><Projects /></section>
+                    <section id="contact"><Contact /></section>
+                </div>
             </div>
+            <Footer />
         </div>
     );
 }

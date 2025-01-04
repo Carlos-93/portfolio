@@ -1,5 +1,4 @@
 export default function Projects() {
-
     return (
         <div className="flex flex-col sm:flex-row gap-16">
             <div className="flex flex-col gap-5 w-full">
