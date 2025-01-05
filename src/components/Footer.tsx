@@ -5,8 +5,14 @@ export default function Footer() {
 
     return (
         <footer className="px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-12 lg:py-12 bg-gray-800 text-gray-300" role="contentinfo">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 lg:gap-8 text-center">
-                <div className="flex gap-6 sm:gap-6 md:gap-8">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-4 md:gap-6 lg:gap-8 text-center">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg cursor-default order-2 lg:order-1">
+                    © {currentYear} | Desarrollado por{' '}
+                    <span className="text-cyan-400 font-medium hover:text-cyan-300 transition-colors duration-300">
+                        Carlos Araujo Galván
+                    </span>
+                </p>
+                <div className="flex gap-6 sm:gap-8 md:gap-10 order-1 lg:order-2">
                     {socialNetworks.map((link) => (
                         <a
                             key={link.alt}
@@ -14,7 +20,7 @@ export default function Footer() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={`Visitar ${link.alt}`}
-                            className="transition-transform hover:scale-110"
+                            className="transition-all duration-300 hover:scale-110 hover:opacity-80"
                         >
                             <img
                                 src={link.src}
@@ -24,9 +30,6 @@ export default function Footer() {
                         </a>
                     ))}
                 </div>
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg cursor-default">
-                    © {currentYear} | Desarrollado por <span className="text-cyan-400 font-medium">Carlos Araujo Galván</span>
-                </p>
             </div>
         </footer>
     );
