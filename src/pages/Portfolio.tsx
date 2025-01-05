@@ -14,7 +14,7 @@ export default function Portfolio() {
         <div className="min-h-screen flex flex-col bg-gray-900">
             <div className="flex flex-1">
                 <Sidebar />
-                <div className="flex flex-col gap-16 p-6 sm:p-8 md:p-10 lg:p-12 lg:ml-72 w-full">
+                <main className="flex flex-col gap-16 p-6 sm:p-8 md:p-10 lg:p-12 lg:ml-72 w-full">
                     <section id="home"><Home /></section>
                     <section id="about"><About /></section>
                     <section id="skills"><Skills /></section>
@@ -23,7 +23,7 @@ export default function Portfolio() {
                     <section id="certifications"><Certifications /></section>
                     <section id="projects"><Projects /></section>
                     <section id="contact"><Contact /></section>
-                </div>
+                </main>
             </div>
             <Footer />
         </div>
