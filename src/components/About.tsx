@@ -2,7 +2,8 @@ export default function About() {
     return (
         <div className="flex flex-col sm:flex-row gap-16">
             <div className="flex flex-col gap-5 w-full">
-                <h1 className="text-gray-100 text-xl"><p>Acerca de mí</p></h1>
+                <p className="text-cyan-400 text-xl">Acerca de mí</p>
+                <p className="text-gray-200 text-md">Soy un desarrollador web Full Stack con experiencia en tecnologías como React, Node.js, Express y MongoDB. Me gusta aprender nuevas tecnologías y aplicarlas en proyectos personales.</p>
             </div>
         </div>
     );

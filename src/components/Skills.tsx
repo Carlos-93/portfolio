@@ -2,7 +2,15 @@ export default function Skills() {
     return (
         <div className="flex flex-col sm:flex-row gap-16">
             <div className="flex flex-col gap-5 w-full">
-                <h1 className="text-gray-100 text-xl"><p>Skills</p></h1>
+                <p className="text-cyan-400 text-xl">Habilidades técnicas</p>
+                <div className="flex flex-col gap-5">
+                    <p className="text-gray-200 text-md">Desarrollo Frontend con React y Next.js</p>
+                    <p className="text-gray-200 text-md">Desarrollo Backend con Node.js y Express</p>
+                    <p className="text-gray-200 text-md">Bases de datos con MongoDB y MySQL</p>
+                    <p className="text-gray-200 text-md">Desarrollo de APIs RESTful</p>
+                    <p className="text-gray-200 text-md">Desarrollo de aplicaciones web responsivas</p>
+                    <p className="text-gray-200 text-md">Manejo de control de versiones con Git</p>
+                </div>
             </div>
         </div>
     );

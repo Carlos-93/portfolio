@@ -2,7 +2,7 @@ export default function Projects() {
     return (
         <div className="flex flex-col sm:flex-row gap-16">
             <div className="flex flex-col gap-5 w-full">
-                <h1 className="text-gray-100 text-xl"><p>Proyectos</p></h1>
+                <p className="text-cyan-400 text-xl">Proyectos</p>
             </div>
         </div>
     );

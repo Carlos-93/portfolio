@@ -2,7 +2,10 @@ export default function Experience() {
     return (
         <div className="flex flex-col sm:flex-row gap-16">
             <div className="flex flex-col gap-5 w-full">
-                <h1 className="text-gray-100 text-xl"><p>Experiencia</p></h1>
+                <p className="text-cyan-400 text-xl">Experiencia</p>
+                <p className="text-gray-200 text-md">Desarrollador web Full Stack</p>
+                <p className="text-gray-200 text-md">PKF Attest</p>
+                <p className="text-gray-200 text-md">2024 - Actualidad</p>
             </div>
         </div>
     );

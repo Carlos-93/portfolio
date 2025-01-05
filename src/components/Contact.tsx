@@ -2,7 +2,7 @@ export default function Contact() {
     return (
         <div className="flex flex-col sm:flex-row gap-16">
             <div className="flex flex-col gap-5 w-full">
-                <h1 className="text-gray-100 text-xl"><p>Contacto</p></h1>
+                <p className="text-cyan-400 text-xl">Contacto</p>
             </div>
         </div>
     );
