@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 export default function Sidebar() {
     const [activeLink, setActiveLink] = useState('#home');
+
     return (
         <nav className="hidden lg:flex flex-col bg-gray-800 w-72 h-screen text-white text-lg select-none overflow-y-auto fixed">
             <ul className="flex flex-col gap-6 py-16">
