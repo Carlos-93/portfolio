@@ -1,7 +1,7 @@
 import Portfolio from './pages/Portfolio';
 
-export default function App() {
-  return (
-    <><Portfolio /></>
-  );
-}
+const App = () => {
+  return <Portfolio />;
+};
+
+export default App;
