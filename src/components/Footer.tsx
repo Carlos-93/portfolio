@@ -4,31 +4,34 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="lg:ml-72 px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-12 lg:py-12 bg-gray-800 text-gray-300 border-t border-gray-500" role="contentinfo">
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-4 md:gap-6 lg:gap-8 text-center">
-                <p className="text-xs sm:text-sm md:text-base xl:text-lg cursor-default order-2 lg:order-1">
-                    © {currentYear} | Desarrollado por{' '}
-                    <span className="text-cyan-400 font-medium hover:text-cyan-300 transition-colors duration-300">
-                        Carlos Araujo Galván
-                    </span>
-                </p>
-                <div className="flex gap-6 sm:gap-8 xl:gap-10 order-1 lg:order-2">
-                    {socialNetworks.map((link) => (
+        <footer className="px-4 py-8 sm:px-6 sm:py-10 bg-gray-800 text-gray-300 border-t border-gray-500 z-10" role="contentinfo">
+            <div className="container mx-auto">
+                <div className="flex flex-col items-center justify-center gap-6 md:gap-8 lg:gap-10">
+                    {/* Redes sociales */}
+                    <div className="flex gap-8 sm:gap-10 xl:gap-12">
+                        {socialNetworks.map((link) => (
+                            <a
+                                key={link.alt}
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`Visitar perfil de ${link.alt}`}
+                                className="transition-transform duration-300 hover:scale-110 focus:scale-110 focus:outline-none"
+                            >
+                                <img src={link.src} alt={link.alt} className="w-6 sm:w-7 md:w-8" />
+                            </a>
+                        ))}
+                    </div>
+                    {/* Copyright */}
+                    <p className="text-xs sm:text-sm md:text-base xl:text-lg text-center">
+                        © {currentYear} | Desarrollado por{' '}
                         <a
-                            key={link.alt}
-                            href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Visitar ${link.alt}`}
-                            className="transition-all duration-300 hover:scale-110 hover:opacity-80"
+                            href="mailto:cagalvan93@gmail.com"
+                            className="text-cyan-400 font-medium hover:text-cyan-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-800"
                         >
-                            <img
-                                src={link.src}
-                                alt={link.alt}
-                                className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
-                            />
+                            Carlos Araujo Galván
                         </a>
-                    ))}
+                    </p>
                 </div>
             </div>
         </footer>
