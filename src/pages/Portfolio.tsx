@@ -15,6 +15,9 @@ export default function Portfolio() {
             <div className="flex flex-1">
                 <Sidebar />
                 <main className="flex flex-col gap-16 px-6 py-16 sm:px-8 md:px-10 lg:p-16 lg:ml-72 w-full">
+                    <button className="lg:hidden fixed right-6 top-2">
+                        <img src="/burger-menu.svg" alt="Menu" />
+                    </button>
                     <section id="home" className="scroll-mt-16 lg:scroll-mt-16"><Home /></section>
                     <section id="about" className="scroll-mt-16 lg:scroll-mt-16"><About /></section>
                     <section id="skills" className="scroll-mt-16 lg:scroll-mt-16"><Skills /></section>
