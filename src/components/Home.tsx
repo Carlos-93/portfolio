@@ -6,7 +6,9 @@ export default function Home() {
                 <h2 className="text-md text-gray-200 font-medium">Desarrollador Web Full Stack</h2>
             </div>
             <div>
-                <img src="assets/profile.jpg" alt="Imagen de perfil de Carlos Araujo Galván" className="sm:w-2/3 m-auto rounded-xl" />
+                <figure>
+                    <img src="assets/profile.jpg" alt="Imagen de perfil de Carlos Araujo Galván" className="sm:w-2/3 m-auto rounded-xl" />
+                </figure>
             </div>
         </div>
     );
