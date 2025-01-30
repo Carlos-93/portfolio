@@ -19,9 +19,8 @@ export const educations: Education[] = [
 ];
 
 export const certificates: Certificate[] = [
-    { title: "Curso de Desarrollo Web Full Stack", company: "Udemy", location: "Online", date: "Abril 2024", image: "profile.png" },
-    { title: "Curso de Desarrollo Web Frontend", company: "Udemy", location: "Online", date: "Marzo 2024", image: "profile.png" },
-    { title: "Curso de Desarrollo Web Backend", company: "Udemy", location: "Online", date: "Febrero 2024", image: "profile.png" }
+    { title: "Administración de Sistemas Operativos Linux", company: "Udemy", location: "Online", date: "Abril 2024", image: "assets/certificate-linux.png" },
+    { title: "Administración de Windows 10", company: "Udemy", location: "Online", date: "Marzo 2024", image: "assets/certificate-windows.png" },
 ];
 
 export const projects: Project[] = [
