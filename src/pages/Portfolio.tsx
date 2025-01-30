@@ -21,7 +21,9 @@ export default function Portfolio() {
                 <main className="flex flex-col gap-16 px-6 py-16 sm:px-8 md:px-10 lg:p-16 lg:ml-72 w-full">
                     <button className="lg:hidden fixed right-6 top-2 w-14 sm:w-16 rounded-lg backdrop-blur-sm z-20"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                        <img src="/burger-menu.svg" alt="Menu" className={`${isMenuOpen ? 'brightness-0 invert' : ''}`} />
+                        <figure>
+                            <img src="/burger-menu.svg" alt="Menu" className={`${isMenuOpen ? 'brightness-0 invert' : ''}`} />
+                        </figure>
                     </button>
                     {isMenuOpen ? (
                         <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-sm bg-black/20 transition-all duration-300 ease-in-out opacity-100"
