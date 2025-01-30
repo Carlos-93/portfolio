@@ -13,7 +13,7 @@ export default function Home() {
                 <figure>
                     <img src="assets/profile.jpg" alt="Imagen de perfil de Carlos Araujo Galván"
                         onLoad={() => setLoaded(true)}
-                        className={`sm:w-2/3 m-auto rounded-xl transition-opacity duration-[3500ms] ${loaded ? 'opacity-100' : 'opacity-0'}`} />
+                        className={`sm:w-2/3 m-auto rounded-xl transition-opacity duration-[4000ms] ${loaded ? 'opacity-100' : 'opacity-0'}`} />
                 </figure>
             </div>
         </div>
