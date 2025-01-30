@@ -27,12 +27,10 @@ export default function Portfolio() {
                     </button>
                     {isMenuOpen ? (
                         <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-sm bg-black/20 transition-all duration-300 ease-in-out opacity-100"
-                            onClick={() => setIsMenuOpen(false)}
-                        />
+                            onClick={() => setIsMenuOpen(false)} />
                     ) : (
                         <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-none bg-black/0 transition-all duration-300 ease-in-out opacity-0 pointer-events-none"
-                            onClick={() => setIsMenuOpen(false)}
-                        />
+                            onClick={() => setIsMenuOpen(false)} />
                     )}
                     <section id="home" className="scroll-mt-16 lg:scroll-mt-16"><Home /></section>
                     <section id="about" className="scroll-mt-16 lg:scroll-mt-16"><About /></section>
