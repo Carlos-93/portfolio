@@ -19,8 +19,8 @@ export const educations: Education[] = [
 ];
 
 export const certificates: Certificate[] = [
-    { title: "Administración de Sistemas Operativos Linux", company: "Udemy", location: "Online", date: "Abril 2024", image: "assets/certificate-linux.png" },
-    { title: "Administración de Windows 10", company: "Udemy", location: "Online", date: "Marzo 2024", image: "assets/certificate-windows.png" },
+    { title: "Administración de Sistemas Operativos Linux", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/certificate-linux.png" },
+    { title: "Administración de Windows 10", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/certificate-windows.png" },
 ];
 
 export const projects: Project[] = [
