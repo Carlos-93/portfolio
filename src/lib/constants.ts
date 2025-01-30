@@ -1,3 +1,12 @@
+export const skills: Skill[] = [
+    { name: "HTML", image: "html.svg" },
+    { name: "CSS", image: "css.svg" },
+    { name: "JavaScript", image: "javascript.svg" },
+    { name: "TypeScript", image: "typescript.svg" },
+    { name: "React", image: "react.svg" },
+    { name: "Node.js", image: "nodejs.svg" },
+];
+
 export const experiences: Experience[] = [
     { title: "Desarrollador Web Full Stack", company: "PKF Attest", location: "Barcelona", date: "Septiembre 2024 - Actual", description: "Desarrollo de aplicaciones web y móviles", image: "profile.png" },
     { title: "Desarrollador Web Frontend", company: "Excelsus Cic Grup SL", location: "Barcelona", date: "Octubre 2023 - Abril 2024", description: "Desarrollo de aplicaciones web y móviles", image: "profile.png" },
@@ -13,6 +22,12 @@ export const certificates: Certificate[] = [
     { title: "Curso de Desarrollo Web Full Stack", company: "Udemy", location: "Online", date: "Abril 2024", image: "profile.png" },
     { title: "Curso de Desarrollo Web Frontend", company: "Udemy", location: "Online", date: "Marzo 2024", image: "profile.png" },
     { title: "Curso de Desarrollo Web Backend", company: "Udemy", location: "Online", date: "Febrero 2024", image: "profile.png" }
+];
+
+export const projects: Project[] = [
+    { title: "Portfolio", description: "Mi portfolio personal", image: "profile.png", href: "https://www.carlosaraujogalvan.com" },
+    { title: "Blog", description: "Mi blog personal", image: "profile.png", href: "https://www.carlosaraujogalvan.com/blog" },
+    { title: "Tienda Online", description: "Mi tienda online", image: "profile.png", href: "https://www.carlosaraujogalvan.com/tienda" }
 ];
 
 export const socialNetworks: SocialNetwork[] = [

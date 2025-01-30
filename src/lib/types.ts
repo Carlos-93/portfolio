@@ -1,3 +1,8 @@
+interface Skill {
+    name: string;
+    image: string;
+}
+
 interface Experience {
     title: string;
     company: string;
@@ -21,6 +26,13 @@ interface Certificate {
     location: string;
     date: string;
     image: string;
+}
+
+interface Project {
+    title: string;
+    description: string;
+    image: string;
+    href: string;
 }
 
 interface SocialNetwork {

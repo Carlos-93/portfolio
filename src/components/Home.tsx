@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 export default function Home() {
+    const [loaded, setLoaded] = useState(false);
+
     return (
         <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col gap-5 w-full">
@@ -7,7 +11,9 @@ export default function Home() {
             </div>
             <div>
                 <figure>
-                    <img src="assets/profile.jpg" alt="Imagen de perfil de Carlos Araujo Galván" className="sm:w-2/3 m-auto rounded-xl" />
+                    <img src="assets/profile.jpg" alt="Imagen de perfil de Carlos Araujo Galván"
+                        onLoad={() => setLoaded(true)}
+                        className={`sm:w-2/3 m-auto rounded-xl transition-opacity duration-[3000ms] ${loaded ? 'opacity-100' : 'opacity-0'}`} />
                 </figure>
             </div>
         </div>
