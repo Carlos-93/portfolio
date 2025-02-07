@@ -25,8 +25,9 @@ export default function Portfolio() {
                             <img src="/burger-menu.svg" alt="Menu" className={`${isMenuOpen ? 'brightness-0 invert' : ''}`} />
                         </figure>
                     </button>
+
                     {isMenuOpen ? (
-                        <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-sm bg-black/40 transition-all duration-300 ease-in-out opacity-100"
+                        <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-md bg-black/40 transition-all duration-700 ease-in-out opacity-100"
                             onClick={() => setIsMenuOpen(false)}>
                             <nav className="fixed w-full h-full flex justify-center items-center">
                                 <ul className="flex flex-col gap-8 text-2xl font-medium text-white text-center">
@@ -42,7 +43,7 @@ export default function Portfolio() {
                             </nav>
                         </div>
                     ) : (
-                        <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-none bg-black/0 transition-all duration-300 ease-in-out opacity-0 pointer-events-none"
+                        <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-none bg-black/0 transition-all duration-700 ease-in-out opacity-0 pointer-events-none"
                             onClick={() => setIsMenuOpen(false)} />
                     )}
                     <section id="home" className="scroll-mt-16 lg:scroll-mt-16"><Home /></section>
