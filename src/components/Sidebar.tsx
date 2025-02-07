@@ -1,7 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Sidebar() {
     const [activeLink, setActiveLink] = useState('#home');
+
+    useEffect(() => {
+        function handleScroll() {
+            const sections = ['home', 'about', 'skills', 'experience', 'education', 'certifications', 'projects', 'contact'];
+
+            for (const section of sections) {
+                const element = document.getElementById(section);
+
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    const isVisible = rect.top >= 0 && rect.top <= window.innerHeight / 2;
+
+                    if (isVisible) {
+                        setActiveLink(`#${section}`);
+                        break;
+                    }
+                }
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <nav className="hidden lg:flex flex-col bg-gray-800 w-72 h-screen text-white text-lg select-none overflow-y-auto fixed">
