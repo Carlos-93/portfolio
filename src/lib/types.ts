@@ -15,7 +15,6 @@ interface Experience {
 interface Education {
     title: string;
     company: string;
-    location: string;
     date: string;
     image: string;
 }

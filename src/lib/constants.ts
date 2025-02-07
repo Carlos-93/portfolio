@@ -13,9 +13,7 @@ export const experiences: Experience[] = [
 ];
 
 export const educations: Education[] = [
-    { title: "Técnico Superior en Desarrollo de Aplicaciones Web", company: "Monlau Centro de Estudios", location: "Barcelona", date: "Septiembre 2022 - Junio 2024", image: "profile.png" },
-    { title: "Técnico en Electromecánica de Vehículos Automóviles", company: "IES Mollet", location: "Mollet del Vallès", date: "Septiembre 2010 - Junio 2012", image: "profile.png" },
-    { title: "Graduado en Educación Secundaria Obligatoria", company: "IES Gallecs", location: "Mollet del Vallès", date: "Septiembre 2005 - Junio 2009", image: "profile.png" }
+    { title: "Técnico Superior en Desarrollo de Aplicaciones Web", company: "Monlau Centro de Estudios", date: "Septiembre 2022 - Junio 2024", image: "assets/education-daw.jpg" },
 ];
 
 export const certificates: Certificate[] = [
