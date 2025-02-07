@@ -12,10 +12,10 @@ export default function Certifications() {
                         <figure className="flex justify-center">
                             <img src={certificate.image} alt={certificate.title} />
                         </figure>
-                        <div className="flex flex-col gap-2 text-center">
+                        <div className="flex flex-col gap-2">
                             <p className="text-lg font-medium text-white">{certificate.title}</p>
                             <p className="text-gray-300">{certificate.company}</p>
-                            <p className="text-xs text-gray-400">{certificate.location} - {certificate.date}</p>
+                            <p className="text-xs text-gray-400 text-end">{certificate.location} - {certificate.date}</p>
                         </div>
                     </div>
                 ))}
