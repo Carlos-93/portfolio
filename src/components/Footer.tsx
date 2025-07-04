@@ -11,7 +11,7 @@ export default function Footer() {
                     <div className="flex gap-8 sm:gap-10 xl:gap-12">
                         {socialNetworks.map((link) => (
                             <a key={link.alt} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Visitar perfil de ${link.alt}`}
-                                className="transition-transform duration-300 hover:scale-110 focus:scale-110 focus:outline-none">
+                                className="transition-transform duration-300 hover:scale-110 focus:scale-110 focus:outline-hidden">
                                 <img src={link.src} alt={link.alt} className="w-6 sm:w-7 md:w-8" />
                             </a>
                         ))}
@@ -20,7 +20,7 @@ export default function Footer() {
                     <p className="text-xs sm:text-sm md:text-base xl:text-lg text-center">
                         © {currentYear} | Desarrollado por{' '}
                         <a href="mailto:cagalvan93@gmail.com"
-                            className="text-cyan-400 font-medium hover:text-cyan-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-800">
+                            className="text-cyan-400 font-medium hover:text-cyan-300 transition-colors duration-300 focus:outline-hidden focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-800">
                             Carlos Araujo Galván
                         </a>
                     </p>

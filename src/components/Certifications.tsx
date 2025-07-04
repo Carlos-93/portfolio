@@ -19,7 +19,7 @@ export default function Certifications() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {certificates.map((certificate, index) => (
                     <div key={index} className="bg-gray-800 rounded-lg p-5 flex flex-col gap-5">
-                        <figure className="flex justify-center relative w-full aspect-[4/3]">
+                        <figure className="flex justify-center relative w-full aspect-4/3">
                             <div className={`absolute inset-0 bg-gray-700 transition-opacity duration-300 ${loadedImages[certificate.image] ? 'opacity-0' : 'opacity-100'
                                 }`}></div>
                             <img
