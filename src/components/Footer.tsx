@@ -4,9 +4,9 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="px-4 py-8 sm:px-6 sm:py-10 bg-gray-800 text-gray-300 border-t border-gray-500 z-10" role="contentinfo">
+        <footer className="px-4 py-6 sm:px-6 sm:py-8 bg-gray-800 text-gray-300 border-t border-gray-500 z-10" role="contentinfo">
             <div className="container mx-auto">
-                <div className="flex flex-col items-center justify-center gap-6 md:gap-8 lg:gap-10">
+                <div className="flex flex-col items-center justify-center gap-6 lg:gap-8">
                     {/* Redes sociales */}
                     <div className="flex gap-8 sm:gap-10 xl:gap-12">
                         {socialNetworks.map((link) => (
@@ -18,11 +18,7 @@ export default function Footer() {
                     </div>
                     {/* Copyright */}
                     <p className="text-xs sm:text-sm md:text-base xl:text-lg text-center">
-                        © {currentYear} | Desarrollado por{' '}
-                        <a href="mailto:cagalvan93@gmail.com"
-                            className="text-cyan-400 font-medium hover:text-cyan-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-800">
-                            Carlos Araujo Galván
-                        </a>
+                        © {currentYear} Carlos Araujo Galván. Todos los derechos reservados.
                     </p>
                 </div>
             </div>
