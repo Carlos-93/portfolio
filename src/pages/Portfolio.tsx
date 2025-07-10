@@ -15,7 +15,7 @@ export default function Portfolio() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="min-h-screen flex flex-col bg-gray-900">
+        <div className="flex flex-col">
             <div className="flex flex-1">
                 <Sidebar />
                 <main className="flex flex-col gap-16 px-6 py-16 sm:px-8 md:px-10 lg:p-16 lg:ml-72 w-full">
