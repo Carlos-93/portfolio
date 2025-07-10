@@ -35,17 +35,19 @@ export default function Sidebar() {
 
     return (
         <>
-            {/* Botón del menú hamburguesa */}
-            <button className="lg:hidden fixed right-6 top-2 w-14 sm:w-16 rounded-lg backdrop-blur-sm z-20"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <figure>
-                    <img src="/burger-menu.svg" alt="Menu" className={`${isMenuOpen ? 'brightness-0 invert' : ''}`} />
-                </figure>
-            </button>
+            <header className="lg:hidden fixed top-0 left-0 right-0 w-full h-16 backdrop-blur-lg bg-black/50 z-10">
+                {/* Botón del menú hamburguesa */}
+                <button className="absolute right-3 w-16 sm:w-18 rounded-lg z-20"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                    <figure>
+                        <img src="/burger-menu.svg" alt="Menu" className={`${isMenuOpen ? 'brightness-0 invert' : ''}`} />
+                    </figure>
+                </button>
+            </header>
 
             {/* Sidebar para teléfono móvil */}
             {isMenuOpen ? (
-                <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-md bg-black/40 transition-all duration-700 ease-in-out opacity-100"
+                <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-lg bg-black/50 transition-all duration-700 ease-in-out"
                     onClick={() => setIsMenuOpen(false)}>
                     <nav className="fixed w-full h-full flex justify-center items-center">
                         <ul className="flex flex-col gap-10 text-2xl font-medium text-white text-center">
