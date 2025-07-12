@@ -1,9 +1,9 @@
-interface Skill {
+export interface Skill {
     name: string;
     image: string;
 }
 
-interface Experience {
+export interface Experience {
     title: string;
     company: string;
     location: string;
@@ -12,14 +12,14 @@ interface Experience {
     image: string;
 }
 
-interface Education {
+export interface Education {
     title: string;
     company: string;
     date: string;
     image: string;
 }
 
-interface Certificate {
+export interface Certificate {
     title: string;
     company: string;
     location: string;
@@ -27,14 +27,14 @@ interface Certificate {
     image: string;
 }
 
-interface Project {
+export interface Project {
     title: string;
     description: string;
     image: string;
     href: string;
 }
 
-interface SocialNetwork {
+export interface SocialNetwork {
     href: string;
     src: string;
     alt: string;
