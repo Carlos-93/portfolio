@@ -4,7 +4,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="px-4 py-6 sm:px-6 sm:py-8 bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-gray-300 border-t border-gray-600" role="contentinfo">
+        <footer className="px-4 py-6 sm:px-6 sm:py-8 bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 border-t border-gray-600" role="contentinfo">
             <div className="container mx-auto">
                 <div className="flex flex-col items-center justify-center gap-6 lg:gap-8">
                     {/* Redes sociales */}
@@ -17,7 +17,7 @@ export default function Footer() {
                         ))}
                     </div>
                     {/* Copyright */}
-                    <p className="text-xs sm:text-sm md:text-base xl:text-lg text-center">
+                    <p className="text-xs sm:text-sm md:text-base xl:text-lg text-center text-white/60">
                         © {currentYear} Carlos Araujo Galván
                     </p>
                 </div>

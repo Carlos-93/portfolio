@@ -38,15 +38,30 @@ export default function Sidebar() {
 
     return (
         <>
-            <header className="lg:hidden fixed top-0 left-0 right-0 w-full h-16 backdrop-blur-lg bg-black/50 z-10">
-                {/* Botón del menú hamburguesa */}
-                <button className="absolute right-3 w-16 sm:w-18 rounded-lg z-20"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                    <figure>
-                        <img src="/burger-menu.svg" alt="Menu" className={`${isMenuOpen ? 'brightness-0 invert' : ''}`} />
-                    </figure>
+            {/* Si el menú no está abierto, muestra el botón del menú hamburguesa */}
+            {!isMenuOpen && (
+                <header className="lg:hidden fixed w-full h-16 backdrop-blur-lg bg-black/50 z-10">
+                    {/* Botón del menú hamburguesa */}
+                    <button className="absolute right-3 w-16 sm:w-18 z-10"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <figure>
+                            <img src="/burger-menu.svg" alt="Menu" className={`${isMenuOpen ? 'brightness-0 invert' : ''}`} />
+                        </figure>
+                    </button>
+                </header>
+            )}
+
+            {/* Si el menú está abierto, muestra el botón de cerrar */}
+            {isMenuOpen && (
+                <button className="lg:hidden fixed top-3 right-4 text-white z-20"
+                    onClick={() => setIsMenuOpen(false)}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-x w-12 sm:w-14">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M18 6L6 18" />
+                        <path d="M6 6l12 12" />
+                    </svg>
                 </button>
-            </header>
+            )}
 
             {/* Sidebar para teléfono móvil */}
             {isMenuOpen ? (
