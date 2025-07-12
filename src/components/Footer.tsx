@@ -18,7 +18,7 @@ export default function Footer() {
                     </div>
                     {/* Copyright */}
                     <p className="text-xs sm:text-sm md:text-base xl:text-lg text-center">
-                        © {currentYear} Carlos Araujo Galván. Todos los derechos reservados.
+                        © {currentYear} Carlos Araujo Galván
                     </p>
                 </div>
             </div>
