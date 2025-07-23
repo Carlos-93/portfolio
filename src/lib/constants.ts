@@ -1,4 +1,4 @@
-import { Skill, Experience, Education, Certificate, Project, SocialNetwork } from "./types";
+import type { Skill, Experience, Education, Certificate, Project, SocialNetwork } from "./types";
 
 export const skills: Skill[] = [
     { name: "HTML", image: "html.svg" },

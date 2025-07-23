@@ -68,7 +68,7 @@ export default function Sidebar() {
                 <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-xl bg-black/70 transition-all duration-700 ease-in-out"
                     onClick={() => setIsMenuOpen(false)}>
                     <nav className="fixed w-full h-full flex justify-center items-center">
-                        <ul className="flex flex-col gap-10 text-xl font-medium text-white text-center">
+                        <ul className="flex flex-col gap-10 sm:gap-16 text-xl sm:text-2xl font-medium text-white text-center">
                             <li><a href="#home" onClick={() => handleLinkClick('#home')} className="hover:text-cyan-400 transition-all duration-300">Inicio</a></li>
                             <li><a href="#about" onClick={() => handleLinkClick('#about')} className="hover:text-cyan-400 transition-all duration-300">Sobre mí</a></li>
                             <li><a href="#skills" onClick={() => handleLinkClick('#skills')} className="hover:text-cyan-400 transition-all duration-300">Habilidades</a></li>
