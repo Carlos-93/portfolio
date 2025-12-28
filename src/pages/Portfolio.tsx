@@ -14,7 +14,7 @@ export default function Portfolio() {
         <div className="flex flex-col">
             <div className="flex flex-1">
                 <Sidebar />
-                <main className="flex flex-col gap-16 px-6 py-20 sm:px-8 md:px-10 lg:p-16 lg:ml-72 w-full">
+                <main className="flex flex-col gap-16 px-6 py-20 sm:px-10 md:px-14 lg:p-18 xl:p-22 lg:ml-72 w-full">
                     <section id="home" className="scroll-mt-16 lg:scroll-mt-16"><Home /></section>
                     <section id="about" className="scroll-mt-16 lg:scroll-mt-16"><About /></section>
                     <section id="skills" className="scroll-mt-16 lg:scroll-mt-16"><Skills /></section>

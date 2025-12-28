@@ -19,7 +19,7 @@ export const educations: Education[] = [
 ];
 
 export const certificates: Certificate[] = [
-    { title: "Administración de Sistemas Operativos Linux", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/certificate-linux.png" },
+    { title: "Administración de SO Linux", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/certificate-linux.png" },
     { title: "Administración de Windows 10", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/certificate-windows.png" },
 ];
 
