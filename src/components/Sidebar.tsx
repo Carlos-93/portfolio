@@ -5,7 +5,7 @@ export default function Sidebar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
-        // Método para manejar el scroll y resaltar el enlace activo
+        // Method to handle the scroll and highlight the active link
         function handleScroll() {
             const sections = ['home', 'about', 'skills', 'experience', 'education', 'certifications', 'projects', 'contact'];
 
@@ -27,7 +27,7 @@ export default function Sidebar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [])
 
-    // Método para manejar el clic en los enlaces del menú móvil
+    // Method to handle the click on the mobile menu links
     function handleLinkClick(link: string) {
         setActiveLink(link);
         setIsMenuOpen(false);
@@ -38,10 +38,10 @@ export default function Sidebar() {
 
     return (
         <>
-            {/* Si el menú no está abierto, muestra el botón del menú hamburguesa */}
+            {/* If the menu is not open, show the hamburger menu button */}
             {!isMenuOpen && (
                 <header className="lg:hidden fixed w-full h-16 backdrop-blur-xl bg-black/70 z-10">
-                    {/* Botón del menú hamburguesa */}
+                    {/* Hamburger menu button */}
                     <button className="absolute right-3 w-16 sm:w-18 z-10"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}>
                         <figure>
@@ -51,7 +51,7 @@ export default function Sidebar() {
                 </header>
             )}
 
-            {/* Si el menú está abierto, muestra el botón de cerrar */}
+            {/* If the menu is open, show the close button */}
             {isMenuOpen && (
                 <button className="lg:hidden fixed top-3 right-4 text-white z-20"
                     onClick={() => setIsMenuOpen(false)}>
@@ -63,7 +63,7 @@ export default function Sidebar() {
                 </button>
             )}
 
-            {/* Sidebar para teléfono móvil */}
+            {/* Mobile sidebar */}
             {isMenuOpen ? (
                 <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-xl bg-black/70 transition-all duration-700 ease-in-out"
                     onClick={() => setIsMenuOpen(false)}>
@@ -85,7 +85,7 @@ export default function Sidebar() {
                     onClick={() => setIsMenuOpen(false)} />
             )}
 
-            {/* Sidebar para escritorio */}
+            {/* Desktop sidebar */}
             <nav className="hidden lg:flex flex-col justify-center bg-gray-800 w-72 h-screen text-white text-lg select-none overflow-y-auto fixed z-10">
                 <ul className="flex flex-col gap-6 py-16">
                     <li>

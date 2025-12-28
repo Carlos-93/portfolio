@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className="px-4 py-6 sm:px-6 sm:py-8 bg-linear-to-r from-gray-800 via-gray-900 to-gray-800 border-t border-gray-600" role="contentinfo">
             <div className="container mx-auto">
                 <div className="flex flex-col items-center justify-center gap-6 lg:gap-8">
-                    {/* Redes sociales */}
+                    {/* Social Networks */}
                     <div className="flex gap-8 sm:gap-10 xl:gap-12">
                         {socialNetworks.map((link) => (
                             <a key={link.alt} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Visitar perfil de ${link.alt}`}
@@ -16,7 +16,8 @@ export default function Footer() {
                             </a>
                         ))}
                     </div>
-                    {/* Copyright */}
+                    
+                    {/* Copyright Message */}
                     <p className="text-xs sm:text-sm md:text-base xl:text-lg text-center text-white/60 cursor-default">
                         © {currentYear} Carlos Araujo Galván
                     </p>
