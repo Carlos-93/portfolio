@@ -1,4 +1,4 @@
-import type { Skill, Experience, Education, Certificate, Project, SocialNetwork } from "./types";
+import type { Skill, Experience, Education, Certificate, Project, SocialNetwork, Language } from "./types";
 
 export const skills: Skill[] = [
     { name: "HTML", image: "html.svg" },
@@ -33,4 +33,13 @@ export const socialNetworks: SocialNetwork[] = [
     { href: "https://www.github.com/Carlos-93", src: "assets/Icons/github.svg", alt: "GitHub" },
     { href: "https://www.instagram.com/carloos_93", src: "assets/Images/SocialNetworks/instagram.png", alt: "Instagram" },
     { href: "https://www.linkedin.com/in/carlos-araujo-galvan/", src: "assets/Images/SocialNetworks/linkedin.png", alt: "LinkedIn" },
+];
+
+export const languages: Language[] = [
+    { code: 'es', name: 'Español', flag: 'assets/Images/Flags/Spain.png' },
+    { code: 'ca', name: 'Català', flag: 'assets/Images/Flags/Catalonia.png' },
+    { code: 'en', name: 'English', flag: 'assets/Images/Flags/United_Kingdom.png' },
+    { code: 'de', name: 'Deutsch', flag: 'assets/Images/Flags/Germany.png' },
+    { code: 'it', name: 'Italiano', flag: 'assets/Images/Flags/Italy.png' },
+    { code: 'fr', name: 'Français', flag: 'assets/Images/Flags/France.png' },
 ];

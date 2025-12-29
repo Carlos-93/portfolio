@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import LanguageSelector from './LanguageSelector';
 
 export default function Sidebar() {
     const [activeLink, setActiveLink] = useState('#home');
@@ -49,7 +50,9 @@ export default function Sidebar() {
         <>
             {/* Header with hamburger menu button */}
             {!isMenuOpen && (
-                <header className="lg:hidden fixed w-full h-16 backdrop-blur-xl bg-black/30 z-20"></header>
+                <header className="lg:hidden fixed w-full h-16 backdrop-blur-xl bg-black/30 z-20 flex items-center justify-between px-6">
+                    <LanguageSelector />
+                </header>
             )}
 
             {/* Hamburger menu button */}

@@ -39,3 +39,9 @@ export interface SocialNetwork {
     src: string;
     alt: string;
 }
+
+export interface Language {
+    code: string;
+    name: string;
+    flag: string;
+}
