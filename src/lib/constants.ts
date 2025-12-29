@@ -15,12 +15,12 @@ export const experiences: Experience[] = [
 ];
 
 export const educations: Education[] = [
-    { title: "Técnico Superior en Desarrollo de Aplicaciones Web", company: "Monlau Centro de Estudios", date: "Septiembre 2022 - Junio 2024", image: "assets/education-daw.jpg" },
+    { title: "Técnico Superior en Desarrollo de Aplicaciones Web", company: "Monlau Centro de Estudios", date: "Septiembre 2022 - Junio 2024", image: "assets/Images/Certificates/education-daw.jpg" },
 ];
 
 export const certificates: Certificate[] = [
-    { title: "Administración de SO Linux", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/certificate-linux.png" },
-    { title: "Administración de Windows 10", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/certificate-windows.png" },
+    { title: "Administración de SO Linux", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/Images/Certificates/certificate-linux.png" },
+    { title: "Administración de Windows 10", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/Images/Certificates/certificate-windows.png" },
 ];
 
 export const projects: Project[] = [
@@ -30,7 +30,7 @@ export const projects: Project[] = [
 ];
 
 export const socialNetworks: SocialNetwork[] = [
-    { href: "https://www.github.com/Carlos-93", src: "github.svg", alt: "GitHub" },
-    { href: "https://www.instagram.com/carloos_93", src: "assets/instagram.png", alt: "Instagram" },
-    { href: "https://www.linkedin.com/in/carlos-araujo-galvan/", src: "assets/linkedin.png", alt: "LinkedIn" },
+    { href: "https://www.github.com/Carlos-93", src: "assets/Icons/github.svg", alt: "GitHub" },
+    { href: "https://www.instagram.com/carloos_93", src: "assets/Images/SocialNetworks/instagram.png", alt: "Instagram" },
+    { href: "https://www.linkedin.com/in/carlos-araujo-galvan/", src: "assets/Images/SocialNetworks/linkedin.png", alt: "LinkedIn" },
 ];
