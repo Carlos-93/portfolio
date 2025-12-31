@@ -15,12 +15,12 @@ export const experiences: Experience[] = [
 ];
 
 export const educations: Education[] = [
-    { title: "Técnico Superior en Desarrollo de Aplicaciones Web", company: "Monlau Centro de Estudios", date: "Septiembre 2022 - Junio 2024", image: "assets/images/certificates/education-daw.jpg" },
+    { title: "Técnico Superior en Desarrollo de Aplicaciones Web", company: "Monlau Centro de Estudios", date: "Septiembre 2022 - Junio 2024", image: "/assets/images/certificates/education-daw.jpg" },
 ];
 
 export const certificates: Certificate[] = [
-    { title: "Administración de SO Linux", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/images/certificates/certificate-linux.png" },
-    { title: "Administración de Windows 10", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/images/certificates/certificate-windows.png" },
+    { title: "Administración de SO Linux", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "/assets/images/certificates/certificate-linux.png" },
+    { title: "Administración de Windows 10", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "/assets/images/certificates/certificate-windows.png" },
 ];
 
 export const projects: Project[] = [
@@ -30,16 +30,16 @@ export const projects: Project[] = [
 ];
 
 export const socialNetworks: SocialNetwork[] = [
-    { href: "https://www.github.com/Carlos-93", src: "assets/icons/github.svg", alt: "GitHub" },
-    { href: "https://www.instagram.com/carloos_93", src: "assets/images/social-networks/instagram.png", alt: "Instagram" },
-    { href: "https://www.linkedin.com/in/carlos-araujo-galvan/", src: "assets/images/social-networks/linkedin.png", alt: "LinkedIn" },
+    { href: "https://www.github.com/Carlos-93", src: "/assets/icons/github.svg", alt: "GitHub" },
+    { href: "https://www.instagram.com/carloos_93", src: "/assets/images/social-networks/instagram.png", alt: "Instagram" },
+    { href: "https://www.linkedin.com/in/carlos-araujo-galvan/", src: "/assets/images/social-networks/linkedin.png", alt: "LinkedIn" },
 ];
 
 export const languages: Language[] = [
-    { code: 'es', name: 'Español', flag: 'assets/images/flags/Spain.png' },
-    { code: 'ca', name: 'Català', flag: 'assets/images/flags/Catalonia.png' },
-    { code: 'en', name: 'English', flag: 'assets/images/flags/United_Kingdom.png' },
-    { code: 'de', name: 'Deutsch', flag: 'assets/images/flags/Germany.png' },
-    { code: 'it', name: 'Italiano', flag: 'assets/images/flags/Italy.png' },
-    { code: 'fr', name: 'Français', flag: 'assets/images/flags/France.png' },
+    { code: 'es', name: 'Español', flag: '/assets/images/flags/Spain.png' },
+    { code: 'ca', name: 'Català', flag: '/assets/images/flags/Catalonia.png' },
+    { code: 'en', name: 'English', flag: '/assets/images/flags/United_Kingdom.png' },
+    { code: 'de', name: 'Deutsch', flag: '/assets/images/flags/Germany.png' },
+    { code: 'it', name: 'Italiano', flag: '/assets/images/flags/Italy.png' },
+    { code: 'fr', name: 'Français', flag: '/assets/images/flags/France.png' },
 ];
