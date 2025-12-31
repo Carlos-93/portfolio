@@ -14,6 +14,14 @@ export default function LanguageSelector() {
         setIsOpen(false);
     };
 
+    // Preload all flag images on component mount
+    useEffect(() => {
+        languages.forEach((language) => {
+            const img = new Image();
+            img.src = language.flag;
+        });
+    }, []);
+
     // Close the dropdown menu when clicking outside
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
