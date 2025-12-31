@@ -1,4 +1,6 @@
 {
-  "common": {}
+  "common": {
+    "portfolio": "Portfolio"
+  }
 }
 

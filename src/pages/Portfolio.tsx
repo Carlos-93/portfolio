@@ -1,3 +1,4 @@
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import Sidebar from '../components/Sidebar';
 import Home from '../components/Home';
 import About from '../components/About';
@@ -10,6 +11,8 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 export default function Portfolio() {
+    useDocumentTitle();
+
     return (
         <div className="flex flex-col">
             <div className="flex flex-1">

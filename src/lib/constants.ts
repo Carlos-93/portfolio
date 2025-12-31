@@ -15,12 +15,12 @@ export const experiences: Experience[] = [
 ];
 
 export const educations: Education[] = [
-    { title: "Técnico Superior en Desarrollo de Aplicaciones Web", company: "Monlau Centro de Estudios", date: "Septiembre 2022 - Junio 2024", image: "assets/Images/Certificates/education-daw.jpg" },
+    { title: "Técnico Superior en Desarrollo de Aplicaciones Web", company: "Monlau Centro de Estudios", date: "Septiembre 2022 - Junio 2024", image: "assets/images/Certificates/education-daw.jpg" },
 ];
 
 export const certificates: Certificate[] = [
-    { title: "Administración de SO Linux", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/Images/Certificates/certificate-linux.png" },
-    { title: "Administración de Windows 10", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/Images/Certificates/certificate-windows.png" },
+    { title: "Administración de SO Linux", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/images/Certificates/certificate-linux.png" },
+    { title: "Administración de Windows 10", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: "assets/images/Certificates/certificate-windows.png" },
 ];
 
 export const projects: Project[] = [
@@ -31,15 +31,15 @@ export const projects: Project[] = [
 
 export const socialNetworks: SocialNetwork[] = [
     { href: "https://www.github.com/Carlos-93", src: "assets/Icons/github.svg", alt: "GitHub" },
-    { href: "https://www.instagram.com/carloos_93", src: "assets/Images/SocialNetworks/instagram.png", alt: "Instagram" },
-    { href: "https://www.linkedin.com/in/carlos-araujo-galvan/", src: "assets/Images/SocialNetworks/linkedin.png", alt: "LinkedIn" },
+    { href: "https://www.instagram.com/carloos_93", src: "assets/images/SocialNetworks/instagram.png", alt: "Instagram" },
+    { href: "https://www.linkedin.com/in/carlos-araujo-galvan/", src: "assets/images/SocialNetworks/linkedin.png", alt: "LinkedIn" },
 ];
 
 export const languages: Language[] = [
-    { code: 'es', name: 'Español', flag: 'assets/Images/Flags/Spain.png' },
-    { code: 'ca', name: 'Català', flag: 'assets/Images/Flags/Catalonia.png' },
-    { code: 'en', name: 'English', flag: 'assets/Images/Flags/United_Kingdom.png' },
-    { code: 'de', name: 'Deutsch', flag: 'assets/Images/Flags/Germany.png' },
-    { code: 'it', name: 'Italiano', flag: 'assets/Images/Flags/Italy.png' },
-    { code: 'fr', name: 'Français', flag: 'assets/Images/Flags/France.png' },
+    { code: 'es', name: 'Español', flag: 'assets/images/Flags/Spain.png' },
+    { code: 'ca', name: 'Català', flag: 'assets/images/Flags/Catalonia.png' },
+    { code: 'en', name: 'English', flag: 'assets/images/Flags/United_Kingdom.png' },
+    { code: 'de', name: 'Deutsch', flag: 'assets/images/Flags/Germany.png' },
+    { code: 'it', name: 'Italiano', flag: 'assets/images/Flags/Italy.png' },
+    { code: 'fr', name: 'Français', flag: 'assets/images/Flags/France.png' },
 ];
