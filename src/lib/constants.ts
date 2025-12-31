@@ -36,10 +36,10 @@ export const socialNetworks: SocialNetwork[] = [
 ];
 
 export const languages: Language[] = [
-    { code: 'es', name: 'Español', flag: `/assets/images/flags/Spain.png` },
-    { code: 'ca', name: 'Català', flag: `/assets/images/flags/Catalonia.png` },
-    { code: 'en', name: 'English', flag: `/assets/images/flags/United_Kingdom.png` },
-    { code: 'de', name: 'Deutsch', flag: `/assets/images/flags/Germany.png` },
-    { code: 'it', name: 'Italiano', flag: `/assets/images/flags/Italy.png` },
-    { code: 'fr', name: 'Français', flag: `/assets/images/flags/France.png` },
+    { code: 'es', name: 'Español', flag: `/assets/images/flags/spain.png` },
+    { code: 'ca', name: 'Català', flag: `/assets/images/flags/catalonia.png` },
+    { code: 'en', name: 'English', flag: `/assets/images/flags/united_kingdom.png` },
+    { code: 'de', name: 'Deutsch', flag: `/assets/images/flags/germany.png` },
+    { code: 'it', name: 'Italiano', flag: `/assets/images/flags/italy.png` },
+    { code: 'fr', name: 'Français', flag: `/assets/images/flags/france.png` },
 ];
