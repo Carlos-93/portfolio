@@ -1,5 +1,22 @@
 {
   "common": {
     "portfolio": "Portafoli"
+  },
+  "home": {
+    "welcome": "Benvingut/da al meu portafoli!",
+    "iAm": "Soc",
+    "role": "Desenvolupador Web Full Stack",
+    "profileImageAlt": "Imatge de perfil de Carlos Araujo Galván"
+  },
+  "sidebar": {
+    "toggleMenu": "Alternar menú",
+    "home": "Inici",
+    "about": "Sobre mi",
+    "skills": "Habilitats",
+    "experience": "Experiència",
+    "education": "Educació",
+    "certifications": "Certificacions",
+    "projects": "Projectes",
+    "contact": "Contacte"
   }
 }
