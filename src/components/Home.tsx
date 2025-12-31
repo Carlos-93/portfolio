@@ -11,7 +11,7 @@ export default function Home() {
             </div>
 
             <figure>
-                <img src={`${import.meta.env.BASE_URL}assets/images/me/profile.jpg`} alt="Imagen de perfil de Carlos Araujo Galván"
+                <img src="/assets/images/me/profile.jpg" alt="Imagen de perfil de Carlos Araujo Galván"
                     onLoad={() => setLoaded(true)}
                     className={`sm:w-2/3 m-auto rounded-xl transition-opacity duration-4000 ${loaded ? 'opacity-100' : 'opacity-0'}`} />
             </figure>
