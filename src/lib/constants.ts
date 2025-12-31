@@ -30,9 +30,9 @@ export const projects: Project[] = [
 ];
 
 export const socialNetworks: SocialNetwork[] = [
-    { href: "https://www.github.com/Carlos-93", src: `/assets/icons/github.svg`, alt: "GitHub" },
-    { href: "https://www.instagram.com/carloos_93", src: `/assets/images/social-networks/instagram.png`, alt: "Instagram" },
-    { href: "https://www.linkedin.com/in/carlos-araujo-galvan/", src: `/assets/images/social-networks/linkedin.png`, alt: "LinkedIn" },
+    { href: "https://www.github.com/Carlos-93", src: `/assets/icons/github_dark.svg`, alt: "GitHub" },
+    { href: "https://www.instagram.com/carloos_93", src: `/assets/icons/instagram.svg`, alt: "Instagram" },
+    { href: "https://www.linkedin.com/in/carlos-araujo-galvan/", src: `/assets/icons/linkedin.svg`, alt: "LinkedIn" },
 ];
 
 export const languages: Language[] = [
