@@ -18,5 +18,8 @@
     "certifications": "Certifications",
     "projects": "Projets",
     "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "Tous les droits réservés."
   }
 }
