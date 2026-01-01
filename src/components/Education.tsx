@@ -3,9 +3,7 @@ import { educations } from "../lib/constants";
 export default function Education() {
     return (
         <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-5">
-                <p className="text-cyan-400 text-xl text-center">Educación</p>
-            </div>
+            <h2 className="text-cyan-400 text-xl text-center cursor-default">Educación</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                 {educations.map((certificate, index) => (
@@ -17,7 +15,7 @@ export default function Education() {
                         <div className="flex flex-col gap-2">
                             <p className="text-lg font-medium text-white">{certificate.title}</p>
                             <p className="text-gray-300">{certificate.company}</p>
-                            <p className="text-xs text-gray-400 text-end">{certificate.date}</p>
+                            <p className="text-xs text-gray-400 text-end mt-2">{certificate.date}</p>
                         </div>
                     </div>
                 ))}

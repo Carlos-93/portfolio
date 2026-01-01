@@ -57,7 +57,7 @@ export default function LanguageSelector() {
 
             {/* Dropdown menu of the selector */}
             {isOpen && (
-                <div className="absolute left-0 mt-2 w-48 bg-gray-800 border border-gray-700 rounded-lg  shadow-xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute right-0 mt-2 w-48 bg-gray-800 border border-gray-700 rounded-lg shadow-xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                     <div className="py-1">
                         {languages.map((language) => (
                             <button

@@ -50,6 +50,11 @@ export default function Sidebar() {
 
     return (
         <>
+            {/* Language selector for desktop - fixed position top right */}
+            <div className="hidden lg:block fixed top-4 right-4 z-30">
+                <LanguageSelector />
+            </div>
+
             {/* Header with hamburger menu button */}
             {!isMenuOpen && (
                 <header className="lg:hidden fixed w-full h-16 backdrop-blur-xl bg-black/30 z-20 flex items-center justify-between px-6">
