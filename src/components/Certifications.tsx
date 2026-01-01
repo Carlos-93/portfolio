@@ -1,8 +1,10 @@
-import { certificates } from "../lib/constants";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
+import { certificates } from "../lib/constants";
 
 export default function Certifications() {
     const [loadedImages, setLoadedImages] = useState<{ [key: string]: boolean }>({});
+    const { t } = useTranslation();
 
     // Load the image
     const handleImageLoad = (imageUrl: string) => {
@@ -14,7 +16,7 @@ export default function Certifications() {
 
     return (
         <div className="flex flex-col gap-8">
-            <h2 className="text-cyan-400 text-xl text-center cursor-default">Cursos / Certificaciones</h2>
+            <h2 className="text-cyan-400 text-xl text-center cursor-default">{t('sidebar.certifications')}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                 {certificates.map((certificate, index) => (
