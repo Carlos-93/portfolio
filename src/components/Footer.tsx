@@ -37,7 +37,7 @@ export default function Footer() {
                         </div>
 
                         {/* Copyright Message */}
-                        <p className="text-xs sm:text-sm md:text-base text-center text-white/60 cursor-default">
+                        <p className="text-[10.6px] sm:text-sm md:text-base text-center text-white/60 cursor-default">
                             © {currentYear} Carlos Araujo Galván. {t('footer.copyright')}
                         </p>
                     </div>
