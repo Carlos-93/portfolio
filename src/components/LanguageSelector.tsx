@@ -65,7 +65,7 @@ export default function LanguageSelector() {
                                 onClick={() => changeLanguage(language.code)}
                                 className={`w-full flex items-center gap-3 px-4 py-2.5 text-left 
                                            transition-colors duration-150 cursor-pointer ${currentLanguage.code === language.code
-                                        ? 'bg-cyan-500/20 text-cyan-400'
+                                        ? 'bg-gray-700 text-cyan-400'
                                         : 'text-gray-200 hover:bg-gray-700'
                                     }`}>
                                 <img src={language.flag} alt={language.name} className="w-6 h-6 object-cover rounded-full shrink-0" />
