@@ -13,7 +13,7 @@ export default function Home() {
             </div>
 
             <figure>
-                <img src="/assets/images/me/profile.jpg" alt={t('home.profileImageAlt')}
+                <img src="/assets/images/me/profile.png" alt={t('home.profileImageAlt')}
                     onLoad={() => setLoaded(true)}
                     className={`sm:w-2/3 m-auto rounded-xl transition-opacity duration-4000 ${loaded ? 'opacity-100' : 'opacity-0'}`} />
             </figure>

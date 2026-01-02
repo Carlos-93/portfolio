@@ -39,7 +39,7 @@ html::before {
     background-size: 200% 200%;
     animation: gradient-move 8s ease-in-out infinite;
     pointer-events: none;
-    z-index: 0;
+    z-index: -1;
 }
 
 @keyframes gradient-move {
