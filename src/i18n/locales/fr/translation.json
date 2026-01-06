@@ -3,9 +3,11 @@
     "portfolio": "Portefeuille"
   },
   "home": {
-    "welcome": "Bienvenue dans mon portfolio !",
+    "welcome": "Bonjour 👋🏻,",
     "iAm": "Je suis",
-    "role": "Développeur Web Full Stack",
+    "name": "Carlos Araujo Galván",
+    "softwareRole": "Développeur Web Full Stack",
+    "designerRole": "Designer Web UX/UI",
     "profileImageAlt": "Photo de profil de Carlos Araujo Galván"
   },
   "sidebar": {

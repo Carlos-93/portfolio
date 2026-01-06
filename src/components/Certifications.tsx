@@ -16,7 +16,7 @@ export default function Certifications() {
 
     return (
         <div className="flex flex-col gap-8">
-            <h2 className="text-cyan-400 text-xl text-center cursor-default">{t('sidebar.certifications')}</h2>
+            <h2 className="text-cyan-400 text-xl text-center cursor-default font-semibold">{t('sidebar.certifications')}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                 {certificates.map((certificate, index) => (

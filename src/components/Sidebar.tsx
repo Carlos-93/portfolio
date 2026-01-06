@@ -201,7 +201,7 @@ export default function Sidebar() {
 
             {/* Desktop sidebar */}
             <nav className="hidden lg:flex flex-col justify-center bg-gray-800 w-72 h-screen text-white text-lg select-none overflow-y-auto fixed z-10">
-                <ul className="flex flex-col gap-6 py-16">
+                <ul className="flex flex-col gap-6 py-16 font-medium">
                     <li>
                         <a href="#home" onClick={() => setActiveLink('#home')} className={`flex gap-2 rounded py-5 pl-14 transition-all ease-in-out duration-300
                             ${activeLink === '#home' ? 'bg-gray-700 text-cyan-400 pl-22' : 'hover:bg-gray-700 hover:pl-22 hover:text-cyan-400'}`}>
