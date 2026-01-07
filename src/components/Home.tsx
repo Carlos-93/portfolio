@@ -45,9 +45,9 @@ export default function Home() {
         <div className="flex flex-col items-center md:flex-row gap-10">
             <div className="flex flex-col justify-center gap-5 w-full">
                 <h1 className="text-gray-100 flex flex-col gap-2 text-justify cursor-default">
-                    <p className='text-lg'>{t('home.welcome')}</p>
-                    <p className='text-2xl font-semibold'>{t('home.iAm')}  <span className="text-cyan-400">{t('home.name')}</span></p>
-                    <p className='text-2xl font-semibold h-8'>
+                    <p className='lg:text-lg text-base'>{t('home.welcome')}</p>
+                    <p className='lg:text-2xl text-xl font-semibold'>{t('home.iAm')}  <span className="text-cyan-400">{t('home.name')}</span></p>
+                    <p className='lg:text-2xl text-xl font-semibold h-8'>
                         {displayText}
                         <span className="animate-pulse ml-0.5">|</span>
                     </p>
