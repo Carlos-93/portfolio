@@ -42,19 +42,19 @@ export default function Home() {
     }, [handleTyping, isDeleting]);
 
     return (
-        <div className="flex flex-col items-center md:flex-row gap-10">
-            <div className="flex flex-col justify-center gap-5 w-full">
-                <h1 className="text-gray-100 flex flex-col gap-2 text-justify cursor-default">
-                    <p className='lg:text-lg text-base'>{t('home.welcome')}</p>
-                    <p className='lg:text-2xl text-xl font-semibold'>{t('home.iAm')}  <span className="text-cyan-400">{t('home.name')}</span></p>
-                    <p className='lg:text-2xl text-xl font-semibold h-8'>
+        <div className="flex flex-col items-center md:flex-row gap-12">
+            <div className="flex flex-col justify-center gap-5 w-full lg:w-2/3 mt-5 lg:mt-0">
+                <h1 className="text-gray-100 flex flex-col gap-2 2xl:gap-6 text-justify cursor-default">
+                    <p className='text-base sm:text-lg lg:text-xl xl:text-2xl'>{t('home.welcome')}</p>
+                    <p className='text-lg sm:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl font-semibold'>{t('home.iAm')}  <span className="text-cyan-400">{t('home.name')}</span></p>
+                    <p className='text-lg sm:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl font-semibold h-8'>
                         {displayText}
                         <span className="animate-pulse ml-0.5">|</span>
                     </p>
                 </h1>
             </div>
 
-            <figure className='w-1/3'>
+            <figure className='w-60 sm:w-80 md:100 lg:w-110 xl:w-120 2xl:w-130'>
                 <img src="/assets/images/me/profile.png" alt={t('home.profileImageAlt')}
                     onLoad={() => setLoaded(true)}
                     className={`transition-opacity duration-4000 ${loaded ? 'opacity-100' : 'opacity-0'}`} />

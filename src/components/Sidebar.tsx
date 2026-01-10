@@ -51,9 +51,10 @@ export default function Sidebar() {
     return (
         <>
             {/* Header background */}
-            {!isMenuOpen && (
-                <header className="lg:hidden fixed w-full h-16 backdrop-blur-xl bg-black/30 z-20" />
-            )}
+            <header className={`fixed h-16 backdrop-blur-xl bg-black/30 z-20 
+                left-0 right-0 lg:left-72
+                ${isMenuOpen ? 'hidden lg:block' : 'block'}`} 
+            />
             
             {/* Language selector for desktop - fixed position top right */}
             <div className="hidden lg:block fixed top-4 right-4 z-30">
