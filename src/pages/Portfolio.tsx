@@ -12,12 +12,14 @@ import Certifications from '../components/Certifications';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import DarkMode from '../components/DarkMode';
 
 export default function Portfolio() {
     useDocumentTitle();
 
     return (
         <div className="flex flex-col">
+            <DarkMode />
             <div className="flex flex-1">
                 <Sidebar />
                 <main className="flex flex-col gap-16 px-6 py-20 sm:px-10 md:px-14 lg:p-18 xl:p-22 lg:ml-72 w-full">
