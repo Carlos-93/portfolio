@@ -57,12 +57,12 @@ export default function Sidebar() {
             />
             
             {/* Language selector for desktop - fixed position top right */}
-            <div className="hidden lg:block fixed top-4 right-4 z-30">
+            <div className="hidden lg:block fixed top-2.5 right-4 z-30">
                 <LanguageSelector />
             </div>
 
             {/* Language selector for mobile - fixed position top left */}
-            <div className="lg:hidden fixed top-4 left-6 z-30">
+            <div className="lg:hidden fixed top-2.5 left-6 z-30">
                 <LanguageSelector />
             </div>
 

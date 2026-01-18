@@ -29,8 +29,9 @@ export default function LanguageSelector() {
                 setIsOpen(false);
             }
         };
-
+        // Add event listener to document
         document.addEventListener('mousedown', handleClickOutside);
+        // Remove event listener when the component unmounts
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
