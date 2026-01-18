@@ -47,8 +47,8 @@ export default function Home() {
     }, [handleTyping, isDeleting]);
 
     return (
-        <div className="flex flex-col items-center md:flex-row gap-12">
-            <div className="flex flex-col justify-center gap-5 w-full lg:w-2/3 mt-5 lg:mt-0">
+        <div className="flex flex-col items-center md:flex-row gap-8">
+            <div className="flex flex-col justify-center gap-5 w-full lg:w-2/3">
                 <h1 className="text-gray-100 flex flex-col gap-2 2xl:gap-6 text-justify cursor-default">
                     <p className='text-base sm:text-lg lg:text-xl xl:text-2xl'>{t('home.welcome')}</p>
                     <p className='text-lg sm:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl font-semibold'>{t('home.iAm')}  <span className="text-cyan-400">{t('home.name')}</span></p>
