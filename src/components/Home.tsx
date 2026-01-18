@@ -1,19 +1,23 @@
+// Libraries imports
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+    // State variables
     const [loaded, setLoaded] = useState(false);
     const [roleIndex, setRoleIndex] = useState(0);
     const [displayText, setDisplayText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
+    // Translation hook
     const { t } = useTranslation();
-
+    // Roles
     const roles = useMemo(() => [t('home.softwareRole'), t('home.designerRole')], [t]);
-
+    // Speed variables
     const typeSpeed = 80;
     const deleteSpeed = 50;
     const pauseTime = 2000;
 
+    // Handle typing
     const handleTyping = useCallback(() => {
         const currentRole = roles[roleIndex];
 
@@ -35,6 +39,7 @@ export default function Home() {
         }
     }, [displayText, isDeleting, roleIndex, roles]);
 
+    // Handle typing effect
     useEffect(() => {
         const speed = isDeleting ? deleteSpeed : typeSpeed;
         const timer = setTimeout(handleTyping, speed);

@@ -1,6 +1,8 @@
+// Libraries imports
 import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
+    // Translation hook
     const { t } = useTranslation();
     
     return (

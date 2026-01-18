@@ -1,7 +1,7 @@
+// Libraries imports
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 import i18n from 'i18next';
-
 // Translations imports
 import esTranslation from './locales/es/translation.json';
 import caTranslation from './locales/ca/translation.json';
@@ -18,10 +18,11 @@ i18n
     // Initialize i18next
     .init({
         // Default language
+        lng: 'es',
         fallbackLng: 'es',
         // Available languages
         supportedLngs: ['es', 'ca', 'en', 'de', 'it', 'fr'],
-        
+
         // Translation resources
         resources: {
             es: {
@@ -46,8 +47,9 @@ i18n
 
         // Detection options
         detection: {
-            order: ['localStorage', 'navigator', 'htmlTag'],
+            order: ['localStorage'],
             caches: ['localStorage'],
+            lookupLocalStorage: 'i18nextLng',
         },
 
         // Interpolation options

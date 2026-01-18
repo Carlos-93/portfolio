@@ -3,12 +3,20 @@
     "portfolio": "Portafolio"
   },
   "home": {
-    "welcome": "Hola 👋🏻,",
+    "welcome": "Hola 👋🏻",
     "iAm": "Soy",
     "name": "Carlos Araujo Galván",
     "softwareRole": "Desarrollador Web Full Stack",
     "designerRole": "Diseñador UX/UI",
     "profileImageAlt": "Imagen de perfil de Carlos Araujo Galván"
+  },
+  "about": {
+    "title": "Acerca de mí",
+    "descriptionOne": "Desarrollador Full Stack con +2 años de experiencia en la creación de aplicaciones web modernas, escalables y de calidad.",
+    "descriptionTwo": "Especializado principalmente en el Frontend, donde diseño y desarrollo interfaces atractivas y responsivas utilizando Angular o React (TypeScript) y Tailwind CSS o CSS3 para el estilo final.",
+    "descriptionThree": "Previamente, utilizo Figma para un prototipado rápido y de alta fidelidad visual, asegurando una experiencia de usuario óptima y agradable.",
+    "descriptionFour": "Para el backend utilizo Node.js, Java (Spring Boot) o PHP (Laravel/Symfony), integrando soluciones completas con bases de datos relacionales (MySQL o PostgreSQL) y no relacionales (MongoDB).",
+    "descriptionFive": "Soy un apasionado del código limpio, las buenas prácticas (SOLID, clean architecture), el diseño escalable y el aprendizaje continuo, trabajando en entornos ágiles."
   },
   "sidebar": {
     "toggleMenu": "Alternar menú",

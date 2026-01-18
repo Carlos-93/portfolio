@@ -1,20 +1,25 @@
+// Libraries imports
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { languages } from '../lib/constants';
 
 export default function LanguageSelector() {
+    // Translation hook
     const { i18n } = useTranslation();
+    // State variables
     const [isOpen, setIsOpen] = useState(false);
+    // Ref
     const dropdownRef = useRef<HTMLDivElement>(null);
-
+    // Current language
     const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
+    // Change language
     const changeLanguage = (langCode: string) => {
         i18n.changeLanguage(langCode);
         setIsOpen(false);
     };
 
-    // Preload all flag images on component mount
+    // Preload all flag images on component mount (useEffect)
     useEffect(() => {
         languages.forEach((language) => {
             const img = new Image();
@@ -22,7 +27,7 @@ export default function LanguageSelector() {
         });
     }, []);
 
-    // Close the dropdown menu when clicking outside
+    // Close the dropdown menu when clicking outside (useEffect)
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {

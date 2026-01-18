@@ -1,9 +1,12 @@
+// Libraries imports
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
 
 export default function Sidebar() {
+    // Translation hook
     const { t } = useTranslation();
+    // State variables
     const [activeLink, setActiveLink] = useState('#home');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 

@@ -1,7 +1,9 @@
+// Libraries imports
 import { certificates } from "../lib/constants";
 import { useTranslation } from 'react-i18next';
 
 export default function Certifications() {
+    // Translation hook
     const { t } = useTranslation();
 
     return (

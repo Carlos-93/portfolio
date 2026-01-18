@@ -1,4 +1,7 @@
+// Hooks imports
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
+
+// Components imports
 import Sidebar from '../components/Sidebar';
 import Home from '../components/Home';
 import About from '../components/About';

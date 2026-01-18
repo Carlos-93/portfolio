@@ -1,8 +1,12 @@
+// Libraries imports
 import { useTranslation } from 'react-i18next';
+// Constants imports
 import { socialNetworks } from '../lib/constants';
 
 export default function Footer() {
+    // Current year
     const currentYear = new Date().getFullYear();
+    // Translation hook
     const { t } = useTranslation();
 
     return (
