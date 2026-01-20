@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 *::-webkit-scrollbar {
     display: none;
 }
@@ -8,14 +10,6 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     scroll-behavior: smooth;
-}
-
-html {
-    background-color: #f8fafc;
-}
-
-html.dark {
-    background-color: #020617;
 }
 
 body {
@@ -27,16 +21,10 @@ body {
     width: 100vw;
     background-color: transparent;
     background-image:
-        linear-gradient(to right, rgba(148, 163, 184, 0.25) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(148, 163, 184, 0.25) 1px, transparent 1px);
-    background-size: 40px 40px, 40px 40px;
-    background-attachment: fixed;
-}
-
-html.dark body {
-    background-image:
         linear-gradient(to right, rgba(71, 85, 105, 0.15) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(71, 85, 105, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px, 40px 40px;
+    background-attachment: fixed;
 }
 
 html::before {
@@ -44,36 +32,48 @@ html::before {
     position: fixed;
     inset: 0;
     background:
-        radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.08) 20%, transparent 35%),
-        radial-gradient(circle at 70% 80%, rgba(14, 165, 233, 0.1) 20%, transparent 35%);
+        radial-gradient(circle at 30% 30%, rgba(255, 0, 128, 0.14) 10%, transparent 40%),
+        radial-gradient(circle at 70% 80%, rgba(132, 0, 255, 0.14) 10%, transparent 40%);
     background-size: 200% 200%;
-    animation: gradient-move 8s ease-in-out infinite;
+    animation: gradient-move 8s linear infinite;
     pointer-events: none;
     z-index: -1;
 }
 
-html.dark::before {
-    background:
-        radial-gradient(circle at 30% 20%, rgba(255, 0, 128, 0.1) 20%, transparent 35%),
-        radial-gradient(circle at 70% 80%, rgba(132, 0, 255, 0.1) 20%, transparent 35%);
-}
-
 @keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
 
-    0%,
-    100% {
-        background-position: 0% 0%;
+    12.5% {
+        background-position: 25% 25%;
     }
 
     25% {
-        background-position: 100% 0%;
+        background-position: 50% 0%;
+    }
+
+    37.5% {
+        background-position: 75% 25%;
     }
 
     50% {
-        background-position: 100% 100%;
+        background-position: 100% 50%;
+    }
+
+    62.5% {
+        background-position: 75% 75%;
     }
 
     75% {
-        background-position: 0% 100%;
+        background-position: 50% 100%;
+    }
+
+    87.5% {
+        background-position: 25% 75%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
