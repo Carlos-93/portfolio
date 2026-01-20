@@ -49,7 +49,7 @@ i18n
         detection: {
             order: ['localStorage'],
             caches: ['localStorage'],
-            lookupLocalStorage: 'i18nextLng',
+            lookupLocalStorage: 'language',
         },
 
         // Interpolation options

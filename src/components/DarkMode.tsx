@@ -14,8 +14,8 @@ export default function DarkMode() {
     const [isDark, setIsDark] = useState(() => {
         if (typeof window === 'undefined') return true;
         const storedTheme = localStorage.getItem(STORAGE_KEY);
-        if (storedTheme === 'dark') return true;
-        if (storedTheme === 'light') return false;
+        if (storedTheme === 'true') return true;
+        if (storedTheme === 'false') return false;
         return prefersDark;
     });
 
@@ -28,27 +28,23 @@ export default function DarkMode() {
             root.classList.remove('dark');
         }
         // Save the dark mode to the local storage
-        localStorage.setItem(STORAGE_KEY, isDark ? 'dark' : 'light');
+        localStorage.setItem(STORAGE_KEY, isDark ? 'true' : 'false');
     }, [isDark]);
 
-    // Function to toggle dark mode with view transition
-    function toggleTheme() {
-        if (!document.startViewTransition) {
-            setIsDark((prev) => !prev);
-            return;
-        }
-        document.startViewTransition(() => {
-            setIsDark((prev) => !prev);
-        });
-    }
+    // Function to switch the theme (dark mode or light mode)
+    const switchTheme = () => {
+        setIsDark(prev => !prev);
+    };
 
     return (
-        <button type="button" aria-label={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
-            onClick={toggleTheme}
+        <button
+            type="button"
+            onClick={switchTheme}
+            aria-label={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
             className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-10 cursor-pointer inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:scale-105 ${isDark
                 ? 'border-slate-200/40 bg-slate-900/80 text-slate-100'
                 : 'border-slate-900/40 bg-white/85 text-slate-900'
-            }`}>
+                }`}>
 
             {/* Moon icon */}
             {isDark ? (

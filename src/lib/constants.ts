@@ -52,4 +52,4 @@ export const languages: Language[] = [
 ];
 
 // Storage Key for the dark mode
-export const STORAGE_KEY = 'portfolio-theme';
+export const STORAGE_KEY = 'dark-mode';
