@@ -83,3 +83,59 @@ body {
         background-position: 0% 50%;
     }
 }
+
+/* View Transitions API - Theme Toggle Effect */
+@supports (view-transition-name: none) {
+    html {
+        view-transition-name: root;
+    }
+}
+
+/* Circular SVG mask animation for theme transition */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50'/%3E%3C/svg%3E");
+    mask-size: 0%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+::view-transition-old(root) {
+    mask-size: 300%;
+}
+
+::view-transition-new(root) {
+    mask-size: 0%;
+    animation-name: circle-in;
+}
+
+.dark::view-transition-old(root) {
+    mask-size: 0%;
+    animation-name: circle-out;
+}
+
+.dark::view-transition-new(root) {
+    mask-size: 300%;
+}
+
+@keyframes circle-in {
+    from {
+        mask-size: 0%;
+    }
+
+    to {
+        mask-size: 300%;
+    }
+}
+
+@keyframes circle-out {
+    from {
+        mask-size: 300%;
+    }
+
+    to {
+        mask-size: 0%;
+    }
+}

@@ -31,13 +31,24 @@ export default function DarkMode() {
         localStorage.setItem(STORAGE_KEY, isDark ? 'dark' : 'light');
     }, [isDark]);
 
+    // Function to toggle dark mode with view transition
+    const toggleTheme = () => {
+        if (!document.startViewTransition) {
+            setIsDark((prev) => !prev);
+            return;
+        }
+        document.startViewTransition(() => {
+            setIsDark((prev) => !prev);
+        });
+    };
+
     return (
         <button type="button" aria-label={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
-            onClick={() => setIsDark((prev) => !prev)}
-            className={`fixed bottom-6 right-6 z-10 cursor-pointer inline-flex h-14 w-14 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:scale-105 ${isDark
+            onClick={toggleTheme}
+            className={`fixed bottom-6 right-6 z-10 cursor-pointer inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:scale-105 ${isDark
                 ? 'border-slate-200/40 bg-slate-900/80 text-slate-100'
                 : 'border-slate-900/40 bg-white/85 text-slate-900'
-                }`}>
+            }`}>
 
             {/* Moon icon */}
             {isDark ? (
