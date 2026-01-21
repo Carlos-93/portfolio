@@ -37,24 +37,35 @@ export default function DarkMode() {
     };
 
     return (
-        <button
-            type="button"
-            onClick={switchTheme}
-            aria-label={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
-            className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-10 cursor-pointer inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:scale-105 ${isDark
-                ? 'border-slate-200/40 bg-slate-900/80 text-slate-100'
-                : 'border-slate-900/40 bg-white/85 text-slate-900'
-                }`}>
+        <button type="button" onClick={switchTheme} aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-10 cursor-pointer inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:scale-105 backdrop-blur-xs ${isDark
+                ? 'border-slate-200/40 bg-slate-900/80 text-slate-200'
+                : 'border-slate-900/40 bg-white/85 text-slate-900/80'
+            }`}>
 
             {/* Moon icon */}
             {isDark ? (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 sm:size-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+                    className="icon icon-tabler icons-tabler-outline icon-tabler-sun-high w-6 sm:w-7.5 transition-transform duration-300">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656" />
+                    <path d="M6.343 17.657l-1.414 1.414" />
+                    <path d="M6.343 6.343l-1.414 -1.414" />
+                    <path d="M17.657 6.343l1.414 -1.414" />
+                    <path d="M17.657 17.657l1.414 1.414" />
+                    <path d="M4 12h-2" />
+                    <path d="M12 4v-2" />
+                    <path d="M20 12h2" />
+                    <path d="M12 20v2" />
                 </svg>
 
             ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 sm:size-7">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.749-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998z" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+                    className="icon icon-tabler icons-tabler-outline icon-tabler-moon-stars w-6.5 sm:w-8 transition-transform duration-300">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" />
+                    <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+                    <path d="M19 11h2m-1 -1v2" />
                 </svg>
             )}
         </button>
