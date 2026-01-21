@@ -55,7 +55,7 @@ export default function DarkMode() {
             {/* Moon icon */}
             {isDark ? (
                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 330 330" xmlSpace="preserve" fill="#000000"
-                    className="icon icon-tabler icons-tabler-outline icon-tabler-moon-stars w-6.5 sm:w-8 transition-transform duration-300">
+                    className="icon icon-tabler icons-tabler-outline icon-tabler-moon-stars w-6 sm:w-8 transition-transform duration-300">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                     <g id="SVGRepo_iconCarrier"><g> 
