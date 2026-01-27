@@ -36,17 +36,8 @@ export default function DarkMode() {
         setIsDark(prev => !prev);
     }
 
-    // Function to handle theme switch with view transitions
-    function effectToSwitchTheme() {
-        if (!document.startViewTransition) {
-            switchTheme();
-        } else {
-            document.startViewTransition(switchTheme);
-        }
-    }
-
     return (
-        <button type="button" onClick={effectToSwitchTheme} aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+        <button type="button" onClick={switchTheme} aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-10 cursor-pointer inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:scale-105 backdrop-blur-xs ${isDark
                 ? 'border-slate-200/40 bg-slate-900/80 text-slate-200'
                 : 'border-slate-900/40 bg-white/85 text-slate-900/80'
