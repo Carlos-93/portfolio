@@ -1,18 +1,18 @@
 // Hooks imports
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
-
 // Components imports
-import Sidebar from '../components/Sidebar';
-import Home from '../components/Home';
-import About from '../components/About';
-import Skills from '../components/Skills';
-import Experience from '../components/Experience';
-import Education from '../components/Education';
-import Certifications from '../components/Certifications';
-import Projects from '../components/Projects';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 import DarkMode from '../components/DarkMode';
+import Sidebar from '../components/Sidebar';
+import Footer from '../components/Footer';
+// Pages imports
+import Certifications from './Certifications';
+import Experience from './Experience';
+import Education from './Education';
+import Projects from './Projects';
+import Contact from './Contact';
+import Skills from './Skills';
+import About from './About';
+import Home from './Home';
 
 export default function Portfolio() {
     useDocumentTitle();

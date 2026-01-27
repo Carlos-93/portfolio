@@ -1,3 +1,4 @@
+// Constants imports
 import { STORAGE_KEY } from '../lib/constants';
 
 export function applyThemeFromStorage(): void {
