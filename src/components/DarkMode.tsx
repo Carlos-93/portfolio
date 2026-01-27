@@ -50,13 +50,13 @@ export default function DarkMode() {
             className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-10 cursor-pointer inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border transition duration-300 ease-in-out hover:scale-105 backdrop-blur-xs ${isDark
                 ? 'border-slate-200/40 bg-slate-900/80 text-slate-200'
                 : 'border-slate-900/40 bg-white/85 text-slate-900/80'
-            }`}>
+                }`}>
 
             {/* Moon icon */}
             {isDark ? (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                     className="icon icon-tabler icons-tabler-outline icon-tabler-sun-high w-6 sm:w-7.5 transition-transform duration-300">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656" />
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656" />
                     <path d="M6.343 17.657l-1.414 1.414" />
                     <path d="M6.343 6.343l-1.414 -1.414" />
                     <path d="M17.657 6.343l1.414 -1.414" />

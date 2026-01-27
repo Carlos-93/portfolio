@@ -10,11 +10,15 @@ export function applyThemeFromStorage(): void {
     // Apply dark class if user has dark mode enabled or prefers dark and hasn't set a preference
     if (storedTheme === 'true' || (storedTheme === null && prefersDark)) {
       document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
   } catch {
     // Fallback: if localStorage is not available, use system preference
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
   }
 }
