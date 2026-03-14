@@ -59,7 +59,7 @@ export default function Home() {
                 </h1>
             </div>
 
-            <figure className='w-lg'>
+            <figure>
                 <img src="/assets/images/me/profile.png" alt={t('home.profileImageAlt')}
                     onLoad={() => setLoaded(true)}
                     className={`w-full transition-opacity duration-4000 profile-image-fade ${loaded ? 'opacity-100' : 'opacity-0'}`} />
