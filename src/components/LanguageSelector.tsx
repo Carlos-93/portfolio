@@ -49,8 +49,11 @@ export default function LanguageSelector() {
                 aria-expanded={isOpen}
             >
                 <img src={currentLanguage.flag} alt={currentLanguage.name} className="w-6 h-6 object-cover rounded-full" />
-                <span className="text-gray-200 text-sm font-medium inline">
+                <span className="text-gray-200 text-sm font-medium lg:hidden">
                     {currentLanguage.code.toUpperCase()}
+                </span>
+                <span className="text-gray-200 text-sm font-medium hidden lg:inline">
+                    {currentLanguage.name}
                 </span>
 
                 <svg className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
