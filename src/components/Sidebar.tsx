@@ -54,23 +54,22 @@ export default function Sidebar() {
     return (
         <>
             {/* Header background */}
-            <header className={`fixed h-16 backdrop-blur-xl bg-black/30 z-20 
-                left-0 right-0 lg:left-72
-                ${isMenuOpen ? 'hidden lg:block' : 'block'}`} 
+            <header className={`fixed h-16 lg:h-20 backdrop-blur-xl bg-black/30 z-20 left-0 right-0 lg:left-72
+                ${isMenuOpen ? 'hidden lg:block' : 'block'}`}
             />
-            
+
             {/* Language selector for desktop - fixed position top right */}
-            <div className="hidden lg:block fixed top-2.5 right-4 z-30">
+            <div className="hidden lg:block fixed top-5 right-5 z-30">
                 <LanguageSelector />
             </div>
 
             {/* Language selector for mobile - fixed position top left */}
-            <div className="lg:hidden fixed top-2.5 left-6 z-30">
+            <div className="lg:hidden fixed top-2.5 left-5 sm:left-7 z-30">
                 <LanguageSelector />
             </div>
 
             {/* Hamburger menu button */}
-            <button className={`lg:hidden fixed right-4 top-2 z-30 flex flex-col justify-center items-center w-12 h-12 space-y-2 focus:outline-none cursor-pointer ${isMenuOpen ? 'z-30' : 'z-30'}`}
+            <button className={`lg:hidden fixed right-5 sm:right-7 top-2 z-30 flex flex-col justify-center items-center w-12 h-12 space-y-2 focus:outline-none cursor-pointer ${isMenuOpen ? 'z-30' : 'z-30'}`}
                 onClick={(e) => {
                     e.stopPropagation();
                     setIsMenuOpen(!isMenuOpen);

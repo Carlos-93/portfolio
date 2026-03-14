@@ -47,7 +47,7 @@ export default function Home() {
     }, [handleTyping, isDeleting]);
 
     return (
-        <div className="flex flex-col justify-between items-center md:flex-row">
+        <div className="flex flex-col items-center gap-2 md:gap-0 md:flex-row md:justify-between">
             <div className="flex flex-col justify-center gap-5 w-full lg:w-2/3">
                 <h1 className="text-slate-900 dark:text-gray-200 flex flex-col gap-2 2xl:gap-6 cursor-default">
                     <p className='text-base sm:text-lg lg:text-xl xl:text-2xl font-medium'>{t('home.welcome')}</p>
@@ -59,11 +59,11 @@ export default function Home() {
                 </h1>
             </div>
 
-            <figure>
+            <figure className='w-md sm:w-lg'>
                 <img src="/assets/images/me/profile.png" alt={t('home.profileImageAlt')}
                     onLoad={() => setLoaded(true)}
-                    className={`w-7xl transition-opacity duration-4000 ${loaded ? 'opacity-100' : 'opacity-0'}`} />
+                    className={`w-full transition-opacity duration-4000 profile-image-fade ${loaded ? 'opacity-100' : 'opacity-0'}`} />
             </figure>
         </div>
-    );  
+    );
 }
