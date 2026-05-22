@@ -2,69 +2,50 @@
 
 # Welcome to my personal portfolio
 
-## Available Scripts
+Static site built with React, Vite, TypeScript, and Tailwind CSS. Includes internationalization (i18next) and routing with React Router.
 
-In the project directory, you can run:
+## Requirements
 
-### `npm start`
+- [Node.js](https://nodejs.org/) v20.19 or later (v22+ recommended for ESLint 10)
+- [pnpm](https://pnpm.io/) v11 (the project pins the version via `packageManager` in `package.json`)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Enable pnpm with Corepack (bundled with Node):
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+corepack enable
+```
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone <repository-url>
+cd portfolio
+pnpm install
+```
 
-### `npm run build`
+## Scripts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Development server with hot reload ([http://localhost:5173](http://localhost:5173)) |
+| `pnpm build` | Type-check (`tsc`) and production build to `dist/` |
+| `pnpm preview` | Serve `dist/` locally to test the production build |
+| `pnpm lint` | Run ESLint across the project |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Production output is in `dist/`. On platforms like Vercel, the build command is typically `pnpm build`; pnpm is auto-detected via the `packageManager` field.
 
-### `npm run eject`
+## Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React 19 + TypeScript 6
+- Vite 8
+- Tailwind CSS 4
+- react-i18next / i18next
+- ESLint 10 (flat config)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Learn more
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Vite documentation](https://vite.dev/)
+- [React documentation](https://react.dev/)
+- [pnpm documentation](https://pnpm.io/)
