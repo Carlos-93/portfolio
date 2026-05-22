@@ -47,11 +47,13 @@ export default function Home() {
     }, [handleTyping, isDeleting]);
 
     return (
-        <div className="flex flex-col items-center gap-8 md:gap-0 md:flex-row md:justify-between">
+        <div className="flex flex-col items-center gap-8 lg:gap-0 lg:flex-row md:justify-between">
             <div className="flex flex-col justify-center gap-5 w-full lg:w-2/3 min-w-0 flex-1">
                 <h1 className="text-slate-900 dark:text-gray-200 flex flex-col gap-2 2xl:gap-6 cursor-default">
                     <p className='text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium'>{t('home.welcome')}</p>
-                    <p className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold'>{t('home.iAm')}  <span className="text-cyan-600 dark:text-cyan-400">{t('home.name')}</span></p>
+                    <p className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold'>{t('home.iAm')}
+                        &nbsp;<span className="text-cyan-600 dark:text-cyan-400">{t('home.name')}</span>
+                    </p>
                     <p className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold h-8'>
                         {displayText}
                         <span className="animate-pulse ml-1">|</span>
@@ -59,10 +61,10 @@ export default function Home() {
                 </h1>
             </div>
 
-            <figure className='w-60 2xl:w-xl'>
-                <img src="/assets/images/me/profile.png" alt={t('home.profileImageAlt')}
-                    onLoad={() => setLoaded(true)}
-                    className={`w-full h-auto object-contain transition-opacity duration-4000 profile-image-fade ${loaded ? 'opacity-100' : 'opacity-0'}`} />
+            <figure className="shrink-0 w-3xs sm:w-xs md:w-sm lg:w-2xs xl:w-sm 2xl:w-xl aspect-997/1480">
+                <img src="/assets/images/me/profile.png" alt={t('home.profileImageAlt')} width={997} height={1480} onLoad={() => setLoaded(true)}
+                    className={`w-full h-auto max-w-full object-contain transition-opacity duration-4000 profile-image-fade ${loaded ? 'opacity-100' : 'opacity-0'}`}
+                />
             </figure>
         </div>
     );
