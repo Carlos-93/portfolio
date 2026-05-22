@@ -16,7 +16,7 @@ export default function Footer() {
 
             {/* Background with subtle gradient */}
             <div className="bg-linear-to-b from-slate-900/50 to-slate-950 backdrop-blur-sm">
-                <div className="flex flex-col items-center justify-center gap-6 lg:gap-8 lg:ml-72 px-4 py-6 sm:px-6 sm:py-8">
+                <div className="flex flex-col items-center justify-center gap-6 lg:ml-72 px-4 py-6 sm:px-6 sm:py-8">
                     {/* Social Networks */}
                     <div className="flex gap-8 sm:gap-10 xl:gap-12">
                         {socialNetworks.map((link) => (
