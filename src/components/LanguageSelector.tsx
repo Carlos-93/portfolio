@@ -8,8 +8,9 @@ export default function LanguageSelector() {
     const { i18n } = useTranslation();
     // State variables
     const [isOpen, setIsOpen] = useState(false);
-    // Ref
+    // Refs
     const dropdownRef = useRef<HTMLDivElement>(null);
+    const triggerRef = useRef<HTMLButtonElement>(null);
     // Current language (Its codes like es-ES, en-GB)
     const currentLanguage = languages.find(lang =>
         lang.code === i18n.language || i18n.language?.startsWith(`${lang.code}-`)
