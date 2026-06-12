@@ -1,10 +1,9 @@
-// Hooks imports
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
-// Components imports
+
 import DarkMode from '../components/DarkMode';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
-// Pages imports
+
 import Certifications from './Certifications';
 import Experience from './Experience';
 import Education from './Education';

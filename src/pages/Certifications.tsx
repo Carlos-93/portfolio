@@ -1,4 +1,3 @@
-// Libraries imports
 import { certificates } from "../lib/constants";
 import { useTranslation } from 'react-i18next';
 

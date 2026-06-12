@@ -1,6 +1,4 @@
-// Libraries imports
 import { useTranslation } from 'react-i18next';
-// Constants imports
 import { educations } from "../lib/constants";
 
 export default function Education() {

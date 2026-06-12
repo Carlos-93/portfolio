@@ -1,6 +1,4 @@
-// Libraries imports
 import { useTranslation } from 'react-i18next';
-// Constants imports
 import { socialNetworks } from '../lib/constants';
 
 export default function Footer() {
@@ -10,7 +8,7 @@ export default function Footer() {
     const { t } = useTranslation();
 
     return (
-        <footer className="relative overflow-hidden" role="contentinfo">
+        <footer className="relative overflow-hidden">
             {/* Gradient top border */}
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-400 to-transparent" />
 

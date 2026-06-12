@@ -1,6 +1,4 @@
-// Libraries imports
 import { useEffect, useMemo, useState } from 'react';
-// Constants imports
 import { STORAGE_KEY } from '../lib/constants';
 
 export default function DarkMode() {

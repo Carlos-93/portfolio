@@ -1,4 +1,3 @@
-// Libraries imports
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
