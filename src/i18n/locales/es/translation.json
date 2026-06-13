@@ -11,12 +11,10 @@
     "profileImageAlt": "Imagen de perfil de Carlos Araujo Galván"
   },
   "about": {
-    "title": "Acerca de mí",
-    "descriptionOne": "Desarrollador Full Stack con +2 años de experiencia en la creación de aplicaciones web modernas, escalables y de calidad.",
-    "descriptionTwo": "Especializado principalmente en el Frontend, donde diseño y desarrollo interfaces atractivas y responsivas utilizando Angular o React (TypeScript) y Tailwind CSS o CSS3 para el estilo final.",
-    "descriptionThree": "Previamente, utilizo Figma para un prototipado rápido y de alta fidelidad visual, asegurando una experiencia de usuario óptima y agradable.",
-    "descriptionFour": "Para el backend utilizo Node.js, Java (Spring Boot) o PHP (Laravel/Symfony), integrando soluciones completas con bases de datos relacionales (MySQL o PostgreSQL) y no relacionales (MongoDB).",
-    "descriptionFive": "Soy un apasionado del código limpio, las buenas prácticas (SOLID, clean architecture), el diseño escalable y el aprendizaje continuo, trabajando en entornos ágiles."
+    "lead": "Desarrollador Web Full Stack & Diseñador UX/UI con +2 años de experiencia creando aplicaciones web modernas, escalables y enfocadas en mejorar la experiencia del usuario.",
+    "frontend": "Para el Frontend y el diseño de experiencias de usuario (UX/UI), empiezo prototipando las interfaces en Figma y las construyo con Angular o React (TypeScript), dándoles el estilo final con Tailwind CSS, Bootstrap o CSS nativo. Cuido cada detalle para que sean rápidas, accesibles y se adapten con fluidez a cualquier dispositivo.",
+    "backend": "Para el Backend desarrollo APIs y lógica de servidor con Node.js, Java (Spring Boot) o PHP (Laravel/Symfony), integrando bases de datos relacionales (MySQL, PostgreSQL) y no relacionales (MongoDB) para construir soluciones completas de principio a fin.",
+    "philosophy": "Defiendo y aplico el código limpio y las buenas prácticas (SOLID, Clean Architecture), trabajando siempre en entornos ágiles con flujos CI/CD sobre Git/GitLab o GitHub y apostando por la mejora continua y la calidad en cada proyecto."
   },
   "sidebar": {
     "toggleMenu": "Alternar menú",

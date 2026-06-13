@@ -46,7 +46,7 @@ export default function LanguageSelector() {
         <div className="relative" ref={dropdownRef}>
             {/* Button of the selector */}
             <button type="button" ref={triggerRef} onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center gap-3 px-3 py-2 rounded-lg border transition-all duration-200 focus:outline-none focus:ring-2 cursor-pointer
+                className="flex items-center gap-3 px-3 py-2 rounded-lg border transition-all duration-300 focus:outline-none focus:ring-2 cursor-pointer
                 bg-white/85 border-slate-300/60 text-slate-800 hover:bg-slate-200 hover:border-slate-400/60 focus:ring-cyan-600 focus:ring-offset-2 focus:ring-offset-slate-200
                 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:ring-cyan-400 dark:focus:ring-offset-gray-900"
                 aria-label="Select language" aria-haspopup="listbox" aria-expanded={isOpen}

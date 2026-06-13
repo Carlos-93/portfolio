@@ -11,12 +11,10 @@
     "profileImageAlt": "Imatge de perfil de Carlos Araujo Galván"
   },
   "about": {
-    "title": "Sobre mi",
-    "descriptionOne": "Desenvolupador Full Stack amb +2 anys d'experiència en la creació d'aplicacions web modernes, escalables i de qualitat.",
-    "descriptionTwo": "Especialitzat principalment en el Frontend, on dissenyo i desenvolupament d'interfícies atractives i responsives utilitzant Angular o React (TypeScript) i Tailwind CSS o CSS3 per a l'estil final.",
-    "descriptionThree": "Previament, utilizo Figma per a un prototipat ràpid i de alta fidelitat visual, assegurant una experiència d'usuari òptima i agradable.",
-    "descriptionFour": "Per al backend utilizo Node.js, Java (Spring Boot) o PHP (Laravel/Symfony), integrant solucions completes amb bases de dades relacionals (MySQL o PostgreSQL) i no relacionals (MongoDB).",
-    "descriptionFive": "Sóc un apassionat del codi net, les bones pràctiques (SOLID, clean architecture), el disseny escalable i l'aprenentatge continu, treballant en entorns ágils."
+    "lead": "Desenvolupador Web Full Stack & Dissenyador UX/UI amb +2 anys d'experiència creant aplicacions web modernes, escalables i enfocades a millorar l'experiència de l'usuari.",
+    "frontend": "Per al Frontend i el disseny d'experiències d'usuari (UX/UI), començo prototipant les interfícies a Figma i les construeixo amb Angular o React (TypeScript), donant-los l'estil final amb Tailwind CSS, Bootstrap o CSS natiu. Cuido cada detall perquè siguin ràpides, accessibles i s'adaptin amb fluïdesa a qualsevol dispositiu.",
+    "backend": "Per al Backend desenvolupo APIs i lògica de servidor amb Node.js, Java (Spring Boot) o PHP (Laravel/Symfony), integrant bases de dades relacionals (MySQL, PostgreSQL) i no relacionals (MongoDB) per construir solucions completes de principi a fi.",
+    "philosophy": "Defenso i aplico el codi net i les bones pràctiques (SOLID, Clean Architecture), treballant sempre en entorns àgils amb fluxos CI/CD sobre Git/GitLab o GitHub i apostant per la millora contínua i la qualitat en cada projecte."
   },
   "sidebar": {
     "toggleMenu": "Alternar menú",

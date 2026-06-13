@@ -1,7 +1,7 @@
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 import i18n from 'i18next';
-
+// Languages translations
 import esTranslation from './locales/es/translation.json';
 import caTranslation from './locales/ca/translation.json';
 import enTranslation from './locales/en/translation.json';

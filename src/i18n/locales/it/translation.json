@@ -11,12 +11,10 @@
     "profileImageAlt": "Immagine del profilo di Carlos Araujo Galván"
   },
   "about": {
-    "title": "Chi sono",
-    "descriptionOne": "Sviluppatore Web Full Stack con +2 anni di esperienza nella creazione di applicazioni web moderne, scalabili e di alta qualità.",
-    "descriptionTwo": "Specializzato principalmente nel Frontend, dove progetto e sviluppo interfacce attraenti e responsive utilizzando Angular o React (TypeScript) e Tailwind CSS o CSS3 per lo stile finale.",
-    "descriptionThree": "Precedentemente, utilizzo Figma per un prototipo veloce e di alta fedeltà visiva, garantendo un'esperienza utente ottimale e gradevole.",
-    "descriptionFour": "Per il backend utilizzo Node.js, Java (Spring Boot) o PHP (Laravel/Symfony), integrando soluzioni complete con database relazionali (MySQL o PostgreSQL) e non relazionali (MongoDB).",
-    "descriptionFive": "Sono un appassionato di codice pulito, buone pratiche (SOLID, clean architecture), design scalabile e apprendimento continuo, lavorando in ambienti agile."
+    "lead": "Sviluppatore Web Full Stack & Designer UX/UI con +2 anni di esperienza nella creazione di applicazioni web moderne, scalabili e orientate a migliorare l'esperienza utente.",
+    "frontend": "Per il Frontend e la progettazione di esperienze utente (UX/UI), inizio prototipando le interfacce in Figma e le sviluppo con Angular o React (TypeScript), definendo lo stile finale con Tailwind CSS, Bootstrap o CSS nativo. Curo ogni dettaglio affinché siano veloci, accessibili e si adattino con fluidità a qualsiasi dispositivo.",
+    "backend": "Per il Backend sviluppo API e logica lato server con Node.js, Java (Spring Boot) o PHP (Laravel/Symfony), integrando database relazionali (MySQL, PostgreSQL) e non relazionali (MongoDB) per costruire soluzioni complete end-to-end.",
+    "philosophy": "Difendo e applico il codice pulito e le buone pratiche (SOLID, Clean Architecture), lavorando sempre in ambienti agili con flussi CI/CD su Git/GitLab o GitHub e puntando sul miglioramento continuo e sulla qualità in ogni progetto."
   },
   "sidebar": {
     "toggleMenu": "Attiva/disattiva menu",

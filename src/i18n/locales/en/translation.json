@@ -11,12 +11,10 @@
     "profileImageAlt": "Profile picture of Carlos Araujo Galván"
   },
   "about": {
-    "title": "About me",
-    "descriptionOne": "Full Stack Web Developer with +2 years of experience in creating modern, scalable and high-quality web applications.",
-    "descriptionTwo": "Specialized mainly in the Frontend, where I design and develop attractive and responsive interfaces using Angular or React (TypeScript) and Tailwind CSS or CSS3 for the final style.",
-    "descriptionThree": "Previously, I use Figma for rapid and high-quality visual prototyping, ensuring an optimal and pleasant user experience.",
-    "descriptionFour": "For the backend I use Node.js, Java (Spring Boot) or PHP (Laravel/Symfony), integrating complete solutions with relational (MySQL or PostgreSQL) and non-relational (MongoDB) databases.",
-    "descriptionFive": "I am a passionate of clean code, good practices (SOLID, clean architecture), scalable design and continuous learning, working in agile environments."
+    "lead": "Full Stack Web Developer & UX/UI Designer with +2 years of experience building modern, scalable web applications focused on improving the user experience.",
+    "frontend": "For the Frontend and user experience design (UX/UI), I start by prototyping interfaces in Figma and build them with Angular or React (TypeScript), giving them their final style with Tailwind CSS, Bootstrap or native CSS. I take care of every detail so they are fast, accessible and adapt smoothly to any device.",
+    "backend": "For the Backend I develop APIs and server-side logic with Node.js, Java (Spring Boot) or PHP (Laravel/Symfony), integrating relational (MySQL, PostgreSQL) and non-relational (MongoDB) databases to build complete end-to-end solutions.",
+    "philosophy": "I uphold and apply clean code and best practices (SOLID, Clean Architecture), always working in agile environments with CI/CD workflows on Git/GitLab or GitHub and committing to continuous improvement and quality in every project."
   },
   "sidebar": {
     "toggleMenu": "Toggle menu",

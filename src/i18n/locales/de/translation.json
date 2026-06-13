@@ -11,12 +11,10 @@
     "profileImageAlt": "Profilbild von Carlos Araujo Galván"
   },
   "about": {
-    "title": "Über mich",
-    "descriptionOne": "Full Stack Webentwickler mit +2 Jahren Erfahrung in der Entwicklung moderner, skalierbarer und qualitativ hochwertiger Webanwendungen.",
-    "descriptionTwo": "Hauptsächlich im Frontend tätig, wo ich attraktive und responsive Interfaces mithilfe von Angular oder React (TypeScript) und Tailwind CSS oder CSS3 entwickle.",
-    "descriptionThree": "Zuvor verwende ich Figma für schnelle und hochwertige visuelle Prototypen, um eine optimale und angenehme Benutzererfahrung zu gewährleisten.",
-    "descriptionFour": "Für den Backend verwende ich Node.js, Java (Spring Boot) oder PHP (Laravel/Symfony), um vollständige Lösungen mit relationalen (MySQL oder PostgreSQL) und nicht relationalen (MongoDB) Datenbanken zu integrieren.",
-    "descriptionFive": "Ich bin ein begeisterter von sauberem Code, guten Praktiken (SOLID, clean architecture), skalierbarem Design und kontinuierlichem Lernen, der in agilen Umgebungen arbeitet."
+    "lead": "Full Stack Webentwickler & UX/UI-Designer mit +2 Jahren Erfahrung in der Entwicklung moderner, skalierbarer und auf die Verbesserung der Benutzererfahrung ausgerichteter Webanwendungen.",
+    "frontend": "Für das Frontend und die Gestaltung von Benutzererlebnissen (UX/UI) beginne ich mit dem Prototyping der Oberflächen in Figma und entwickle sie mit Angular oder React (TypeScript), wobei ich ihnen mit Tailwind CSS, Bootstrap oder nativem CSS den letzten Schliff gebe. Ich achte auf jedes Detail, damit sie schnell und barrierefrei sind und sich flüssig an jedes Gerät anpassen.",
+    "backend": "Für das Backend entwickle ich APIs und serverseitige Logik mit Node.js, Java (Spring Boot) oder PHP (Laravel/Symfony) und integriere relationale (MySQL, PostgreSQL) und nicht relationale (MongoDB) Datenbanken, um vollständige End-to-End-Lösungen zu schaffen.",
+    "philosophy": "Ich vertrete und wende sauberen Code und bewährte Praktiken (SOLID, Clean Architecture) an, arbeite dabei stets in agilen Umgebungen mit CI/CD-Workflows auf Git/GitLab oder GitHub und setze auf kontinuierliche Verbesserung und Qualität in jedem Projekt."
   },
   "sidebar": {
     "toggleMenu": "Menü umschalten",
