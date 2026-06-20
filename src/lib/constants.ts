@@ -2,12 +2,30 @@ import type { Skill, Experience, Education, Certificate, Project, SocialNetwork,
 
 // Skills Object
 export const skills: Skill[] = [
-    { name: "HTML", image: "html.svg" },
-    { name: "CSS", image: "css.svg" },
-    { name: "JavaScript", image: "javascript.svg" },
-    { name: "TypeScript", image: "typescript.svg" },
-    { name: "React", image: "react.svg" },
-    { name: "Node.js", image: "nodejs.svg" },
+    // Frontend
+    { name: "HTML", image: "html.svg", category: "frontend", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: "CSS", image: "css.svg", category: "frontend", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { name: "JavaScript", image: "javascript.svg", category: "frontend", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { name: "TypeScript", image: "typescript.svg", category: "frontend", url: "https://www.typescriptlang.org" },
+    { name: "React", image: "react.svg", category: "frontend", url: "https://react.dev" },
+    { name: "Angular", image: "angular.svg", category: "frontend", url: "https://angular.dev" },
+    { name: "Tailwind CSS", image: "tailwind.svg", category: "frontend", url: "https://tailwindcss.com" },
+    { name: "Bootstrap", image: "bootstrap.svg", category: "frontend", url: "https://getbootstrap.com" },
+    // Backend
+    { name: "Node.js", image: "nodejs.svg", category: "backend", url: "https://nodejs.org" },
+    { name: "Java", image: "java.svg", category: "backend", url: "https://www.java.com" },
+    { name: "Spring Boot", image: "spring.svg", category: "backend", url: "https://spring.io/projects/spring-boot" },
+    { name: "PHP", image: "php.svg", category: "backend", url: "https://www.php.net" },
+    { name: "Laravel", image: "laravel.svg", category: "backend", url: "https://laravel.com" },
+    // Databases
+    { name: "MySQL", image: "mysql.svg", category: "database", url: "https://www.mysql.com" },
+    { name: "PostgreSQL", image: "postgresql.svg", category: "database", url: "https://www.postgresql.org" },
+    { name: "MongoDB", image: "mongodb.svg", category: "database", url: "https://www.mongodb.com" },
+    // Tools
+    { name: "Git", image: "git.svg", category: "tools", url: "https://git-scm.com" },
+    { name: "GitLab", image: "gitlab.svg", category: "tools", url: "https://about.gitlab.com" },
+    { name: "Figma", image: "figma.svg", category: "tools", url: "https://www.figma.com" },
+    { name: "Vite", image: "vite.svg", category: "tools", url: "https://vite.dev" },
 ];
 
 // Experiences Object

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import SectionHeader from '../components/SectionHeader';
 
 export default function About() {
     // Translation hook
@@ -6,16 +7,10 @@ export default function About() {
 
     return (
         <div className="flex w-full flex-col items-center gap-6 sm:gap-8 lg:gap-10 cursor-default">
-            {/* Section header — reusable pattern: title + accent underline */}
-            <header className="flex flex-col items-center gap-2 sm:gap-3">
-                <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-cyan-600 dark:text-cyan-400">
-                    {t('sidebar.about')}
-                </h2>
-                <span className="h-0.5 w-full rounded-full bg-cyan-600 dark:bg-cyan-400" />
-            </header>
+            <SectionHeader title={t('sidebar.about')} />
 
             {/* Lead: role + experience tagline */}
-            <p className="max-w-3xl sm:text-center sm:text-lg lg:text-xl font-semibold text-slate-800 dark:text-gray-200">
+            <p className="max-w-2xl sm:text-center sm:text-lg lg:text-xl font-semibold text-slate-800 dark:text-gray-200">
                 {t('about.lead')}
             </p>
 

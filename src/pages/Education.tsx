@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { educations } from "../lib/constants";
+import SectionHeader from '../components/SectionHeader';
 
 export default function Education() {
     // Translation hook
@@ -8,7 +9,7 @@ export default function Education() {
     return (
         <div className="flex flex-col justify-center items-center w-full sm:flex-row">
             <div className="flex flex-col gap-10">
-            <h2 className="text-cyan-600 dark:text-cyan-400 text-xl text-center cursor-default font-semibold">{t('sidebar.education')}</h2>
+                <SectionHeader title={t('sidebar.education')} />
                 <div className="flex justify-center items-center flex-wrap gap-10 w-full">
                     {educations.map((certificate, index) => (
                         <div key={index} className="bg-gray-800 rounded-lg p-5 flex flex-col gap-4 w-full sm:w-100">

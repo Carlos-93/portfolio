@@ -28,6 +28,7 @@ export default defineConfig(
         'warn',
         { allowConstantExport: true },
       ],
+      '@typescript-eslint/consistent-type-imports': 'error',
     },
   },
 )

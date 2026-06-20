@@ -1,6 +1,10 @@
+export type SkillCategory = 'frontend' | 'backend' | 'database' | 'tools';
+
 export interface Skill {
     name: string;
     image: string;
+    category: SkillCategory;
+    url: string;
 }
 
 export interface Experience {
@@ -44,4 +48,8 @@ export interface Language {
     code: string;
     name: string;
     flag: string;
+}
+
+export interface SectionHeaderProps {
+    title: string;
 }
