@@ -18,6 +18,7 @@
     "philosophy": "Je défends et applique le code propre et les bonnes pratiques (SOLID, Clean Architecture), en travaillant toujours dans des environnements agiles avec des flux CI/CD sur Git/GitLab ou GitHub et en misant sur l'amélioration continue et la qualité dans chaque projet."
   },
   "skills": {
+    "os": "Systèmes d'exploitation",
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Bases de données",

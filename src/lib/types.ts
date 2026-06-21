@@ -1,10 +1,12 @@
-export type SkillCategory = 'frontend' | 'backend' | 'database' | 'tools';
+export type SkillCategory = 'os' | 'frontend' | 'backend' | 'database' | 'tools';
 
 export interface Skill {
     name: string;
     image: string;
     category: SkillCategory;
     url: string;
+    /** Monochrome (black) brand marks need inverting so they stay visible in dark mode */
+    invertOnDark?: boolean;
 }
 
 export interface Experience {

@@ -2,28 +2,44 @@ import type { Skill, Experience, Education, Certificate, Project, SocialNetwork,
 
 // Skills Object
 export const skills: Skill[] = [
+    // Operating Systems
+    { name: "Windows", image: "windows.svg", category: "os", url: "https://www.microsoft.com/windows" },
+    { name: "Windows Server", image: "windows-server.svg", category: "os", url: "https://www.microsoft.com/windows-server" },
+    { name: "Ubuntu", image: "ubuntu.svg", category: "os", url: "https://ubuntu.com" },
+    { name: "Ubuntu Server", image: "ubuntu-server.svg", category: "os", url: "https://ubuntu.com/server" },
     // Frontend
-    { name: "HTML", image: "html.svg", category: "frontend", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-    { name: "CSS", image: "css.svg", category: "frontend", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { name: "HTML5", image: "html.svg", category: "frontend", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: "CSS3", image: "css.svg", category: "frontend", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
     { name: "JavaScript", image: "javascript.svg", category: "frontend", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
     { name: "TypeScript", image: "typescript.svg", category: "frontend", url: "https://www.typescriptlang.org" },
     { name: "React", image: "react.svg", category: "frontend", url: "https://react.dev" },
     { name: "Angular", image: "angular.svg", category: "frontend", url: "https://angular.dev" },
+    { name: "Next.js", image: "nextjs.svg", category: "frontend", url: "https://nextjs.org", invertOnDark: true },
     { name: "Tailwind CSS", image: "tailwind.svg", category: "frontend", url: "https://tailwindcss.com" },
     { name: "Bootstrap", image: "bootstrap.svg", category: "frontend", url: "https://getbootstrap.com" },
     // Backend
     { name: "Node.js", image: "nodejs.svg", category: "backend", url: "https://nodejs.org" },
+    { name: "Express.js", image: "express.svg", category: "backend", url: "https://expressjs.com", invertOnDark: true },
     { name: "Java", image: "java.svg", category: "backend", url: "https://www.java.com" },
     { name: "Spring Boot", image: "spring.svg", category: "backend", url: "https://spring.io/projects/spring-boot" },
     { name: "PHP", image: "php.svg", category: "backend", url: "https://www.php.net" },
     { name: "Laravel", image: "laravel.svg", category: "backend", url: "https://laravel.com" },
+    { name: "Symfony", image: "symfony.svg", category: "backend", url: "https://symfony.com", invertOnDark: true },
+    { name: "C++", image: "cplusplus.svg", category: "backend", url: "https://isocpp.org" },
+    { name: "Visual Basic 6.0", image: "visualbasic.svg", category: "backend", url: "https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation" },
+    { name: "SQL & PL/SQL", image: "sql.svg", category: "backend", url: "https://www.oracle.com/database/technologies/appdev/plsql.html" },
     // Databases
     { name: "MySQL", image: "mysql.svg", category: "database", url: "https://www.mysql.com" },
     { name: "PostgreSQL", image: "postgresql.svg", category: "database", url: "https://www.postgresql.org" },
     { name: "MongoDB", image: "mongodb.svg", category: "database", url: "https://www.mongodb.com" },
+    { name: "Oracle Database", image: "oracle.svg", category: "database", url: "https://www.oracle.com/database" },
     // Tools
     { name: "Git", image: "git.svg", category: "tools", url: "https://git-scm.com" },
+    { name: "GitHub", image: "github.svg", category: "tools", url: "https://github.com", invertOnDark: true },
     { name: "GitLab", image: "gitlab.svg", category: "tools", url: "https://about.gitlab.com" },
+    { name: "Bitbucket", image: "bitbucket.svg", category: "tools", url: "https://bitbucket.org" },
+    { name: "DBeaver", image: "dbeaver.svg", category: "tools", url: "https://dbeaver.io" },
+    { name: "Cypress", image: "cypress.svg", category: "tools", url: "https://www.cypress.io" },
     { name: "Figma", image: "figma.svg", category: "tools", url: "https://www.figma.com" },
     { name: "Vite", image: "vite.svg", category: "tools", url: "https://vite.dev" },
 ];

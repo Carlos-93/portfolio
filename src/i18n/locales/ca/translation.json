@@ -18,6 +18,7 @@
     "philosophy": "Defenso i aplico el codi net i les bones pràctiques (SOLID, Clean Architecture), treballant sempre en entorns àgils amb fluxos CI/CD sobre Git/GitLab o GitHub i apostant per la millora contínua i la qualitat en cada projecte."
   },
   "skills": {
+    "os": "Sistemes Operatius",
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Bases de dades",
