@@ -36,6 +36,62 @@
     "projects": "Projects",
     "contact": "Contact"
   },
+  "experience": {
+    "duration": {
+      "yearOne": "{{count}} year",
+      "yearOther": "{{count}} years",
+      "monthOne": "{{count}} month",
+      "monthOther": "{{count}} months"
+    },
+    "items": {
+      "sece": {
+        "period": "Feb 2025 - Present",
+        "location": "Barcelona, Catalonia, Spain",
+        "employment": "Full-time · Hybrid",
+        "bullets": [
+          "Designed the prototypes for the internal web applications' interfaces (desktop, tablet and mobile) in Figma, optimizing the user experience (UX/UI).",
+          "Built the frontend in Angular (latest versions) with native CSS and Tailwind CSS, implementing new features and improving navigation for a smoother experience.",
+          "Built the backend in Java, ensuring correct record synchronization in PostgreSQL databases (managed with DBeaver).",
+          "Managed version control and branching on GitLab with Git, ensuring a collaborative workflow aligned with CI/CD."
+        ]
+      },
+      "pkfAttest": {
+        "period": "Sep 2024 - Feb 2025",
+        "location": "Barcelona, Catalonia, Spain",
+        "employment": "Full-time · Hybrid",
+        "bullets": [
+          "Provided technical support for healthcare web applications, fixing critical bugs and tailoring solutions to each client's requirements.",
+          "Developed new features in Symfony (PHP), ensuring correct record synchronization in MySQL and PostgreSQL databases (managed with DBeaver).",
+          "Developed new features in Visual Basic 6.0 integrated into the web applications, with record synchronization in Oracle Database.",
+          "Managed version control and branching on GitLab with Git, ensuring a collaborative workflow aligned with CI/CD."
+        ]
+      },
+      "essistemas": {
+        "period": "Oct 2023 - Apr 2024",
+        "location": "Barcelona, Catalonia, Spain",
+        "employment": "Training contract · Remote",
+        "bullets": [
+          "Built the frontend of the new internal website (desktop, tablet and mobile) in React (latest versions) and CSS3, applying the BEM methodology and accurately replicating the Figma prototypes.",
+          "Managed version control and branching on GitHub with Git, ensuring a collaborative workflow aligned with CI/CD."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "viewDemo": "View demo",
+    "viewCode": "View code",
+    "items": {
+      "reactPokedex": {
+        "description": "Interactive Pokédex built with React that consumes the PokeAPI to display real-time data, stats and abilities for each Pokémon."
+      },
+      "reactWeatherMap": {
+        "description": "Weather app built with React that integrates external APIs to dynamically show the weather for any location."
+      },
+      "angularRouting": {
+        "description": "Website built with Angular 17 to practice the framework's routing, services and forms."
+      }
+    }
+  },
   "footer": {
     "tagline": "Full Stack Web Developer & UX/UI Designer crafting modern, accessible web experiences.",
     "navigation": "Navigation",

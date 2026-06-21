@@ -46,8 +46,29 @@ export const skills: Skill[] = [
 
 // Experiences Object
 export const experiences: Experience[] = [
-    { title: "Desarrollador Web Full Stack", company: "PKF Attest", location: "Barcelona", date: "Septiembre 2024 - Actual", description: "Desarrollo de aplicaciones web y móviles", image: "profile.png" },
-    { title: "Desarrollador Web Frontend", company: "Excelsus Cic Grup SL", location: "Barcelona", date: "Octubre 2023 - Abril 2024", description: "Desarrollo de aplicaciones web y móviles", image: "profile.png" },
+    {
+        id: "sece",
+        company: "Sociedad Española de Construcciones Eléctricas (SECE)",
+        role: "Frontend Web Developer · UX/UI Designer",
+        logo: "/assets/images/companies/sece.png",
+        start: "2025-02",
+    },
+    {
+        id: "pkfAttest",
+        company: "PKF Attest",
+        role: "Full Stack Web Developer",
+        logo: "/assets/images/companies/pkf-attest.png",
+        start: "2024-09",
+        end: "2025-02",
+    },
+    {
+        id: "essistemas",
+        company: "ESSistemas",
+        role: "Frontend Web Developer",
+        logo: "/assets/images/companies/essistemas.png",
+        start: "2023-10",
+        end: "2024-04",
+    },
 ];
 
 // Educations Object
@@ -63,9 +84,27 @@ export const certificates: Certificate[] = [
 
 // Projects Object
 export const projects: Project[] = [
-    { title: "Portfolio", description: "Mi portfolio personal", image: "profile.png", href: "https://www.carlosaraujogalvan.com" },
-    { title: "Blog", description: "Mi blog personal", image: "profile.png", href: "https://www.carlosaraujogalvan.com/blog" },
-    { title: "Tienda Online", description: "Mi tienda online", image: "profile.png", href: "https://www.carlosaraujogalvan.com/tienda" }
+    {
+        id: "reactPokedex",
+        title: "React Pokédex",
+        tags: ["React", "JavaScript", "PokeAPI", "CSS3"],
+        demoUrl: "https://react-pokedex-rose.vercel.app",
+        repoUrl: "https://github.com/Carlos-93/react-pokedex",
+    },
+    {
+        id: "reactWeatherMap",
+        title: "React Weather Map",
+        tags: ["React", "JavaScript", "API", "CSS3"],
+        demoUrl: "https://react-weather-map-gamma.vercel.app",
+        repoUrl: "https://github.com/Carlos-93/react-weather-map",
+    },
+    {
+        id: "angularRouting",
+        title: "Angular Routing, Services & Forms",
+        tags: ["Angular", "TypeScript", "Tailwind CSS", "HTML5"],
+        demoUrl: "https://angular-routing-services-forms.vercel.app",
+        repoUrl: "https://github.com/Carlos-93/angular-routing-services-forms",
+    },
 ];
 
 // Social Networks Object

@@ -5,17 +5,16 @@ export interface Skill {
     image: string;
     category: SkillCategory;
     url: string;
-    /** Monochrome (black) brand marks need inverting so they stay visible in dark mode */
     invertOnDark?: boolean;
 }
 
 export interface Experience {
-    title: string;
+    id: string;
     company: string;
-    location: string;
-    date: string;
-    description: string;
-    image: string;
+    role: string;
+    logo: string;
+    start: string;
+    end?: string;
 }
 
 export interface Education {
@@ -34,10 +33,12 @@ export interface Certificate {
 }
 
 export interface Project {
+    id: string;
     title: string;
-    description: string;
-    image: string;
-    href: string;
+    image?: string;
+    tags: string[];
+    demoUrl?: string;
+    repoUrl?: string;
 }
 
 export interface SocialNetwork {

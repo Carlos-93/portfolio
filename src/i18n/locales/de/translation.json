@@ -36,6 +36,62 @@
     "projects": "Projekte",
     "contact": "Kontakt"
   },
+  "experience": {
+    "duration": {
+      "yearOne": "{{count}} Jahr",
+      "yearOther": "{{count}} Jahre",
+      "monthOne": "{{count}} Monat",
+      "monthOther": "{{count}} Monate"
+    },
+    "items": {
+      "sece": {
+        "period": "Feb. 2025 - heute",
+        "location": "Barcelona, Katalonien, Spanien",
+        "employment": "Vollzeit · Hybrid",
+        "bullets": [
+          "Habe in Figma die Prototypen der Oberflächen für die internen Webanwendungen (Desktop, Tablet und Mobil) entworfen und die Benutzererfahrung (UX/UI) optimiert.",
+          "Habe das Frontend mit Angular (neueste Versionen) und nativem CSS sowie Tailwind CSS entwickelt, neue Funktionen implementiert und die Navigation für ein flüssigeres Erlebnis verbessert.",
+          "Habe das Backend in Java entwickelt und die korrekte Synchronisierung der Datensätze in PostgreSQL-Datenbanken (verwaltet mit DBeaver) sichergestellt.",
+          "Habe die Versionsverwaltung und Branches auf GitLab mit Git verwaltet und einen kollaborativen, an CI/CD ausgerichteten Workflow gewährleistet."
+        ]
+      },
+      "pkfAttest": {
+        "period": "Sep. 2024 - Feb. 2025",
+        "location": "Barcelona, Katalonien, Spanien",
+        "employment": "Vollzeit · Hybrid",
+        "bullets": [
+          "Habe technischen Support für Webanwendungen im Gesundheitswesen geleistet, kritische Fehler behoben und Lösungen an die Anforderungen jedes Kunden angepasst.",
+          "Habe neue Funktionen in Symfony (PHP) entwickelt und die korrekte Synchronisierung der Datensätze in MySQL- und PostgreSQL-Datenbanken (verwaltet mit DBeaver) sichergestellt.",
+          "Habe neue Funktionen in Visual Basic 6.0 entwickelt, in die Webanwendungen integriert und die Datensätze in Oracle Database synchronisiert.",
+          "Habe die Versionsverwaltung und Branches auf GitLab mit Git verwaltet und einen kollaborativen, an CI/CD ausgerichteten Workflow gewährleistet."
+        ]
+      },
+      "essistemas": {
+        "period": "Okt. 2023 - Apr. 2024",
+        "location": "Barcelona, Katalonien, Spanien",
+        "employment": "Ausbildungsvertrag · Remote",
+        "bullets": [
+          "Habe das Frontend der neuen internen Website (Desktop, Tablet und Mobil) mit React (neueste Versionen) und CSS3 entwickelt, die BEM-Methodik angewandt und die Figma-Prototypen präzise umgesetzt.",
+          "Habe die Versionsverwaltung und Branches auf GitHub mit Git verwaltet und einen kollaborativen, an CI/CD ausgerichteten Workflow gewährleistet."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "viewDemo": "Demo ansehen",
+    "viewCode": "Code ansehen",
+    "items": {
+      "reactPokedex": {
+        "description": "Interaktiver Pokédex mit React, der die PokeAPI nutzt, um Daten, Statistiken und Fähigkeiten jedes Pokémon in Echtzeit anzuzeigen."
+      },
+      "reactWeatherMap": {
+        "description": "Mit React entwickelte Wetter-App, die externe APIs integriert, um das Wetter für jeden Ort dynamisch anzuzeigen."
+      },
+      "angularRouting": {
+        "description": "Mit Angular 17 erstellte Website, um Routing, Services und Formulare des Frameworks zu üben."
+      }
+    }
+  },
   "footer": {
     "tagline": "Full-Stack-Webentwickler & UX/UI-Designer für moderne, barrierefreie Web-Erlebnisse.",
     "navigation": "Navigation",

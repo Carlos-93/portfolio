@@ -36,6 +36,62 @@
     "projects": "Projectes",
     "contact": "Contacte"
   },
+  "experience": {
+    "duration": {
+      "yearOne": "{{count}} any",
+      "yearOther": "{{count}} anys",
+      "monthOne": "{{count}} mes",
+      "monthOther": "{{count}} mesos"
+    },
+    "items": {
+      "sece": {
+        "period": "febr. 2025 - actualitat",
+        "location": "Barcelona, Catalunya, Espanya",
+        "employment": "Jornada completa · Híbrid",
+        "bullets": [
+          "Vaig dissenyar a Figma els prototips de les interfícies de les aplicacions web internes (escriptori, tauleta i mòbil), optimitzant l'experiència d'usuari (UX/UI).",
+          "Vaig desenvolupar el frontend en Angular (últimes versions) amb CSS natiu i Tailwind CSS, implementant noves funcionalitats i millorant la navegació per a una experiència més fluida.",
+          "Vaig desenvolupar el backend en Java, assegurant la correcta sincronització dels registres en bases de dades PostgreSQL (gestionades amb DBeaver).",
+          "Vaig gestionar el control de versions i branques a GitLab mitjançant Git, garantint un flux de treball col·laboratiu alineat amb CI/CD."
+        ]
+      },
+      "pkfAttest": {
+        "period": "set. 2024 - febr. 2025",
+        "location": "Barcelona, Catalunya, Espanya",
+        "employment": "Jornada completa · Híbrid",
+        "bullets": [
+          "Vaig oferir suport tècnic en aplicacions web per a centres sanitaris, resolent errors crítics i adaptant les solucions als requisits de cada client.",
+          "Vaig desenvolupar noves funcionalitats en Symfony (PHP), assegurant la correcta sincronització dels registres en bases de dades MySQL i PostgreSQL (gestionades amb DBeaver).",
+          "Vaig desenvolupar noves funcionalitats en Visual Basic 6.0 integrades a les aplicacions web, amb sincronització de registres en Oracle Database.",
+          "Vaig gestionar el control de versions i branques a GitLab mitjançant Git, garantint un flux de treball col·laboratiu alineat amb CI/CD."
+        ]
+      },
+      "essistemas": {
+        "period": "oct. 2023 - abr. 2024",
+        "location": "Barcelona, Catalunya, Espanya",
+        "employment": "Contracte de formació · En remot",
+        "bullets": [
+          "Vaig desenvolupar el frontend de la nova web interna (escriptori, tauleta i mòbil) en React (últimes versions) i CSS3, aplicant la metodologia BEM i replicant amb precisió els prototips de Figma.",
+          "Vaig gestionar el control de versions i branques a GitHub mitjançant Git, garantint un flux de treball col·laboratiu alineat amb CI/CD."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "viewDemo": "Veure demo",
+    "viewCode": "Veure codi",
+    "items": {
+      "reactPokedex": {
+        "description": "Pokédex interactiva construïda amb React que consumeix la PokeAPI per mostrar en temps real dades, estadístiques i habilitats de cada Pokémon."
+      },
+      "reactWeatherMap": {
+        "description": "Aplicació del temps desenvolupada amb React que integra APIs externes per mostrar el clima de qualsevol ubicació de manera dinàmica."
+      },
+      "angularRouting": {
+        "description": "Lloc web desenvolupat amb Angular 17 per practicar l'enrutament, els serveis i els formularis del framework."
+      }
+    }
+  },
   "footer": {
     "tagline": "Desenvolupador Web Full Stack & Dissenyador UX/UI creant experiències web modernes i accessibles.",
     "navigation": "Navegació",
