@@ -37,6 +37,12 @@
     "contact": "Kontakt"
   },
   "footer": {
+    "tagline": "Full-Stack-Webentwickler & UX/UI-Designer für moderne, barrierefreie Web-Erlebnisse.",
+    "navigation": "Navigation",
+    "letsTalkTitle": "Sprechen wir?",
+    "letsTalkText": "Hast du ein Projekt im Kopf? Ich helfe dir gerne, es umzusetzen.",
+    "contactCta": "Kontaktiere mich",
+    "backToTop": "Nach oben",
     "copyright": "Alle Rechte vorbehalten."
   }
 }

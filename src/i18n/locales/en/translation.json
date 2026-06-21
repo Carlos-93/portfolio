@@ -37,6 +37,12 @@
     "contact": "Contact"
   },
   "footer": {
+    "tagline": "Full Stack Web Developer & UX/UI Designer crafting modern, accessible web experiences.",
+    "navigation": "Navigation",
+    "letsTalkTitle": "Let's talk",
+    "letsTalkText": "Have a project in mind? I'd be glad to help you bring it to life.",
+    "contactCta": "Contact me",
+    "backToTop": "Back to top",
     "copyright": "All rights reserved."
   }
 }

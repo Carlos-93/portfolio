@@ -37,6 +37,12 @@
     "contact": "Contacte"
   },
   "footer": {
+    "tagline": "Desenvolupador Web Full Stack & Dissenyador UX/UI creant experiències web modernes i accessibles.",
+    "navigation": "Navegació",
+    "letsTalkTitle": "Parlem?",
+    "letsTalkText": "Tens un projecte en ment? Estaré encantat d'ajudar-te a fer-lo realitat.",
+    "contactCta": "Contacta'm",
+    "backToTop": "Tornar a dalt",
     "copyright": "Tots els drets reservats."
   }
 }
