@@ -4,7 +4,7 @@ import { languages } from '../lib/constants';
 
 export default function LanguageSelector() {
     // Translation hook
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
     // State variables
     const [isOpen, setIsOpen] = useState(false);
     // Refs
@@ -49,7 +49,7 @@ export default function LanguageSelector() {
                 className="flex items-center gap-3 px-3 py-2 rounded-lg border transition-all duration-300 focus:outline-none focus:ring-2 cursor-pointer
                 bg-white/85 border-slate-300/60 text-slate-800 hover:bg-slate-200 hover:border-slate-400/60 focus:ring-cyan-600 focus:ring-offset-2 focus:ring-offset-slate-200
                 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:ring-cyan-400 dark:focus:ring-offset-gray-900"
-                aria-label="Select language" aria-haspopup="listbox" aria-expanded={isOpen}
+                aria-label={t('common.selectLanguage')} aria-haspopup="listbox" aria-expanded={isOpen}
             >
                 <img src={currentLanguage.flag} alt={currentLanguage.name} className="w-6 h-6 object-cover rounded-full" />
                 <span className="text-sm font-medium lg:hidden">
@@ -69,7 +69,7 @@ export default function LanguageSelector() {
             <div className={`absolute left-0 lg:left-auto lg:right-0 mt-2 w-48 rounded-lg shadow-xl overflow-hidden z-50 transition-opacity duration-200
                 bg-white border border-slate-200 dark:bg-gray-800 dark:border-gray-700
                 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
-                role="listbox" aria-hidden={!isOpen} aria-label="Language options" inert={!isOpen} >
+                role="listbox" aria-hidden={!isOpen} aria-label={t('common.selectLanguage')} inert={!isOpen} >
 
                 {/* List of languages */}
                 <div className="py-1">

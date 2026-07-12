@@ -51,6 +51,7 @@ export const experiences: Experience[] = [
         company: "Sociedad Española de Construcciones Eléctricas (SECE)",
         role: "Frontend Web Developer · UX/UI Designer",
         logo: "/assets/images/companies/sece.png",
+        logoScale: 1.35,
         start: "2025-02",
     },
     {
@@ -73,13 +74,13 @@ export const experiences: Experience[] = [
 
 // Educations Object
 export const educations: Education[] = [
-    { title: "Técnico Superior en Desarrollo de Aplicaciones Web", company: "Monlau Centro de Estudios", date: "Septiembre 2022 - Junio 2024", image: `/assets/images/certificates/education-daw.jpg` },
+    { id: "daw", institution: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.png", url: "https://www.monlau.com", file: "/assets/certificates/education-daw.pdf" },
 ];
 
 // Certificates Object
 export const certificates: Certificate[] = [
-    { title: "Administración de SO Linux", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: `/assets/images/certificates/certificate-linux.png` },
-    { title: "Administración de Windows 10", company: "Monlau Centre d'Estudis", location: "Presencial", date: "Junio 2024", image: `/assets/images/certificates/certificate-windows.png` },
+    { id: "linux", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.png", file: "/assets/certificates/certificate-linux.pdf" },
+    { id: "windows", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.png", file: "/assets/certificates/certificate-windows.pdf" },
 ];
 
 // Projects Object

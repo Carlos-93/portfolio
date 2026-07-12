@@ -1,6 +1,9 @@
 {
   "common": {
-    "portfolio": "Portafoli"
+    "portfolio": "Portafoli",
+    "switchToLight": "Canviar a mode clar",
+    "switchToDark": "Canviar a mode fosc",
+    "selectLanguage": "Seleccionar idioma"
   },
   "home": {
     "welcome": "Hola 👋🏻",
@@ -45,7 +48,7 @@
     },
     "items": {
       "sece": {
-        "period": "febr. 2025 - actualitat",
+        "period": "Febr. 2025 - actualitat",
         "location": "Barcelona, Catalunya, Espanya",
         "employment": "Jornada completa · Híbrid",
         "bullets": [
@@ -56,7 +59,7 @@
         ]
       },
       "pkfAttest": {
-        "period": "set. 2024 - febr. 2025",
+        "period": "Set. 2024 - Febr. 2025",
         "location": "Barcelona, Catalunya, Espanya",
         "employment": "Jornada completa · Híbrid",
         "bullets": [
@@ -67,13 +70,39 @@
         ]
       },
       "essistemas": {
-        "period": "oct. 2023 - abr. 2024",
+        "period": "Oct. 2023 - Abr. 2024",
         "location": "Barcelona, Catalunya, Espanya",
         "employment": "Contracte de formació · En remot",
         "bullets": [
           "Vaig desenvolupar el frontend de la nova web interna (escriptori, tauleta i mòbil) en React (últimes versions) i CSS3, aplicant la metodologia BEM i replicant amb precisió els prototips de Figma.",
           "Vaig gestionar el control de versions i branques a GitHub mitjançant Git, garantint un flux de treball col·laboratiu alineat amb CI/CD."
         ]
+      }
+    }
+  },
+  "education": {
+    "viewDegree": "Veure títol",
+    "items": {
+      "daw": {
+        "title": "Tècnic Superior en Desenvolupament d'Aplicacions Web",
+        "period": "Set. 2022 - Juny 2024",
+        "location": "Barcelona, Espanya",
+        "description": "Formació superior centrada en el desenvolupament web full stack: frontend, backend, bases de dades i desplegament d'aplicacions, aplicant bones pràctiques i metodologies àgils."
+      }
+    }
+  },
+  "certifications": {
+    "viewCertificate": "Veure certificat",
+    "items": {
+      "linux": {
+        "title": "Administració de Sistemes Operatius Linux",
+        "period": "Juny 2024",
+        "location": "Presencial"
+      },
+      "windows": {
+        "title": "Administració de Windows 10",
+        "period": "Juny 2024",
+        "location": "Presencial"
       }
     }
   },
@@ -90,6 +119,24 @@
       "angularRouting": {
         "description": "Lloc web desenvolupat amb Angular 17 per practicar l'enrutament, els serveis i els formularis del framework."
       }
+    }
+  },
+  "contact": {
+    "lead": "Tens un projecte al cap o vols que treballem junts? Omple el formulari i et respondré al més aviat possible.",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "El teu nom",
+      "email": "Correu electrònic",
+      "emailPlaceholder": "teu@email.com",
+      "subject": "Assumpte",
+      "subjectPlaceholder": "De què vols parlar?",
+      "message": "Missatge",
+      "messagePlaceholder": "Explica'm la teva idea...",
+      "optional": "opcional",
+      "submit": "Enviar missatge",
+      "sending": "Enviant...",
+      "success": "Missatge enviat! Et respondré aviat.",
+      "error": "No s'ha pogut enviar el missatge. Torna-ho a intentar."
     }
   },
   "footer": {

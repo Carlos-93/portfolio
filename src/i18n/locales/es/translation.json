@@ -1,6 +1,9 @@
 {
   "common": {
-    "portfolio": "Portafolio"
+    "portfolio": "Portafolio",
+    "switchToLight": "Cambiar a modo claro",
+    "switchToDark": "Cambiar a modo oscuro",
+    "selectLanguage": "Seleccionar idioma"
   },
   "home": {
     "welcome": "Hola 👋🏻",
@@ -45,7 +48,7 @@
     },
     "items": {
       "sece": {
-        "period": "feb. 2025 - actualidad",
+        "period": "Feb. 2025 - actualidad",
         "location": "Barcelona, Cataluña, España",
         "employment": "Jornada completa · Híbrido",
         "bullets": [
@@ -56,7 +59,7 @@
         ]
       },
       "pkfAttest": {
-        "period": "sept. 2024 - feb. 2025",
+        "period": "Sept. 2024 - Feb. 2025",
         "location": "Barcelona, Cataluña, España",
         "employment": "Jornada completa · Híbrido",
         "bullets": [
@@ -67,13 +70,39 @@
         ]
       },
       "essistemas": {
-        "period": "oct. 2023 - abr. 2024",
+        "period": "Oct. 2023 - Abr. 2024",
         "location": "Barcelona, Cataluña, España",
         "employment": "Contrato de formación · En remoto",
         "bullets": [
           "Desarrollé el frontend de la nueva web interna (escritorio, tablet y móvil) en React (últimas versiones) y CSS3, aplicando la metodología BEM y replicando con precisión los prototipos de Figma.",
           "Gestioné el control de versiones y ramas en GitHub mediante Git, garantizando un flujo de trabajo colaborativo alineado con CI/CD."
         ]
+      }
+    }
+  },
+  "education": {
+    "viewDegree": "Ver título",
+    "items": {
+      "daw": {
+        "title": "Técnico Superior en Desarrollo de Aplicaciones Web",
+        "period": "Sept. 2022 - Jun. 2024",
+        "location": "Barcelona, España",
+        "description": "Formación superior centrada en el desarrollo web full stack: frontend, backend, bases de datos y despliegue de aplicaciones, aplicando buenas prácticas y metodologías ágiles."
+      }
+    }
+  },
+  "certifications": {
+    "viewCertificate": "Ver certificado",
+    "items": {
+      "linux": {
+        "title": "Administración de Sistemas Operativos Linux",
+        "period": "Junio 2024",
+        "location": "Presencial"
+      },
+      "windows": {
+        "title": "Administración de Windows 10",
+        "period": "Junio 2024",
+        "location": "Presencial"
       }
     }
   },
@@ -90,6 +119,24 @@
       "angularRouting": {
         "description": "Sitio web desarrollado con Angular 17 para practicar el enrutamiento, los servicios y los formularios del framework."
       }
+    }
+  },
+  "contact": {
+    "lead": "¿Tienes un proyecto en mente o quieres que trabajemos juntos? Rellena el formulario y te responderé lo antes posible.",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿Sobre qué quieres hablar?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame tu idea...",
+      "optional": "opcional",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado! Te responderé pronto.",
+      "error": "No se pudo enviar el mensaje. Inténtalo de nuevo."
     }
   },
   "footer": {

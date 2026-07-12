@@ -13,23 +13,26 @@ export interface Experience {
     company: string;
     role: string;
     logo: string;
+    /** Compensates logos with built-in whitespace so they all look the same size */
+    logoScale?: number;
     start: string;
     end?: string;
 }
 
 export interface Education {
-    title: string;
-    company: string;
-    date: string;
-    image: string;
+    id: string;
+    institution: string;
+    logo: string;
+    url?: string;
+    file?: string;
 }
 
 export interface Certificate {
-    title: string;
-    company: string;
-    location: string;
-    date: string;
-    image: string;
+    id: string;
+    issuer: string;
+    logo: string;
+    url?: string;
+    file?: string;
 }
 
 export interface Project {

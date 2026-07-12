@@ -26,7 +26,7 @@ function HeroActions({ className }: { className?: string }) {
             {/* Social Networks */}
             <div className="flex items-center gap-8">
                 {socialNetworks.map((link) => (
-                    <a key={link.alt} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Visitar perfil de ${link.alt}`}
+                    <a key={link.alt} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.alt}
                         className="group relative transition-all duration-300">
                         {/* Icons */}
                         <img src={link.src} alt={link.alt}

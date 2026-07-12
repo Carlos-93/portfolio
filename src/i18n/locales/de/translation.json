@@ -1,6 +1,9 @@
 {
   "common": {
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "switchToLight": "Zum hellen Modus wechseln",
+    "switchToDark": "Zum dunklen Modus wechseln",
+    "selectLanguage": "Sprache auswählen"
   },
   "home": {
     "welcome": "Hallo 👋🏻",
@@ -77,6 +80,32 @@
       }
     }
   },
+  "education": {
+    "viewDegree": "Abschluss ansehen",
+    "items": {
+      "daw": {
+        "title": "Höherer Techniker für die Entwicklung von Webanwendungen",
+        "period": "Sep. 2022 - Juni 2024",
+        "location": "Barcelona, Spanien",
+        "description": "Höhere Berufsausbildung mit Schwerpunkt Full-Stack-Webentwicklung: Frontend, Backend, Datenbanken und Anwendungs-Deployment, unter Anwendung von Best Practices und agilen Methoden."
+      }
+    }
+  },
+  "certifications": {
+    "viewCertificate": "Zertifikat ansehen",
+    "items": {
+      "linux": {
+        "title": "Administration von Linux-Betriebssystemen",
+        "period": "Juni 2024",
+        "location": "Vor Ort"
+      },
+      "windows": {
+        "title": "Administration von Windows 10",
+        "period": "Juni 2024",
+        "location": "Vor Ort"
+      }
+    }
+  },
   "projects": {
     "viewDemo": "Demo ansehen",
     "viewCode": "Code ansehen",
@@ -90,6 +119,24 @@
       "angularRouting": {
         "description": "Mit Angular 17 erstellte Website, um Routing, Services und Formulare des Frameworks zu üben."
       }
+    }
+  },
+  "contact": {
+    "lead": "Hast du ein Projekt im Kopf oder möchtest du mit mir zusammenarbeiten? Füll das Formular aus und ich melde mich so schnell wie möglich.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Dein Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "deine@email.com",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Worüber möchtest du sprechen?",
+      "message": "Nachricht",
+      "messagePlaceholder": "Erzähl mir von deiner Idee...",
+      "optional": "optional",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht gesendet! Ich melde mich bald.",
+      "error": "Die Nachricht konnte nicht gesendet werden. Versuch es erneut."
     }
   },
   "footer": {

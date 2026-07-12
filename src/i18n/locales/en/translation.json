@@ -1,6 +1,9 @@
 {
   "common": {
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "selectLanguage": "Select language"
   },
   "home": {
     "welcome": "Hello 👋🏻",
@@ -77,6 +80,32 @@
       }
     }
   },
+  "education": {
+    "viewDegree": "View degree",
+    "items": {
+      "daw": {
+        "title": "Higher Technician in Web Application Development",
+        "period": "Sep 2022 - Jun 2024",
+        "location": "Barcelona, Spain",
+        "description": "Higher vocational degree focused on full stack web development: frontend, backend, databases and application deployment, applying best practices and agile methodologies."
+      }
+    }
+  },
+  "certifications": {
+    "viewCertificate": "View certificate",
+    "items": {
+      "linux": {
+        "title": "Linux Operating System Administration",
+        "period": "June 2024",
+        "location": "On-site"
+      },
+      "windows": {
+        "title": "Windows 10 Administration",
+        "period": "June 2024",
+        "location": "On-site"
+      }
+    }
+  },
   "projects": {
     "viewDemo": "View demo",
     "viewCode": "View code",
@@ -90,6 +119,24 @@
       "angularRouting": {
         "description": "Website built with Angular 17 to practice the framework's routing, services and forms."
       }
+    }
+  },
+  "contact": {
+    "lead": "Have a project in mind or want to work together? Fill in the form and I'll get back to you as soon as possible.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What would you like to talk about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your idea...",
+      "optional": "optional",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent! I'll get back to you soon.",
+      "error": "The message could not be sent. Please try again."
     }
   },
   "footer": {

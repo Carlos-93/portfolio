@@ -101,3 +101,36 @@ body {
     -webkit-mask-image: linear-gradient(#000 85%, transparent);
     mask-image: linear-gradient(#000 85%, transparent);
 }
+
+/* Seamless stream of light flowing down the experience timeline trunk */
+.trunk-beam {
+    background-image: linear-gradient(to bottom,
+            transparent 0%,
+            rgba(34, 211, 238, 0.9) 30%,
+            rgba(6, 182, 212, 0.5) 50%,
+            rgba(34, 211, 238, 0.9) 70%,
+            transparent 100%);
+    background-size: 100% 200%;
+    animation: trunk-beam 5s linear infinite;
+}
+
+/* Respect the user's reduced-motion preference: stop decorative animations */
+@media (prefers-reduced-motion: reduce) {
+    html::before {
+        animation: none;
+    }
+
+    .trunk-beam {
+        display: none;
+    }
+}
+
+@keyframes trunk-beam {
+    from {
+        background-position: 0 200%;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}

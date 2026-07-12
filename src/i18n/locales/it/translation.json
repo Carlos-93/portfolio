@@ -1,6 +1,9 @@
 {
   "common": {
-    "portfolio": "Portafoglio"
+    "portfolio": "Portafoglio",
+    "switchToLight": "Passa alla modalità chiara",
+    "switchToDark": "Passa alla modalità scura",
+    "selectLanguage": "Seleziona la lingua"
   },
   "home": {
     "welcome": "Ciao 👋🏻",
@@ -45,7 +48,7 @@
     },
     "items": {
       "sece": {
-        "period": "feb. 2025 - oggi",
+        "period": "Feb. 2025 - oggi",
         "location": "Barcellona, Catalogna, Spagna",
         "employment": "Tempo pieno · Ibrido",
         "bullets": [
@@ -56,7 +59,7 @@
         ]
       },
       "pkfAttest": {
-        "period": "set. 2024 - feb. 2025",
+        "period": "Set. 2024 - Feb. 2025",
         "location": "Barcellona, Catalogna, Spagna",
         "employment": "Tempo pieno · Ibrido",
         "bullets": [
@@ -67,13 +70,39 @@
         ]
       },
       "essistemas": {
-        "period": "ott. 2023 - apr. 2024",
+        "period": "Ott. 2023 - Apr. 2024",
         "location": "Barcellona, Catalogna, Spagna",
         "employment": "Contratto di formazione · Da remoto",
         "bullets": [
           "Ho sviluppato il frontend del nuovo sito web interno (desktop, tablet e mobile) in React (ultime versioni) e CSS3, applicando la metodologia BEM e replicando con precisione i prototipi di Figma.",
           "Ho gestito il controllo di versione e i branch su GitHub tramite Git, garantendo un flusso di lavoro collaborativo allineato al CI/CD."
         ]
+      }
+    }
+  },
+  "education": {
+    "viewDegree": "Vedi titolo",
+    "items": {
+      "daw": {
+        "title": "Tecnico Superiore in Sviluppo di Applicazioni Web",
+        "period": "Set. 2022 - Giu. 2024",
+        "location": "Barcellona, Spagna",
+        "description": "Formazione superiore incentrata sullo sviluppo web full stack: frontend, backend, database e deployment delle applicazioni, applicando buone pratiche e metodologie agili."
+      }
+    }
+  },
+  "certifications": {
+    "viewCertificate": "Vedi certificato",
+    "items": {
+      "linux": {
+        "title": "Amministrazione di Sistemi Operativi Linux",
+        "period": "Giugno 2024",
+        "location": "In presenza"
+      },
+      "windows": {
+        "title": "Amministrazione di Windows 10",
+        "period": "Giugno 2024",
+        "location": "In presenza"
       }
     }
   },
@@ -90,6 +119,24 @@
       "angularRouting": {
         "description": "Sito web sviluppato con Angular 17 per esercitarsi con il routing, i servizi e i form del framework."
       }
+    }
+  },
+  "contact": {
+    "lead": "Hai un progetto in mente o vuoi che lavoriamo insieme? Compila il modulo e ti risponderò il prima possibile.",
+    "form": {
+      "name": "Nome",
+      "namePlaceholder": "Il tuo nome",
+      "email": "Email",
+      "emailPlaceholder": "tua@email.com",
+      "subject": "Oggetto",
+      "subjectPlaceholder": "Di cosa vuoi parlare?",
+      "message": "Messaggio",
+      "messagePlaceholder": "Raccontami la tua idea...",
+      "optional": "facoltativo",
+      "submit": "Invia messaggio",
+      "sending": "Invio in corso...",
+      "success": "Messaggio inviato! Ti risponderò presto.",
+      "error": "Impossibile inviare il messaggio. Riprova."
     }
   },
   "footer": {
