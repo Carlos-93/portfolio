@@ -135,7 +135,7 @@
       "optional": "optional",
       "submit": "Send message",
       "sending": "Sending...",
-      "success": "Message sent! I'll get back to you soon.",
+      "success": "The message has been sent successfully",
       "error": "The message could not be sent. Please try again."
     }
   },

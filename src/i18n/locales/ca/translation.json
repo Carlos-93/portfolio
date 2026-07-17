@@ -135,7 +135,7 @@
       "optional": "opcional",
       "submit": "Enviar missatge",
       "sending": "Enviant...",
-      "success": "Missatge enviat! Et respondré aviat.",
+      "success": "S'ha enviat el missatge correctament",
       "error": "No s'ha pogut enviar el missatge. Torna-ho a intentar."
     }
   },

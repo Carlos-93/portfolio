@@ -135,7 +135,7 @@
       "optional": "facultatif",
       "submit": "Envoyer le message",
       "sending": "Envoi en cours...",
-      "success": "Message envoyé ! Je vous répondrai bientôt.",
+      "success": "Le message a été envoyé avec succès",
       "error": "Le message n'a pas pu être envoyé. Veuillez réessayer."
     }
   },

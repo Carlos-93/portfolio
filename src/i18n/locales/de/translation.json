@@ -135,7 +135,7 @@
       "optional": "optional",
       "submit": "Nachricht senden",
       "sending": "Wird gesendet...",
-      "success": "Nachricht gesendet! Ich melde mich bald.",
+      "success": "Die Nachricht wurde erfolgreich gesendet",
       "error": "Die Nachricht konnte nicht gesendet werden. Versuch es erneut."
     }
   },
