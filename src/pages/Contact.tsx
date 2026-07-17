@@ -58,7 +58,7 @@ export default function Contact() {
             </p>
 
             <form action={formAction}
-                className="grid w-full max-w-2xl grid-cols-1 gap-5 rounded-2xl border border-slate-200 bg-white/50 p-6 backdrop-blur-sm dark:border-white/10 dark:bg-white/5 sm:grid-cols-2">
+                className="grid w-full max-w-2xl grid-cols-1 gap-5 rounded-2xl border border-slate-200 bg-white/50 p-5 backdrop-blur-sm dark:border-white/10 dark:bg-white/5 sm:grid-cols-2 sm:p-6">
                 {/* Honeypot field for spam bots — hidden from humans and screen readers */}
                 <input type="checkbox" name="botcheck" tabIndex={-1} aria-hidden="true" className="hidden" />
                 <div className="flex flex-col gap-2">

@@ -12,7 +12,7 @@ export default function Projects() {
     return (
         <div className="flex w-full flex-col items-center gap-10">
             <SectionHeader title={t('sidebar.projects')} />
-            <ul className="grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            <ul className="grid w-full max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project) => (
                     <li key={project.id}
                         className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/20 dark:border-white/10 dark:bg-white/5">

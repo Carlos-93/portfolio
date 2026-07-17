@@ -29,7 +29,7 @@ export default function Skills() {
                         </h3>
 
                         {/* Skill cards */}
-                        <ul className="grid grid-cols-3 gap-3 sm:gap-5 md:grid-cols-4">
+                        <ul className="grid grid-cols-3 gap-3 sm:gap-5 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
                             {items.map((skill) => (
                                 <li key={skill.name}>
                                     <a href={skill.url} target="_blank" rel="noopener noreferrer"
