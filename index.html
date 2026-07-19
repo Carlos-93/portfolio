@@ -14,7 +14,19 @@
   <meta property="og:image" content="/assets/images/me/profile.png" />
   <meta name="twitter:card" content="summary" />
   <title>Portafolio - Carlos Araujo Galván</title>
-  <script type="module" src="/src/utils/theme.ts"></script>
+  <script>
+    (() => {
+      let dark;
+      try {
+        const stored = localStorage.getItem('dark-mode');
+        dark = stored === 'true' || (stored === null && matchMedia('(prefers-color-scheme: dark)').matches);
+      } catch {
+        dark = matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+      document.documentElement.classList.toggle('dark', dark);
+      document.documentElement.style.backgroundColor = dark ? '#020617' : '#e2e8f0';
+    })();
+  </script>
 </head>
 
 <body>

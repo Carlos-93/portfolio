@@ -29,6 +29,7 @@ export default function DarkMode() {
         } else {
             root.classList.remove('dark');
         }
+        root.style.removeProperty('background-color');
         // Save the dark mode to the local storage
         localStorage.setItem(STORAGE_KEY, isDark ? 'true' : 'false');
     }, [isDark]);
