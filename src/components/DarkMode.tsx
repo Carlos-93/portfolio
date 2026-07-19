@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Toaster } from 'sonner';
 import { STORAGE_KEY } from '../lib/constants';
+import { Toaster } from 'sonner';
 
 export default function DarkMode() {
     // Translation hook
