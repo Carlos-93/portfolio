@@ -36,6 +36,7 @@
     "experience": "Experiència",
     "education": "Educació",
     "certifications": "Certificacions",
+    "languages": "Idiomes",
     "projects": "Projectes",
     "contact": "Contacte"
   },
@@ -104,6 +105,13 @@
         "period": "Juny 2024",
         "location": "Presencial"
       }
+    }
+  },
+  "languages": {
+    "items": {
+      "spanish": { "name": "Castellà", "level": "Natiu" },
+      "catalan": { "name": "Català", "level": "Natiu" },
+      "english": { "name": "Anglès", "level": "B1 · Intermedi" }
     }
   },
   "projects": {

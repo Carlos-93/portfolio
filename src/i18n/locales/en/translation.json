@@ -36,6 +36,7 @@
     "experience": "Experience",
     "education": "Education",
     "certifications": "Certifications",
+    "languages": "Languages",
     "projects": "Projects",
     "contact": "Contact"
   },
@@ -104,6 +105,13 @@
         "period": "June 2024",
         "location": "On-site"
       }
+    }
+  },
+  "languages": {
+    "items": {
+      "spanish": { "name": "Spanish", "level": "Native" },
+      "catalan": { "name": "Catalan", "level": "Native" },
+      "english": { "name": "English", "level": "B1 · Intermediate" }
     }
   },
   "projects": {

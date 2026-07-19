@@ -56,6 +56,11 @@ export interface Language {
     flag: string;
 }
 
+export interface SpokenLanguage {
+    id: string;
+    flag: string;
+}
+
 export interface SectionHeaderProps {
     title: string;
 }

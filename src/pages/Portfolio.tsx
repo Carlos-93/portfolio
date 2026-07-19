@@ -5,6 +5,7 @@ import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 // Pages
 import Certifications from './Certifications';
+import Languages from './Languages';
 import Experience from './Experience';
 import Education from './Education';
 import Projects from './Projects';
@@ -29,6 +30,7 @@ export default function Portfolio() {
                     <section id="experience" className="scroll-mt-20 lg:scroll-mt-24"><Experience /></section>
                     <section id="education" className="scroll-mt-20 lg:scroll-mt-24"><Education /></section>
                     <section id="certifications" className="scroll-mt-20 lg:scroll-mt-24"><Certifications /></section>
+                    <section id="languages" className="scroll-mt-20 lg:scroll-mt-24"><Languages /></section>
                     <section id="projects" className="scroll-mt-20 lg:scroll-mt-24"><Projects /></section>
                     <section id="contact" className="scroll-mt-20 lg:scroll-mt-24"><Contact /></section>
                 </main>

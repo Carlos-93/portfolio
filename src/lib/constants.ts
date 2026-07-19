@@ -1,4 +1,4 @@
-import type { Skill, Experience, Education, Certificate, Project, SocialNetwork, Language } from "./types";
+import type { Skill, Experience, Education, Certificate, Project, SocialNetwork, Language, SpokenLanguage } from "./types";
 
 // Skills Object
 export const skills: Skill[] = [
@@ -123,6 +123,13 @@ export const languages: Language[] = [
     { code: 'de', name: 'Deutsch', flag: `/assets/images/flags/germany.png` },
     { code: 'it', name: 'Italiano', flag: `/assets/images/flags/italy.png` },
     { code: 'fr', name: 'Français', flag: `/assets/images/flags/france.png` },
+];
+
+// Spoken Languages Object
+export const spokenLanguages: SpokenLanguage[] = [
+    { id: "spanish", flag: `/assets/images/flags/spain.png` },
+    { id: "catalan", flag: `/assets/images/flags/catalonia.png` },
+    { id: "english", flag: `/assets/images/flags/united-kingdom.png` },
 ];
 
 // Storage Key for the dark mode

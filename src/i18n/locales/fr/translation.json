@@ -36,6 +36,7 @@
     "experience": "Expérience",
     "education": "Formation",
     "certifications": "Certifications",
+    "languages": "Langues",
     "projects": "Projets",
     "contact": "Contact"
   },
@@ -104,6 +105,13 @@
         "period": "Juin 2024",
         "location": "En présentiel"
       }
+    }
+  },
+  "languages": {
+    "items": {
+      "spanish": { "name": "Espagnol", "level": "Langue maternelle" },
+      "catalan": { "name": "Catalan", "level": "Langue maternelle" },
+      "english": { "name": "Anglais", "level": "B1 · Intermédiaire" }
     }
   },
   "projects": {
