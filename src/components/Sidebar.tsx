@@ -100,26 +100,21 @@ export default function Sidebar() {
     const [activeLink, setActiveLink] = useState('#home');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    // Highlight the section currently crossing the upper part of the viewport
     useEffect(() => {
-        // Method to handle the scroll and highlight the active link
-        function handleScroll() {
-            // Loop through the sections and check if the element is visible in the viewport
-            for (const { id } of NAV_ITEMS) {
-                const element = document.getElementById(id);
-                // Check if the element is visible in the viewport
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    const isVisible = rect.top >= 0 && rect.top <= window.innerHeight / 2;
-
-                    if (isVisible) {
-                        setActiveLink(`#${id}`);
-                        break;
-                    }
+        const observer = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+                if (entry.isIntersecting) {
+                    setActiveLink(`#${entry.target.id}`);
                 }
             }
+        }, { rootMargin: '-20% 0px -55% 0px' });
+
+        for (const { id } of NAV_ITEMS) {
+            const element = document.getElementById(id);
+            if (element) observer.observe(element);
         }
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => observer.disconnect();
     }, [])
 
     // Disable scroll when the mobile menu is open

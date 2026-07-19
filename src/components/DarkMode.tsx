@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Toaster } from 'sonner';
 import { STORAGE_KEY } from '../lib/constants';
@@ -6,19 +6,13 @@ import { STORAGE_KEY } from '../lib/constants';
 export default function DarkMode() {
     // Translation hook
     const { t } = useTranslation();
-    // Check if the user prefers dark mode
-    const prefersDark = useMemo(() => {
-        if (typeof window === 'undefined') return true;
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }, []);
 
-    // State variables for the dark mode
+    // State variables for the dark mode: stored preference first, system preference as fallback
     const [isDark, setIsDark] = useState(() => {
-        if (typeof window === 'undefined') return true;
         const storedTheme = localStorage.getItem(STORAGE_KEY);
         if (storedTheme === 'true') return true;
         if (storedTheme === 'false') return false;
-        return prefersDark;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
     });
 
     // Effect to add the dark class to the root element
