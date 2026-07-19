@@ -192,12 +192,25 @@ export default function Sidebar() {
             )}
 
             {/* Desktop sidebar */}
-            <nav className="hidden lg:flex flex-col justify-center bg-gray-800 w-72 h-screen text-white text-lg select-none overflow-y-auto fixed z-10">
-                <ul className="flex flex-col gap-6 py-16 font-medium">
+            <nav className="hidden lg:flex flex-col justify-center bg-linear-to-b from-slate-900 via-slate-950 to-slate-900 w-72 h-screen text-white text-lg select-none overflow-y-auto fixed z-10">
+                {/* Decorative corner glows, clipped so they never extend the scroll area */}
+                <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+                    <span className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-cyan-500/15 blur-3xl" />
+                    <span className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-purple-500/15 blur-3xl" />
+                </div>
+                
+                {/* Right edge gradient hairline */}
+                <span aria-hidden="true"
+                    className="absolute inset-y-0 right-0 w-px bg-linear-to-b from-transparent via-cyan-500/50 to-transparent" />
+
+                <ul className="relative flex flex-col gap-8 py-16 font-medium">
                     {NAV_ITEMS.map(({ id, paths }) => (
                         <li key={id}>
-                            <a href={`#${id}`} onClick={() => setActiveLink(`#${id}`)} className={`flex gap-2 rounded py-5 pl-14 transition-all ease-in-out duration-300
-                                ${activeLink === `#${id}` ? 'bg-gray-700 text-cyan-400 pl-22' : 'hover:bg-gray-700 hover:pl-22 hover:text-cyan-400'}`}>
+                            <a href={`#${id}`} onClick={() => setActiveLink(`#${id}`)} className={`relative flex items-center gap-3 py-3.5 pl-14 transition-all ease-in-out duration-300
+                                ${activeLink === `#${id}` ? 'bg-cyan-500/10 text-cyan-400 pl-18' : 'text-slate-300 hover:bg-white/5 hover:text-cyan-400 hover:pl-18'}`}>
+                                {/* Active indicator bar */}
+                                <span aria-hidden="true"
+                                    className={`absolute inset-y-0 left-0 w-1 bg-linear-to-b from-cyan-400 to-cyan-600 transition-opacity duration-300 ${activeLink === `#${id}` ? 'opacity-100' : 'opacity-0'}`} />
                                 <NavIcon paths={paths} />
                                 {t(`sidebar.${id}`)}
                             </a>
