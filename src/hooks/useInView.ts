@@ -15,7 +15,7 @@ export function useInView<T extends HTMLElement>() {
                 setInView(true);
                 observer.disconnect();
             }
-        }, { rootMargin: '0px 0px -10% 0px' });
+        }, { rootMargin: '0px 0px -25% 0px' });
 
         observer.observe(element);
         return () => observer.disconnect();
