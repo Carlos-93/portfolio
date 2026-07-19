@@ -169,7 +169,7 @@ export default function Sidebar() {
 
             {/* Mobile sidebar */}
             {isMenuOpen ? (
-                <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-xl bg-black/70 transition-all duration-700 ease-in-out"
+                <div className="fixed inset-0 z-20 lg:hidden backdrop-blur-xl bg-black/70 transition-all duration-700 ease-in-out"
                     onClick={() => setIsMenuOpen(false)}>
                     <nav className="fixed w-full h-full flex justify-center items-center">
                         <ul className="flex flex-col gap-10 sm:gap-16 text-xl sm:text-2xl font-medium text-white text-center">
