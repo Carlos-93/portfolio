@@ -115,6 +115,7 @@
     }
   },
   "projects": {
+    "githubStars": "GitHub stars",
     "viewDemo": "View demo",
     "viewCode": "View code",
     "items": {

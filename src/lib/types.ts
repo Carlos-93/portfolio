@@ -63,6 +63,17 @@ export interface SpokenLanguage {
     flag: string;
 }
 
+export interface RepoStats {
+    stars: number;
+    language: string | null;
+}
+
+/** Subset of the GitHub REST "get repository" response the app consumes */
+export interface GithubRepo {
+    stargazers_count: number;
+    language: string | null;
+}
+
 export interface RevealProps {
     children: ReactNode;
     /** Transition delay in ms, used to stagger sibling reveals */
