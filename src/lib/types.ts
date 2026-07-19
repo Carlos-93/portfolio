@@ -15,7 +15,6 @@ export interface Experience {
     company: string;
     role: string;
     logo: string;
-    /** Compensates logos with built-in whitespace so they all look the same size */
     logoScale?: number;
     start: string;
     end?: string;
@@ -68,7 +67,6 @@ export interface RepoStats {
     language: string | null;
 }
 
-/** Subset of the GitHub REST "get repository" response the app consumes */
 export interface GithubRepo {
     stargazers_count: number;
     language: string | null;
@@ -76,7 +74,6 @@ export interface GithubRepo {
 
 export interface RevealProps {
     children: ReactNode;
-    /** Transition delay in ms, used to stagger sibling reveals */
     delay?: number;
     className?: string;
 }

@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
-import type { GithubRepo, RepoStats } from '../lib/types';
 import { projects } from '../lib/constants';
+import type { GithubRepo, RepoStats } from '../lib/types';
 
 const CACHE_KEY = 'github-stats';
 
-// Live stats (stars, main language) for the featured repos from the public GitHub API,
-// cached per browser session to stay well under the unauthenticated rate limit
+// This hook fetches GitHub repository stats for the projects listed in `projects`.
 export function useGithubStats() {
     const [stats, setStats] = useState<Record<string, RepoStats> | null>(() => {
         try {
