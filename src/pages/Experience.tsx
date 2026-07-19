@@ -20,7 +20,7 @@ export default function Experience() {
             <ol className="relative w-full max-w-7xl">
                 {/* Trunk with a continuous stream of light, faded at both ends */}
                 <span aria-hidden="true"
-                    className="pointer-events-none absolute top-2 bottom-2 left-7 w-0.5 -translate-x-1/2 overflow-hidden rounded-full bg-cyan-500/25 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] md:left-1/2">
+                    className="pointer-events-none absolute top-2 bottom-2 left-7 w-0.5 -translate-x-1/2 overflow-hidden rounded-full bg-cyan-500/25 mask-[linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] md:left-1/2">
                     <span className="trunk-beam absolute inset-0" />
                 </span>
 
@@ -41,7 +41,7 @@ export default function Experience() {
                         <li key={exp.id} className="relative mb-10 last:mb-0">
                             {/* Branch node: company logo filling the circle */}
                             <div className="absolute top-1 left-7 z-10 -translate-x-1/2 md:left-1/2">
-                                <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white p-2 shadow-md shadow-cyan-500/20 ring-2 ring-cyan-500/60 transition-transform duration-300 hover:scale-105 md:h-18 md:w-18 md:p-2.5">
+                                <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white p-1.5 shadow-md shadow-cyan-500/20 ring-2 ring-cyan-500/60 transition-transform duration-300 hover:scale-105 md:h-18 md:w-18 md:p-2">
                                     <img src={exp.logo} alt={exp.company} loading="lazy" className="h-full w-full object-contain"
                                         style={exp.logoScale ? { transform: `scale(${exp.logoScale})` } : undefined} />
                                 </div>

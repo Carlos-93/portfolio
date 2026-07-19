@@ -16,6 +16,7 @@ export default function Languages() {
                             {/* Flag filling the card as a faded background */}
                             <img src={language.flag} alt="" loading="lazy"
                                 className="absolute inset-0 h-full w-full opacity-20 transition-all duration-500 group-hover:opacity-40 dark:opacity-20 dark:group-hover:opacity-40" />
+                            
                             {/* Bottom scrim so the text stays legible over the flag */}
                             <span aria-hidden="true"
                                 className="absolute inset-0 bg-linear-to-t from-white via-white/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/40 dark:to-transparent" />
@@ -25,9 +26,10 @@ export default function Languages() {
 
                             {/* Name + level chip anchored to the bottom */}
                             <div className="relative flex items-center justify-between gap-3">
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                                <span className="text-lg font-bold text-slate-900 dark:text-white">
                                     {t(`languages.items.${language.id}.name`)}
-                                </h3>
+                                </span>
+
                                 <span className="rounded-full border border-cyan-600/30 bg-cyan-600/10 px-3 py-1 text-sm font-medium text-cyan-700 backdrop-blur-sm dark:border-cyan-400/30 dark:bg-cyan-400/10 dark:text-cyan-300">
                                     {t(`languages.items.${language.id}.level`)}
                                 </span>

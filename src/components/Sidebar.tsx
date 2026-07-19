@@ -172,7 +172,7 @@ export default function Sidebar() {
                 <div className="fixed inset-0 z-20 lg:hidden backdrop-blur-xl bg-black/70 transition-all duration-700 ease-in-out"
                     onClick={() => setIsMenuOpen(false)}>
                     <nav className="fixed w-full h-full flex justify-center items-center">
-                        <ul className="flex flex-col gap-10 sm:gap-16 text-xl sm:text-2xl font-medium text-white text-center">
+                        <ul className="flex flex-col gap-8 sm:gap-14 text-lg sm:text-xl font-medium text-white text-center">
                             {NAV_ITEMS.map(({ id, paths }) => (
                                 <li key={id}>
                                     <a href={`#${id}`} onClick={() => handleLinkClick(`#${id}`)}
@@ -196,7 +196,7 @@ export default function Sidebar() {
                 {/* Decorative corner glows, clipped so they never extend the scroll area */}
                 <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
                     <span className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-cyan-500/15 blur-3xl" />
-                    <span className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-purple-500/15 blur-3xl" />
+                    <span className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-blue-600/15 blur-3xl" />
                 </div>
                 
                 {/* Right edge gradient hairline */}
