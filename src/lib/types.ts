@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 export type SkillCategory = 'os' | 'frontend' | 'backend' | 'database' | 'tools';
 
 export interface Skill {
@@ -59,6 +61,13 @@ export interface Language {
 export interface SpokenLanguage {
     id: string;
     flag: string;
+}
+
+export interface RevealProps {
+    children: ReactNode;
+    /** Transition delay in ms, used to stagger sibling reveals */
+    delay?: number;
+    className?: string;
 }
 
 export interface SectionHeaderProps {
