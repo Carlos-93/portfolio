@@ -104,7 +104,7 @@ export default function Home() {
             </div>
 
             <figure className="shrink-0 w-3xs sm:w-xs md:w-sm lg:w-2xs xl:w-sm 2xl:w-xl aspect-997/1480 lg:mt-10">
-                <img src="/assets/images/me/profile.png" alt={t('home.profileImageAlt')} width={997} height={1480} onLoad={() => setLoaded(true)}
+                <img src="/assets/images/me/profile.webp" alt={t('home.profileImageAlt')} width={997} height={1480} onLoad={() => setLoaded(true)}
                     className={`w-full h-auto max-w-full object-contain transition-opacity duration-4000 profile-image-fade ${loaded ? 'opacity-100' : 'opacity-0'}`}
                 />
             </figure>

@@ -1,17 +1,14 @@
 import LanguageDetector from 'i18next-browser-languagedetector';
+import resourcesToBackend from 'i18next-resources-to-backend';
+import esTranslation from './locales/es/translation.json';
 import { initReactI18next } from 'react-i18next';
 import i18n from 'i18next';
-// Languages translations
-import esTranslation from './locales/es/translation.json';
-import caTranslation from './locales/ca/translation.json';
-import enTranslation from './locales/en/translation.json';
-import deTranslation from './locales/de/translation.json';
-import itTranslation from './locales/it/translation.json';
-import frTranslation from './locales/fr/translation.json';
 
 i18n
     // Detect browser language
     .use(LanguageDetector)
+    // Load the rest of the languages on demand, one dynamic import per language
+    .use(resourcesToBackend((language: string) => import(`./locales/${language}/translation.json`)))
     // Pass the i18n instance to react-i18next
     .use(initReactI18next)
     // Initialize i18next
@@ -20,26 +17,13 @@ i18n
         fallbackLng: 'es',
         // Available languages
         supportedLngs: ['es', 'ca', 'en', 'de', 'it', 'fr'],
+        // 'es' is already available synchronously; other languages come from the backend above
+        partialBundledLanguages: true,
 
         // Translation resources
         resources: {
             es: {
                 translation: esTranslation,
-            },
-            ca: {
-                translation: caTranslation,
-            },
-            en: {
-                translation: enTranslation,
-            },
-            de: {
-                translation: deTranslation,
-            },
-            it: {
-                translation: itTranslation,
-            },
-            fr: {
-                translation: frTranslation,
             },
         },
 

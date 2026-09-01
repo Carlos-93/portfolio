@@ -50,7 +50,7 @@ export const experiences: Experience[] = [
         id: "sece",
         company: "Sociedad Española de Construcciones Eléctricas (SECE)",
         role: "Frontend Web Developer · UX/UI Designer",
-        logo: "/assets/images/companies/sece.png",
+        logo: "/assets/images/companies/sece.webp",
         logoScale: 1.35,
         start: "2025-02",
     },
@@ -58,7 +58,7 @@ export const experiences: Experience[] = [
         id: "pkfAttest",
         company: "PKF Attest",
         role: "Full Stack Web Developer",
-        logo: "/assets/images/companies/pkf-attest.png",
+        logo: "/assets/images/companies/pkf-attest.webp",
         start: "2024-09",
         end: "2025-02",
     },
@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
         id: "essistemas",
         company: "ESSistemas",
         role: "Frontend Web Developer",
-        logo: "/assets/images/companies/essistemas.png",
+        logo: "/assets/images/companies/essistemas.webp",
         start: "2023-10",
         end: "2024-04",
     },
@@ -74,13 +74,13 @@ export const experiences: Experience[] = [
 
 // Educations Object
 export const educations: Education[] = [
-    { id: "daw", institution: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.png", url: "https://www.monlau.com", file: "/assets/certificates/education-daw.pdf" },
+    { id: "daw", institution: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.webp", url: "https://www.monlau.com", file: "/assets/certificates/education-daw.pdf" },
 ];
 
 // Certificates Object
 export const certificates: Certificate[] = [
-    { id: "linux", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.png", file: "/assets/certificates/certificate-linux.pdf" },
-    { id: "windows", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.png", file: "/assets/certificates/certificate-windows.pdf" },
+    { id: "linux", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.webp", file: "/assets/certificates/certificate-linux.pdf" },
+    { id: "windows", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.webp", file: "/assets/certificates/certificate-windows.pdf" },
 ];
 
 // Projects Object
@@ -117,19 +117,19 @@ export const socialNetworks: SocialNetwork[] = [
 
 // Languages Object
 export const languages: Language[] = [
-    { code: 'es', name: 'Español', flag: `/assets/images/flags/spain.png` },
-    { code: 'ca', name: 'Català', flag: `/assets/images/flags/catalonia.png` },
-    { code: 'en', name: 'English', flag: `/assets/images/flags/united-kingdom.png` },
-    { code: 'de', name: 'Deutsch', flag: `/assets/images/flags/germany.png` },
-    { code: 'it', name: 'Italiano', flag: `/assets/images/flags/italy.png` },
-    { code: 'fr', name: 'Français', flag: `/assets/images/flags/france.png` },
+    { code: 'es', name: 'Español', flag: `/assets/images/flags/spain.webp` },
+    { code: 'ca', name: 'Català', flag: `/assets/images/flags/catalonia.webp` },
+    { code: 'en', name: 'English', flag: `/assets/images/flags/united-kingdom.webp` },
+    { code: 'de', name: 'Deutsch', flag: `/assets/images/flags/germany.webp` },
+    { code: 'it', name: 'Italiano', flag: `/assets/images/flags/italy.webp` },
+    { code: 'fr', name: 'Français', flag: `/assets/images/flags/france.webp` },
 ];
 
 // Spoken Languages Object
 export const spokenLanguages: SpokenLanguage[] = [
-    { id: "spanish", flag: `/assets/images/flags/spain.png` },
-    { id: "catalan", flag: `/assets/images/flags/catalonia.png` },
-    { id: "english", flag: `/assets/images/flags/united-kingdom.png` },
+    { id: "spanish", flag: `/assets/images/flags/spain.webp` },
+    { id: "catalan", flag: `/assets/images/flags/catalonia.webp` },
+    { id: "english", flag: `/assets/images/flags/united-kingdom.webp` },
 ];
 
 // Storage Key for the dark mode
