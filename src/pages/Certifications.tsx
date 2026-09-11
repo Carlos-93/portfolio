@@ -9,7 +9,7 @@ export default function Certifications() {
     return (
         <div className="flex w-full flex-col items-center gap-10">
             <SectionHeader title={t('sidebar.certifications')} />
-            <ul className="grid w-full max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
+            <ul className="grid w-full max-w-7xl gap-6 grid-cols-1 md:grid-cols-2">
                 {certificates.map((certificate) => (
                     <li key={certificate.id}>
                         <article className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-slate-200 bg-white/50 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/20 dark:border-white/10 dark:bg-white/5 sm:p-6">

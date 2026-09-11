@@ -96,14 +96,69 @@
     "viewCertificate": "View certificate",
     "items": {
       "linux": {
-        "title": "Linux Operating System Administration",
-        "period": "June 2024",
+        "title": "Linux Operating System Administration (60h)",
+        "period": "June 2023",
         "location": "On-site"
       },
       "windows": {
-        "title": "Windows 10 Administration",
+        "title": "Windows 10 Administration (70h)",
+        "period": "June 2023",
+        "location": "On-site"
+      },
+      "oracleSqlFundamentals": {
+        "title": "Oracle SQL Fundamentals (50h)",
+        "period": "June 2023",
+        "location": "On-site"
+      },
+      "javaSeFundamentals": {
+        "title": "Java SE Fundamentals (45h)",
+        "period": "June 2023",
+        "location": "On-site"
+      },
+      "oraclePlsql": {
+        "title": "Oracle PL/SQL Programming (60h)",
+        "period": "June 2023",
+        "location": "On-site"
+      },
+      "aspIntro": {
+        "title": "Introduction to ASP (70h)",
         "period": "June 2024",
         "location": "On-site"
+      },
+      "javaSeProgramming": {
+        "title": "Java SE Programming Language (60h)",
+        "period": "June 2024",
+        "location": "On-site"
+      },
+      "angularTypeScript": {
+        "title": "Introduction to Angular and TypeScript (70h)",
+        "period": "June 2024",
+        "location": "On-site"
+      },
+      "udemyHtml5": {
+        "title": "HTML5 Course from Scratch: The Most Complete One in Spanish (4h)",
+        "period": "June 2023",
+        "location": "Online"
+      },
+      "googleWebDev1": {
+        "title": "Introduction to Web Development I (40h)",
+        "period": "July 2022",
+        "location": "Online"
+      },
+      "googleCybersecurity": {
+        "title": "Protect Your Business: Cybersecurity in Remote Work (2 hours)",
+        "period": "July 2022",
+        "location": "Online"
+      },
+      "googleWebDev2": {
+        "title": "Introduction to Web Development II (40h)",
+        "period": "August 2022",
+        "location": "Online"
+      },
+      "googleMobileApps": {
+        "title": "Mobile App Development (40h)",
+        "period": "June 2023",
+        "location": "Online"
       }
     }
   },

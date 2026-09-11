@@ -60,6 +60,13 @@ body {
         linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
 }
 
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
 @keyframes gradient-move {
     0% {
         background-position: 0% 50%;

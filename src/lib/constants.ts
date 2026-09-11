@@ -79,8 +79,19 @@ export const educations: Education[] = [
 
 // Certificates Object
 export const certificates: Certificate[] = [
-    { id: "linux", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.webp", file: "/assets/certificates/certificate-linux.pdf" },
-    { id: "windows", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.webp", file: "/assets/certificates/certificate-windows.pdf" },
+    { id: "linux", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/lpi.svg", file: "/assets/certificates/certificate-linux.pdf" },
+    { id: "windows", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/windows.svg", file: "/assets/certificates/certificate-windows.pdf" },
+    { id: "aspIntro", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.webp", file: "/assets/certificates/certificate-asp-intro.pdf" },
+    { id: "angularTypeScript", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.webp", file: "/assets/certificates/certificate-angular-typescript.pdf" },
+    { id: "oracleSqlFundamentals", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-oracle-sql-fundamentals.pdf" },
+    { id: "oraclePlsql", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-oracle-plsql.pdf" },
+    { id: "javaSeFundamentals", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-java-se-fundamentals.pdf" },
+    { id: "javaSeProgramming", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-java-se-programming.pdf" },
+    { id: "udemyHtml5", issuer: "Udemy", logo: "/assets/icons/udemy.svg", file: "/assets/certificates/certificate-udemy-html5.pdf" },
+    { id: "googleCybersecurity", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-cybersecurity.pdf" },
+    { id: "googleWebDev1", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-web-dev-1.pdf" },
+    { id: "googleWebDev2", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-web-dev-2.pdf" },
+    { id: "googleMobileApps", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-mobile-apps.pdf" },
 ];
 
 // Projects Object

@@ -96,14 +96,69 @@
     "viewCertificate": "Voir le certificat",
     "items": {
       "linux": {
-        "title": "Administration de Systèmes d'Exploitation Linux",
-        "period": "Juin 2024",
+        "title": "Administration de Systèmes d'Exploitation Linux (60 h)",
+        "period": "Juin 2023",
         "location": "En présentiel"
       },
       "windows": {
-        "title": "Administration de Windows 10",
+        "title": "Administration de Windows 10 (70 h)",
+        "period": "Juin 2023",
+        "location": "En présentiel"
+      },
+      "oracleSqlFundamentals": {
+        "title": "Concepts Fondamentaux SQL Oracle (50 h)",
+        "period": "Juin 2023",
+        "location": "En présentiel"
+      },
+      "javaSeFundamentals": {
+        "title": "Java SE Fundamentals (45 h)",
+        "period": "Juin 2023",
+        "location": "En présentiel"
+      },
+      "oraclePlsql": {
+        "title": "Programmation PL/SQL Oracle (60 h)",
+        "period": "Juin 2023",
+        "location": "En présentiel"
+      },
+      "aspIntro": {
+        "title": "Introduction à ASP (70 h)",
         "period": "Juin 2024",
         "location": "En présentiel"
+      },
+      "javaSeProgramming": {
+        "title": "Java SE Programming Language (60 h)",
+        "period": "Juin 2024",
+        "location": "En présentiel"
+      },
+      "angularTypeScript": {
+        "title": "Introduction à Angular et TypeScript (70 h)",
+        "period": "Juin 2024",
+        "location": "En présentiel"
+      },
+      "udemyHtml5": {
+        "title": "Cours HTML5 depuis Zéro : Le plus Complet en Espagnol (4 h)",
+        "period": "Juin 2023",
+        "location": "En ligne"
+      },
+      "googleWebDev1": {
+        "title": "Introduction au Développement Web I (40 h)",
+        "period": "Juillet 2022",
+        "location": "En ligne"
+      },
+      "googleCybersecurity": {
+        "title": "Protégez votre Entreprise : Cybersécurité en Télétravail (2 heures)",
+        "period": "Juillet 2022",
+        "location": "En ligne"
+      },
+      "googleWebDev2": {
+        "title": "Introduction au Développement Web II (40 h)",
+        "period": "Août 2022",
+        "location": "En ligne"
+      },
+      "googleMobileApps": {
+        "title": "Développement d'Applications Mobiles (40 h)",
+        "period": "Juin 2023",
+        "location": "En ligne"
       }
     }
   },

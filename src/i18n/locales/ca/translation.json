@@ -96,14 +96,69 @@
     "viewCertificate": "Veure certificat",
     "items": {
       "linux": {
-        "title": "Administració de Sistemes Operatius Linux",
-        "period": "Juny 2024",
+        "title": "Administració de Sistemes Operatius Linux (60 h)",
+        "period": "Juny 2023",
         "location": "Presencial"
       },
       "windows": {
-        "title": "Administració de Windows 10",
+        "title": "Administració de Windows 10 (70 h)",
+        "period": "Juny 2023",
+        "location": "Presencial"
+      },
+      "oracleSqlFundamentals": {
+        "title": "Conceptes Fonamentals SQL Oracle (50 h)",
+        "period": "Juny 2023",
+        "location": "Presencial"
+      },
+      "javaSeFundamentals": {
+        "title": "Java SE Fundamentals (45 h)",
+        "period": "Juny 2023",
+        "location": "Presencial"
+      },
+      "oraclePlsql": {
+        "title": "Programació PL/SQL Oracle (60 h)",
+        "period": "Juny 2023",
+        "location": "Presencial"
+      },
+      "aspIntro": {
+        "title": "Introducció a ASP (70 h)",
         "period": "Juny 2024",
         "location": "Presencial"
+      },
+      "javaSeProgramming": {
+        "title": "Java SE Programming Language (60 h)",
+        "period": "Juny 2024",
+        "location": "Presencial"
+      },
+      "angularTypeScript": {
+        "title": "Introducció a Angular i TypeScript (70 h)",
+        "period": "Juny 2024",
+        "location": "Presencial"
+      },
+      "udemyHtml5": {
+        "title": "Curs d'HTML5 des de Zero: El més Complet en Espanyol (4 h)",
+        "period": "Juny 2023",
+        "location": "En línia"
+      },
+      "googleWebDev1": {
+        "title": "Introducció al Desenvolupament Web I (40 h)",
+        "period": "Juliol 2022",
+        "location": "En línia"
+      },
+      "googleCybersecurity": {
+        "title": "Protegeix el teu Negoci: Ciberseguretat en el Teletreball (2 hores)",
+        "period": "Juliol 2022",
+        "location": "En línia"
+      },
+      "googleWebDev2": {
+        "title": "Introducció al Desenvolupament Web II (40 h)",
+        "period": "Agost 2022",
+        "location": "En línia"
+      },
+      "googleMobileApps": {
+        "title": "Desenvolupament d'Apps Mòbils (40 h)",
+        "period": "Juny 2023",
+        "location": "En línia"
       }
     }
   },

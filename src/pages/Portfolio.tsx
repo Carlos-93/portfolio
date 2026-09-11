@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 // Components
 import DarkMode from '../components/DarkMode';
@@ -18,6 +19,17 @@ import Home from './Home';
 export default function Portfolio() {
     // Set the document title for the portfolio page
     useDocumentTitle();
+
+    // Block the right-click / long-press context menu on images only
+    useEffect(() => {
+        const blockImageContextMenu = (event: MouseEvent) => {
+            if (event.target instanceof HTMLImageElement) {
+                event.preventDefault();
+            }
+        };
+        document.addEventListener('contextmenu', blockImageContextMenu);
+        return () => document.removeEventListener('contextmenu', blockImageContextMenu);
+    }, []);
 
     return (
         <div className="flex flex-col">
