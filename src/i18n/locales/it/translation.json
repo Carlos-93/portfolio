@@ -94,69 +94,84 @@
   },
   "certifications": {
     "viewCertificate": "Vedi certificato",
+    "scrollLeft": "Scorri i certificati a sinistra",
+    "scrollRight": "Scorri i certificati a destra",
     "items": {
       "linux": {
-        "title": "Amministrazione di Sistemi Operativi Linux (60 h)",
+        "title": "Amministrazione di Sistemi Operativi Linux",
+        "duration": "60 h",
         "period": "Giugno 2023",
         "location": "In presenza"
       },
       "windows": {
-        "title": "Amministrazione di Windows 10 (70 h)",
+        "title": "Amministrazione di Windows 10",
+        "duration": "70 h",
         "period": "Giugno 2023",
         "location": "In presenza"
       },
       "oracleSqlFundamentals": {
-        "title": "Concetti Fondamentali SQL Oracle (50 h)",
+        "title": "Concetti Fondamentali SQL Oracle",
+        "duration": "50 h",
         "period": "Giugno 2023",
         "location": "In presenza"
       },
       "javaSeFundamentals": {
-        "title": "Java SE Fundamentals (45 h)",
+        "title": "Java SE Fundamentals",
+        "duration": "45 h",
         "period": "Giugno 2023",
         "location": "In presenza"
       },
       "oraclePlsql": {
-        "title": "Programmazione PL/SQL Oracle (60 h)",
+        "title": "Programmazione PL/SQL Oracle",
+        "duration": "60 h",
         "period": "Giugno 2023",
         "location": "In presenza"
       },
       "aspIntro": {
-        "title": "Introduzione ad ASP (70 h)",
+        "title": "Introduzione ad ASP",
+        "duration": "70 h",
         "period": "Giugno 2024",
         "location": "In presenza"
       },
       "javaSeProgramming": {
-        "title": "Java SE Programming Language (60 h)",
+        "title": "Java SE Programming Language",
+        "duration": "60 h",
         "period": "Giugno 2024",
         "location": "In presenza"
       },
       "angularTypeScript": {
-        "title": "Introduzione ad Angular e TypeScript (70 h)",
+        "title": "Introduzione ad Angular e TypeScript",
+        "duration": "70 h",
         "period": "Giugno 2024",
         "location": "In presenza"
       },
       "udemyHtml5": {
-        "title": "Corso di HTML5 da Zero: Il più Completo in Spagnolo (4 h)",
+        "title": "Corso di HTML5 da Zero: Il più Completo in Spagnolo",
+        "duration": "4 h",
         "period": "Giugno 2023",
         "location": "Online"
       },
       "googleWebDev1": {
-        "title": "Introduzione allo Sviluppo Web I (40 h)",
+        "title": "Introduzione allo Sviluppo Web I",
+        "duration": "40 h",
         "period": "Luglio 2022",
         "location": "Online"
       },
       "googleCybersecurity": {
-        "title": "Proteggi la tua Attività: Cybersicurezza nel Lavoro da Remoto (2 ore)",
+        "title": "Proteggi la tua Attività: Cybersicurezza nel Lavoro da Remoto",
+        "duration": "2 ore",
         "period": "Luglio 2022",
         "location": "Online"
       },
       "googleWebDev2": {
-        "title": "Introduzione allo Sviluppo Web II (40 h)",
+        "title": "Introduzione allo Sviluppo Web II",
+        "duration": "40 h",
         "period": "Agosto 2022",
         "location": "Online"
       },
       "googleMobileApps": {
-        "title": "Sviluppo di App Mobili (40 h)",
+        "title": "Sviluppo di App Mobili",
+        "duration": "40 h",
         "period": "Giugno 2023",
         "location": "Online"
       }

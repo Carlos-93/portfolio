@@ -87,7 +87,7 @@ export const certificates: Certificate[] = [
     { id: "oraclePlsql", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-oracle-plsql.pdf" },
     { id: "javaSeFundamentals", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-java-se-fundamentals.pdf" },
     { id: "javaSeProgramming", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-java-se-programming.pdf" },
-    { id: "udemyHtml5", issuer: "Udemy", logo: "/assets/icons/udemy.svg", file: "/assets/certificates/certificate-udemy-html5.pdf" },
+    { id: "udemyHtml5", issuer: "Udemy", logo: "/assets/images/companies/udemy.png", file: "/assets/certificates/certificate-udemy-html5.pdf" },
     { id: "googleCybersecurity", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-cybersecurity.pdf" },
     { id: "googleWebDev1", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-web-dev-1.pdf" },
     { id: "googleWebDev2", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-web-dev-2.pdf" },

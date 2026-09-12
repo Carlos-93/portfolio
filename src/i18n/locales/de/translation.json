@@ -94,69 +94,84 @@
   },
   "certifications": {
     "viewCertificate": "Zertifikat ansehen",
+    "scrollLeft": "Zertifikate nach links scrollen",
+    "scrollRight": "Zertifikate nach rechts scrollen",
     "items": {
       "linux": {
-        "title": "Administration von Linux-Betriebssystemen (60 Std.)",
+        "title": "Administration von Linux-Betriebssystemen",
+        "duration": "60 Std.",
         "period": "Juni 2023",
         "location": "Vor Ort"
       },
       "windows": {
-        "title": "Administration von Windows 10 (70 Std.)",
+        "title": "Administration von Windows 10",
+        "duration": "70 Std.",
         "period": "Juni 2023",
         "location": "Vor Ort"
       },
       "oracleSqlFundamentals": {
-        "title": "Oracle SQL Grundlagen (50 Std.)",
+        "title": "Oracle SQL Grundlagen",
+        "duration": "50 Std.",
         "period": "Juni 2023",
         "location": "Vor Ort"
       },
       "javaSeFundamentals": {
-        "title": "Java SE Fundamentals (45 Std.)",
+        "title": "Java SE Fundamentals",
+        "duration": "45 Std.",
         "period": "Juni 2023",
         "location": "Vor Ort"
       },
       "oraclePlsql": {
-        "title": "Oracle PL/SQL-Programmierung (60 Std.)",
+        "title": "Oracle PL/SQL-Programmierung",
+        "duration": "60 Std.",
         "period": "Juni 2023",
         "location": "Vor Ort"
       },
       "aspIntro": {
-        "title": "Einführung in ASP (70 Std.)",
+        "title": "Einführung in ASP",
+        "duration": "70 Std.",
         "period": "Juni 2024",
         "location": "Vor Ort"
       },
       "javaSeProgramming": {
-        "title": "Java SE Programming Language (60 Std.)",
+        "title": "Java SE Programming Language",
+        "duration": "60 Std.",
         "period": "Juni 2024",
         "location": "Vor Ort"
       },
       "angularTypeScript": {
-        "title": "Einführung in Angular und TypeScript (70 Std.)",
+        "title": "Einführung in Angular und TypeScript",
+        "duration": "70 Std.",
         "period": "Juni 2024",
         "location": "Vor Ort"
       },
       "udemyHtml5": {
-        "title": "HTML5-Kurs von Grund auf: Der Umfassendste auf Spanisch (4 Std.)",
+        "title": "HTML5-Kurs von Grund auf: Der Umfassendste auf Spanisch",
+        "duration": "4 Std.",
         "period": "Juni 2023",
         "location": "Online"
       },
       "googleWebDev1": {
-        "title": "Einführung in die Webentwicklung I (40 Std.)",
+        "title": "Einführung in die Webentwicklung I",
+        "duration": "40 Std.",
         "period": "Juli 2022",
         "location": "Online"
       },
       "googleCybersecurity": {
-        "title": "Schütze dein Unternehmen: Cybersicherheit im Homeoffice (2 Std.)",
+        "title": "Schütze dein Unternehmen: Cybersicherheit im Homeoffice",
+        "duration": "2 Std.",
         "period": "Juli 2022",
         "location": "Online"
       },
       "googleWebDev2": {
-        "title": "Einführung in die Webentwicklung II (40 Std.)",
+        "title": "Einführung in die Webentwicklung II",
+        "duration": "40 Std.",
         "period": "August 2022",
         "location": "Online"
       },
       "googleMobileApps": {
-        "title": "Entwicklung von Mobil-Apps (40 Std.)",
+        "title": "Entwicklung von Mobil-Apps",
+        "duration": "40 Std.",
         "period": "Juni 2023",
         "location": "Online"
       }
