@@ -22,7 +22,7 @@ export default function Projects() {
     const stats = useGithubStats();
 
     return (
-        <div className="flex w-full flex-col items-center gap-10">
+        <div className="flex w-full flex-col items-center gap-8 sm:gap-10">
             <SectionHeader title={t('sidebar.projects')} />
             <ul className="grid w-full max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project, index) => {
@@ -40,13 +40,13 @@ export default function Projects() {
                                 </div>
 
                                 {/* Body */}
-                                <div className="flex flex-1 flex-col gap-4 p-5">
+                                <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
                                     <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
-                                        <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+                                        <h3 className="text-base font-semibold text-slate-900 dark:text-white sm:text-lg">
                                             {project.title}
                                         </h3>
                                         {repo && (
-                                            <div className="flex shrink-0 items-center gap-3 text-sm text-slate-500 dark:text-gray-400">
+                                            <div className="flex shrink-0 items-center gap-3 text-xs text-slate-500 dark:text-gray-400 sm:text-sm">
                                                 {repo.language && (
                                                     <span className="inline-flex items-center gap-1.5">
                                                         <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full"
@@ -85,7 +85,7 @@ export default function Projects() {
                                     <div className="mt-1 flex justify-end items-center gap-4">
                                         {project.repoUrl && (
                                             <a href={project.repoUrl} target="_blank" rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 transition-colors duration-300 hover:text-cyan-600 dark:text-gray-300 dark:hover:text-cyan-400">
+                                                className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 transition-colors duration-300 hover:text-cyan-600 dark:text-gray-300 dark:hover:text-cyan-400 sm:text-sm">
                                                 {t('projects.viewCode')}
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -95,7 +95,7 @@ export default function Projects() {
                                         )}
                                         {project.demoUrl && (
                                             <a href={project.demoUrl} target="_blank" rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-1.5 rounded-md border-2 border-cyan-600 px-3 py-1.5 text-sm font-semibold text-slate-900 transition-colors duration-300 hover:bg-cyan-600 hover:text-white dark:border-cyan-400 dark:text-white dark:hover:bg-cyan-400 dark:hover:text-slate-900">
+                                                className="inline-flex items-center gap-1.5 rounded-md border-2 border-cyan-600 px-2.5 py-1 text-xs font-semibold text-slate-900 transition-colors duration-300 hover:bg-cyan-600 hover:text-white dark:border-cyan-400 dark:text-white dark:hover:bg-cyan-400 dark:hover:text-slate-900 sm:px-3 sm:py-1.5 sm:text-sm">
                                                 {t('projects.viewDemo')}
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />

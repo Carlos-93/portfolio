@@ -15,7 +15,7 @@ export default function Experience() {
     const { t } = useTranslation();
 
     return (
-        <div className="flex w-full flex-col items-center gap-10">
+        <div className="flex w-full flex-col items-center gap-8 sm:gap-10">
             <SectionHeader title={t('sidebar.experience')} />
             <ol className="relative w-full max-w-7xl">
                 {/* Trunk with a continuous stream of light, faded at both ends */}
@@ -68,17 +68,17 @@ export default function Experience() {
                                             <h3 className="text-base font-semibold text-slate-900 dark:text-white sm:text-lg">
                                                 {exp.role}
                                             </h3>
-                                            <p className="text-sm font-medium text-cyan-600 dark:text-cyan-400">
+                                            <p className="text-xs font-medium text-cyan-600 dark:text-cyan-400 sm:text-sm">
                                                 {exp.company}
                                             </p>
                                         </div>
-                                        <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-2.5 py-1 text-sm font-medium text-slate-600 dark:border-white/10 dark:bg-white/10 dark:text-gray-300">
+                                        <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/10 dark:text-gray-300 sm:px-2.5 sm:py-1 sm:text-sm">
                                             {t(`experience.items.${exp.id}.employment`)}
                                         </span>
                                     </div>
 
                                     {/* Meta: period – duration on one line, location below */}
-                                    <div className="flex flex-col gap-1.5 text-sm text-slate-500 dark:text-gray-400">
+                                    <div className="flex flex-col gap-1.5 text-xs text-slate-500 dark:text-gray-400 sm:text-sm">
                                         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                                             <span className="inline-flex items-center gap-1.5">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

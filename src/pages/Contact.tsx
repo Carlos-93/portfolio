@@ -50,7 +50,7 @@ export default function Contact() {
     const [{ values }, formAction, isPending] = useActionState(sendMessage, { status: 'idle' });
 
     return (
-        <div className="flex w-full flex-col items-center gap-10">
+        <div className="flex w-full flex-col items-center gap-8 sm:gap-10">
             <SectionHeader title={t('sidebar.contact')} />
 
             <p className="max-w-2xl text-center text-sm leading-relaxed text-slate-600 dark:text-gray-300 sm:text-base">

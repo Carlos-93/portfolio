@@ -8,7 +8,7 @@ export default function Languages() {
     const { t } = useTranslation();
 
     return (
-        <div className="flex w-full flex-col items-center gap-10">
+        <div className="flex w-full flex-col items-center gap-8 sm:gap-10">
             <SectionHeader title={t('sidebar.languages')} />
             <ul className="grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {spokenLanguages.map((language, index) => (
@@ -28,11 +28,11 @@ export default function Languages() {
 
                                 {/* Name + level chip anchored to the bottom */}
                                 <div className="relative flex items-center justify-between gap-3">
-                                    <span className="text-lg font-bold text-slate-900 dark:text-white">
+                                    <span className="text-base font-bold text-slate-900 dark:text-white sm:text-lg">
                                         {t(`languages.items.${language.id}.name`)}
                                     </span>
 
-                                    <span className="rounded-full border border-cyan-600/30 bg-cyan-600/10 px-3 py-1 text-sm font-medium text-cyan-700 backdrop-blur-sm dark:border-cyan-400/30 dark:bg-cyan-400/10 dark:text-cyan-300">
+                                    <span className="rounded-full border border-cyan-600/30 bg-cyan-600/10 px-2.5 py-0.5 text-xs font-medium text-cyan-700 backdrop-blur-sm dark:border-cyan-400/30 dark:bg-cyan-400/10 dark:text-cyan-300 sm:px-3 sm:py-1 sm:text-sm">
                                         {t(`languages.items.${language.id}.level`)}
                                     </span>
                                 </div>
