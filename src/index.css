@@ -41,8 +41,8 @@ html::before {
     position: fixed;
     inset: 0;
     background:
-        radial-gradient(circle at 30% 30%, rgba(255, 0, 128, 0.14) 10%, transparent 40%),
-        radial-gradient(circle at 70% 80%, rgba(132, 0, 255, 0.14) 10%, transparent 40%);
+        radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--color-violet-600) 14%, transparent) 10%, transparent 40%),
+        radial-gradient(circle at 70% 80%, color-mix(in oklab, var(--color-cyan-500) 14%, transparent) 10%, transparent 40%);
     background-size: 200% 200%;
     animation: gradient-move 6s linear infinite;
     pointer-events: none;

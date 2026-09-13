@@ -102,7 +102,7 @@ export default function Footer() {
                         <div className="h-px w-full bg-white/10" />
 
                         {/* Bottom bar */}
-                        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+                        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between sm:pr-16">
                             <p className="text-center text-xs sm:text-sm text-white/50 sm:text-left cursor-default">
                                 © {currentYear} Carlos Araujo Galván. {t('footer.copyright')}
                             </p>
