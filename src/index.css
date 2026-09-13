@@ -2,12 +2,23 @@
 @import '@fontsource-variable/montserrat';
 
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant h-md (@media (min-height: 760px));
+@custom-variant h-lg (@media (min-height: 900px));
+@custom-variant h-xl (@media (min-height: 1000px));
 
 html {
     scroll-behavior: smooth;
 }
 
 @layer base {
+    :focus-visible {
+        outline: 2px solid var(--color-cyan-600);
+        outline-offset: 2px;
+    }
+
+    .dark :focus-visible {
+        outline-color: var(--color-cyan-400);
+    }
 
     *,
     *::before,
@@ -110,7 +121,6 @@ img {
     mask-image: linear-gradient(#000 85%, transparent);
 }
 
-/* Seamless stream of light flowing down the experience timeline trunk */
 .trunk-beam {
     background-image: linear-gradient(to bottom,
             transparent 0%,
@@ -122,7 +132,6 @@ img {
     animation: trunk-beam 5s linear infinite;
 }
 
-/* Respect the user's reduced-motion preference: stop decorative animations */
 @media (prefers-reduced-motion: reduce) {
     html::before {
         animation: none;

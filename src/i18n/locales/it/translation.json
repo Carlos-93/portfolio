@@ -96,6 +96,7 @@
     "viewCertificate": "Vedi certificato",
     "scrollLeft": "Scorri i certificati a sinistra",
     "scrollRight": "Scorri i certificati a destra",
+    "goToPage": "Vai alla pagina {{page}} di {{total}}",
     "items": {
       "linux": {
         "title": "Amministrazione di Sistemi Operativi Linux",

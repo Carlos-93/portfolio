@@ -96,6 +96,7 @@
     "viewCertificate": "Zertifikat ansehen",
     "scrollLeft": "Zertifikate nach links scrollen",
     "scrollRight": "Zertifikate nach rechts scrollen",
+    "goToPage": "Zu Seite {{page}} von {{total}}",
     "items": {
       "linux": {
         "title": "Administration von Linux-Betriebssystemen",

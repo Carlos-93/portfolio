@@ -96,6 +96,7 @@
     "viewCertificate": "View certificate",
     "scrollLeft": "Scroll certificates left",
     "scrollRight": "Scroll certificates right",
+    "goToPage": "Go to page {{page}} of {{total}}",
     "items": {
       "linux": {
         "title": "Linux Operating System Administration",

@@ -13,6 +13,8 @@ export default function Certifications() {
     const scrollRef = useRef<HTMLUListElement>(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(false);
+    // Index of the page currently in view (drives the page indicator dots)
+    const [currentPage, setCurrentPage] = useState(0);
 
     // Track the `lg` breakpoint so pages can be re-chunked to match the grid's current column count
     const [isDesktop, setIsDesktop] = useState(
@@ -36,12 +38,14 @@ export default function Certifications() {
         );
     }, [isDesktop]);
 
-    // Recompute which arrows should be active from the row's current scroll position
+    // Recompute which arrows should be active and which page is in view from the row's current scroll position
     const updateScrollState = () => {
         const el = scrollRef.current;
         if (!el) return;
+        const maxScroll = el.scrollWidth - el.clientWidth;
         setCanScrollLeft(el.scrollLeft > 8);
-        setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 8);
+        setCanScrollRight(el.scrollLeft < maxScroll - 8);
+        setCurrentPage(maxScroll > 0 ? Math.round((el.scrollLeft / maxScroll) * (el.children.length - 1)) : 0);
     };
 
     useEffect(() => {
@@ -57,25 +61,34 @@ export default function Certifications() {
         el.scrollBy({ left: direction * el.clientWidth, behavior: 'smooth' });
     };
 
+    // Jump straight to a page from the indicator dots
+    const goToPage = (index: number) => {
+        const el = scrollRef.current;
+        const page = el?.children[index];
+        const firstPage = el?.firstElementChild;
+        if (!el || !(page instanceof HTMLElement) || !(firstPage instanceof HTMLElement)) return;
+        el.scrollTo({ left: page.offsetLeft - firstPage.offsetLeft, behavior: 'smooth' });
+    };
+
+    // Prev/next button, rendered above the row on desktop and beside the dots on mobile/tablet
+    const renderArrow = (direction: 1 | -1, className = '') => (
+        <button type="button" onClick={() => scrollBy(direction)} disabled={direction === -1 ? !canScrollLeft : !canScrollRight}
+            aria-label={t(direction === -1 ? 'certifications.scrollLeft' : 'certifications.scrollRight')}
+            className={`inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors duration-300 hover:border-cyan-500/60 hover:text-cyan-600 disabled:pointer-events-none disabled:opacity-30 dark:border-white/10 dark:text-gray-300 dark:hover:text-cyan-400 sm:h-9 sm:w-9 ${className}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d={direction === -1 ? 'M15 6l-6 6l6 6' : 'M9 6l6 6l-6 6'} />
+            </svg>
+        </button>
+    );
+
     return (
         <div className="flex w-full flex-col items-center gap-6">
             <SectionHeader title={t('sidebar.certifications')} />
 
-            {/* Prev/next controls, above the row (not overlapping the cards) */}
-            <div className="flex w-full max-w-7xl justify-end gap-2">
-                <button type="button" onClick={() => scrollBy(-1)} disabled={!canScrollLeft} aria-label={t('certifications.scrollLeft')}
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors duration-300 hover:border-cyan-500/60 hover:text-cyan-600 disabled:pointer-events-none disabled:opacity-30 dark:border-white/10 dark:text-gray-300 dark:hover:text-cyan-400 sm:h-9 sm:w-9">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" />
-                    </svg>
-                </button>
-
-                <button type="button" onClick={() => scrollBy(1)} disabled={!canScrollRight} aria-label={t('certifications.scrollRight')}
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors duration-300 hover:border-cyan-500/60 hover:text-cyan-600 disabled:pointer-events-none disabled:opacity-30 dark:border-white/10 dark:text-gray-300 dark:hover:text-cyan-400 sm:h-9 sm:w-9">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" />
-                    </svg>
-                </button>
+            {/* Desktop: prev/next controls above the row (not overlapping the cards) */}
+            <div className="hidden w-full max-w-7xl justify-end gap-2 lg:flex">
+                {renderArrow(-1)}
+                {renderArrow(1)}
             </div>
 
             <div className="relative w-full max-w-7xl">
@@ -149,6 +162,26 @@ export default function Certifications() {
                     ))}
                 </ul>
             </div>
+
+            {/* Page indicator; on mobile/tablet the arrows sit beside it, within thumb reach */}
+            {certificatePages.length > 1 && (
+                <div className="flex items-center justify-center gap-3">
+                    {renderArrow(-1, 'lg:hidden')}
+                    <div className="flex items-center">
+                        {certificatePages.map((_, pageIndex) => (
+                            <button key={pageIndex} type="button" onClick={() => goToPage(pageIndex)}
+                                aria-label={t('certifications.goToPage', { page: pageIndex + 1, total: certificatePages.length })}
+                                aria-current={pageIndex === currentPage ? 'true' : undefined}
+                                className="group flex h-6 cursor-pointer items-center rounded-full px-1">
+                                <span className={`block h-2 rounded-full transition-all duration-300 ${pageIndex === currentPage
+                                    ? 'w-6 bg-cyan-600 dark:bg-cyan-400'
+                                    : 'w-2 bg-slate-300 group-hover:bg-cyan-500/60 dark:bg-white/20'}`} />
+                            </button>
+                        ))}
+                    </div>
+                    {renderArrow(1, 'lg:hidden')}
+                </div>
+            )}
         </div>
     );
 }

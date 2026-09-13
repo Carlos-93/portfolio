@@ -47,10 +47,14 @@ export default function Home() {
     const [roleIndex, setRoleIndex] = useState(0);
     const [displayText, setDisplayText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
+    // Users who prefer reduced motion get the roles as static text instead of the typewriter
+    const [reduceMotion] = useState(() => matchMedia('(prefers-reduced-motion: reduce)').matches);
     // Translation hook
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     // Roles
     const roles = useMemo(() => [t('home.softwareRole'), t('home.designerRole')], [t]);
+    // Every role as one localized phrase (e.g. "A y B"), for screen readers, search engines and reduced motion
+    const rolesText = useMemo(() => new Intl.ListFormat(i18n.language, { type: 'conjunction' }).format(roles), [i18n.language, roles]);
     // Speed variables
     const typeSpeed = 80;
     const deleteSpeed = 50;
@@ -80,10 +84,11 @@ export default function Home() {
 
     // Handle typing effect
     useEffect(() => {
+        if (reduceMotion) return;
         const speed = isDeleting ? deleteSpeed : typeSpeed;
         const timer = setTimeout(handleTyping, speed);
         return () => clearTimeout(timer);
-    }, [handleTyping, isDeleting]);
+    }, [handleTyping, isDeleting, reduceMotion]);
 
     return (
         <div className="flex flex-col items-center gap-8 lg:gap-0 lg:flex-row">
@@ -93,10 +98,19 @@ export default function Home() {
                     <span className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold'>{t('home.iAm')}
                         &nbsp;<span className="text-cyan-600 dark:text-cyan-400">{t('home.name')}</span>
                     </span>
-                    <span className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold h-8 sm:h-9 lg:h-10 xl:h-12 2xl:h-14'>
-                        {displayText}
-                        <span className="animate-pulse ml-1">|</span>
-                    </span>
+                    
+                    {reduceMotion ? (
+                        <span className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold'>{rolesText}</span>
+                    ) : (
+                        <span className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold h-8 sm:h-9 lg:h-10 xl:h-12 2xl:h-14'>
+                            {/* Static roles for assistive tech; the ever-changing typewriter is visual only */}
+                            <span className="sr-only">{rolesText}</span>
+                            <span aria-hidden="true">
+                                {displayText}
+                                <span className="animate-pulse ml-1">|</span>
+                            </span>
+                        </span>
+                    )}
                 </h1>
 
                 {/* Tablet & desktop: actions below the text, left-aligned */}

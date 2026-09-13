@@ -96,6 +96,7 @@
     "viewCertificate": "Voir le certificat",
     "scrollLeft": "Faire défiler les certificats vers la gauche",
     "scrollRight": "Faire défiler les certificats vers la droite",
+    "goToPage": "Aller à la page {{page}} sur {{total}}",
     "items": {
       "linux": {
         "title": "Administration de Systèmes d'Exploitation Linux",

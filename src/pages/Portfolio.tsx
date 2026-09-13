@@ -39,12 +39,12 @@ export default function Portfolio() {
                 <main className="flex flex-col gap-8 md:gap-16 lg:gap-20 px-5 py-20 sm:px-8 md:px-14 lg:px-10 lg:py-24 xl:px-16 2xl:px-20 lg:ml-72 w-full">
                     <section id="home" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Home /></Reveal></section>
                     <section id="about" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><About /></Reveal></section>
-                    <section id="skills" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Skills /></Reveal></section>
                     <section id="experience" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Experience /></Reveal></section>
+                    <section id="projects" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Projects /></Reveal></section>
+                    <section id="skills" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Skills /></Reveal></section>
                     <section id="education" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Education /></Reveal></section>
                     <section id="certifications" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Certifications /></Reveal></section>
                     <section id="languages" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Languages /></Reveal></section>
-                    <section id="projects" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Projects /></Reveal></section>
                     <section id="contact" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Contact /></Reveal></section>
                 </main>
             </div>

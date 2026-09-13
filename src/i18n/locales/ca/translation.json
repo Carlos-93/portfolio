@@ -96,6 +96,7 @@
     "viewCertificate": "Veure certificat",
     "scrollLeft": "Desplaçar certificats cap a l'esquerra",
     "scrollRight": "Desplaçar certificats cap a la dreta",
+    "goToPage": "Anar a la pàgina {{page}} de {{total}}",
     "items": {
       "linux": {
         "title": "Administració de Sistemes Operatius Linux",

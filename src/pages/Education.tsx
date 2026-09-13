@@ -9,9 +9,12 @@ export default function Education() {
     return (
         <div className="flex w-full flex-col items-center gap-8 sm:gap-10">
             <SectionHeader title={t('sidebar.education')} />
-            <ul className="flex w-full max-w-7xl flex-col items-center gap-6">
+            {/* A single entry stays as one centered card; with more, same two-column grid as Certifications */}
+            <ul className={educations.length > 1
+                ? 'grid w-full max-w-7xl grid-cols-1 gap-6 lg:grid-cols-2'
+                : 'flex w-full max-w-7xl flex-col items-center gap-6'}>
                 {educations.map((education) => (
-                    <li key={education.id} className="w-full max-w-2xl">
+                    <li key={education.id} className={educations.length > 1 ? 'w-full' : 'w-full max-w-2xl'}>
                         <article className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-slate-200 bg-white/50 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/20 dark:border-white/10 dark:bg-white/5 sm:p-6">
                             {/* Top gradient hairline */}
                             <span aria-hidden="true"

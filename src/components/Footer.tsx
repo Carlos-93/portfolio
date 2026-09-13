@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { socialNetworks } from '../lib/constants';
 
 // Section anchors shown in the footer nav — labels reuse the sidebar translations
-const NAV_LINKS = ['home', 'about', 'skills', 'experience', 'education', 'certifications', 'projects', 'contact'] as const;
+const NAV_LINKS = ['home', 'about', 'experience', 'projects', 'skills', 'education', 'certifications', 'contact'] as const;
 
 export default function Footer() {
     // Current year
@@ -30,6 +30,7 @@ export default function Footer() {
                                 <a href="#home" className="text-lg font-semibold text-white transition-colors duration-300 hover:text-cyan-400">
                                     {t('home.name')}
                                 </a>
+
                                 <p className="max-w-xs text-sm leading-relaxed text-white/55">
                                     {t('footer.tagline')}
                                 </p>
@@ -50,6 +51,7 @@ export default function Footer() {
                                 <h3 className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
                                     {t('footer.navigation')}
                                 </h3>
+
                                 <ul className="grid grid-cols-2 gap-x-8 gap-y-2.5">
                                     {NAV_LINKS.map((id) => (
                                         <li key={id}>
@@ -67,9 +69,11 @@ export default function Footer() {
                                 <h3 className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
                                     {t('footer.letsTalkTitle')}
                                 </h3>
+
                                 <p className="max-w-xs text-sm leading-relaxed text-white/55">
                                     {t('footer.letsTalkText')}
                                 </p>
+
                                 <a href="mailto:ca.galvan@outlook.com"
                                     className="inline-flex w-fit items-center gap-2 rounded-md border-2 border-cyan-400 px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-cyan-400 hover:text-slate-900">
                                     {t('footer.contactCta')}
@@ -102,6 +106,7 @@ export default function Footer() {
                             <p className="text-center text-xs sm:text-sm text-white/50 sm:text-left cursor-default">
                                 © {currentYear} Carlos Araujo Galván. {t('footer.copyright')}
                             </p>
+                            
                             <a href="#home"
                                 className="group inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-white/60 transition-colors duration-300 hover:text-cyan-400">
                                 {t('footer.backToTop')}

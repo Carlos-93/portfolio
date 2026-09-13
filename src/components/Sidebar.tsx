@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
 
@@ -22,18 +22,28 @@ const NAV_ITEMS = [
         ],
     },
     {
-        id: 'skills',
-        paths: [
-            'M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z',
-        ],
-    },
-    {
         id: 'experience',
         paths: [
             'M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z',
             'M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2',
             'M12 12l0 .01',
             'M3 13a20 20 0 0 0 18 0',
+        ],
+    },
+    {
+        id: 'projects',
+        paths: [
+            'M3 4l18 0',
+            'M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-10',
+            'M12 16l0 4',
+            'M9 20l6 0',
+            'M8 12l3 -3l2 2l3 -3',
+        ],
+    },
+    {
+        id: 'skills',
+        paths: [
+            'M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z',
         ],
     },
     {
@@ -65,16 +75,6 @@ const NAV_ITEMS = [
         ],
     },
     {
-        id: 'projects',
-        paths: [
-            'M3 4l18 0',
-            'M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-10',
-            'M12 16l0 4',
-            'M9 20l6 0',
-            'M8 12l3 -3l2 2l3 -3',
-        ],
-    },
-    {
         id: 'contact',
         paths: [
             'M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2',
@@ -99,6 +99,9 @@ export default function Sidebar() {
     // State variables
     const [activeLink, setActiveLink] = useState('#home');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // Refs used to manage keyboard focus while the mobile menu is open
+    const menuButtonRef = useRef<HTMLButtonElement>(null);
+    const mobileNavRef = useRef<HTMLElement>(null);
 
     // Highlight the section currently crossing the upper part of the viewport
     useEffect(() => {
@@ -126,6 +129,38 @@ export default function Sidebar() {
         };
     }, [isMenuOpen])
 
+    // Mobile menu keyboard support: focus the first link, keep Tab inside the menu and close it with Escape
+    useEffect(() => {
+        if (!isMenuOpen) return;
+        mobileNavRef.current?.querySelector('a')?.focus();
+
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                setIsMenuOpen(false);
+                menuButtonRef.current?.focus();
+                return;
+            }
+            if (event.key !== 'Tab') return;
+
+            // Focus cycle: the toggle button (acts as close) + every menu link
+            const focusables = [menuButtonRef.current, ...(mobileNavRef.current?.querySelectorAll('a') ?? [])]
+                .filter((element): element is HTMLButtonElement | HTMLAnchorElement => element !== null);
+            const first = focusables[0];
+            const last = focusables[focusables.length - 1];
+            const current = document.activeElement;
+
+            if (event.shiftKey && (current === first || !focusables.includes(current as HTMLAnchorElement))) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && (current === last || !focusables.includes(current as HTMLAnchorElement))) {
+                event.preventDefault();
+                first.focus();
+            }
+        };
+        document.addEventListener('keydown', handleKeyDown);
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [isMenuOpen])
+
     // Method to handle the click on the mobile menu links
     function handleLinkClick(link: string) {
         setActiveLink(link);
@@ -138,7 +173,7 @@ export default function Sidebar() {
     return (
         <>
             {/* Header background */}
-            <header className="fixed h-16 lg:h-20 backdrop-blur-xl bg-black/30 z-20 left-0 right-0 lg:left-72 block" />
+            <header className="fixed h-16 lg:h-20 backdrop-blur-xl bg-slate-900/70 dark:bg-black/30 z-20 left-0 right-0 lg:left-72 block" />
 
             {/* Language selector for desktop - fixed position top right */}
             <div className="hidden lg:block fixed top-5 right-5 z-30">
@@ -151,7 +186,8 @@ export default function Sidebar() {
             </div>
 
             {/* Hamburger menu button */}
-            <button className="lg:hidden fixed right-5 sm:right-7 top-2 z-30 flex flex-col justify-center items-center w-12 h-12 space-y-2 focus:outline-none cursor-pointer"
+            <button type="button" ref={menuButtonRef} aria-expanded={isMenuOpen} aria-controls="mobile-menu"
+                className="lg:hidden fixed right-5 sm:right-7 top-2 z-30 flex flex-col justify-center items-center w-12 h-12 space-y-2 rounded-md cursor-pointer"
                 onClick={(e) => {
                     e.stopPropagation();
                     setIsMenuOpen(!isMenuOpen);
@@ -166,12 +202,12 @@ export default function Sidebar() {
             {isMenuOpen ? (
                 <div className="fixed inset-0 z-20 lg:hidden backdrop-blur-xl bg-black/70 transition-all duration-700 ease-in-out"
                     onClick={() => setIsMenuOpen(false)}>
-                    <nav className="fixed w-full h-full flex justify-center items-center">
+                    <nav id="mobile-menu" ref={mobileNavRef} aria-label={t('sidebar.toggleMenu')} className="fixed w-full h-full flex justify-center items-center">
                         <ul className="flex flex-col gap-8 sm:gap-14 text-lg sm:text-xl font-medium text-white text-center">
                             {NAV_ITEMS.map(({ id, paths }) => (
                                 <li key={id}>
                                     <a href={`#${id}`} onClick={() => handleLinkClick(`#${id}`)}
-                                        className={`flex items-center justify-center gap-3 transition-all duration-300 ${activeLink === `#${id}` ? 'text-cyan-400' : 'hover:text-cyan-400'}`}>
+                                        className={`flex items-center justify-center gap-3 rounded-md px-2 transition-all duration-300 ${activeLink === `#${id}` ? 'text-cyan-400' : 'hover:text-cyan-400'}`}>
                                         <NavIcon paths={paths} />
                                         {t(`sidebar.${id}`)}
                                     </a>
@@ -187,7 +223,7 @@ export default function Sidebar() {
             )}
 
             {/* Desktop sidebar */}
-            <nav className="hidden lg:flex flex-col justify-center bg-linear-to-b from-slate-900 via-slate-950 to-slate-900 w-72 h-screen text-white text-lg select-none overflow-y-auto fixed z-10">
+            <nav className="hidden lg:flex flex-col bg-linear-to-b from-slate-900 via-slate-950 to-slate-900 w-72 h-screen text-white text-lg select-none overflow-y-auto fixed z-10">
                 {/* Decorative corner glows, clipped so they never extend the scroll area */}
                 <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
                     <span className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-cyan-500/15 blur-3xl" />
@@ -198,10 +234,11 @@ export default function Sidebar() {
                 <span aria-hidden="true"
                     className="absolute inset-y-0 right-0 w-px bg-linear-to-b from-transparent via-cyan-500/50 to-transparent" />
 
-                <ul className="relative flex flex-col gap-8 py-16 font-medium">
+                {/* Spacing grows with the viewport height; `my-auto` centers it but still lets it scroll if it overflows */}
+                <ul className="relative my-auto flex flex-col gap-1 py-6 font-medium h-md:gap-2 h-md:py-8 h-lg:gap-5 h-lg:py-12 h-xl:gap-8 h-xl:py-16">
                     {NAV_ITEMS.map(({ id, paths }) => (
                         <li key={id}>
-                            <a href={`#${id}`} onClick={() => setActiveLink(`#${id}`)} className={`relative flex items-center gap-3 py-3.5 pl-14 transition-all ease-in-out duration-300
+                            <a href={`#${id}`} onClick={() => setActiveLink(`#${id}`)} className={`relative flex items-center gap-3 py-2.5 h-md:py-3.5 pl-14 focus-visible:-outline-offset-2 transition-all ease-in-out duration-300
                                 ${activeLink === `#${id}` ? 'bg-cyan-500/10 text-cyan-400 pl-18' : 'text-slate-300 hover:bg-white/5 hover:text-cyan-400 hover:pl-18'}`}>
                                 {/* Active indicator bar */}
                                 <span aria-hidden="true"
