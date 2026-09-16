@@ -173,30 +173,33 @@ export default function Sidebar() {
     return (
         <>
             {/* Header background */}
-            <header className="fixed h-16 lg:h-20 backdrop-blur-xl bg-slate-900/70 dark:bg-black/30 z-20 left-0 right-0 lg:left-72 block" />
+            <div aria-hidden="true" className="fixed h-16 lg:h-20 backdrop-blur-xl bg-slate-900/70 dark:bg-black/30 z-20 left-0 right-0 lg:left-72" />
 
-            {/* Language selector for desktop - fixed position top right */}
-            <div className="hidden lg:block fixed top-5 right-5 z-30">
-                <LanguageSelector />
-            </div>
+            {/* Header landmark */}
+            <header className="fixed top-0 h-16 lg:h-20 z-30 left-0 right-0 lg:left-72 pointer-events-none">
+                {/* Language selector for desktop - top right */}
+                <div className="hidden lg:block absolute top-5 right-5 pointer-events-auto">
+                    <LanguageSelector />
+                </div>
 
-            {/* Language selector for mobile - fixed position top left */}
-            <div className="lg:hidden fixed top-2.5 left-5 sm:left-7 z-30">
-                <LanguageSelector />
-            </div>
+                {/* Language selector for mobile - top left */}
+                <div className="lg:hidden absolute top-2.5 left-5 sm:left-7 pointer-events-auto">
+                    <LanguageSelector />
+                </div>
 
-            {/* Hamburger menu button */}
-            <button type="button" ref={menuButtonRef} aria-expanded={isMenuOpen} aria-controls="mobile-menu"
-                className="lg:hidden fixed right-5 sm:right-7 top-2 z-30 flex flex-col justify-center items-center w-12 h-12 space-y-2 rounded-md cursor-pointer"
-                onClick={(e) => {
-                    e.stopPropagation();
-                    setIsMenuOpen(!isMenuOpen);
-                }}
-                aria-label={t('sidebar.toggleMenu')}>
-                <span className={`block w-9 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
-                <span className={`block w-9 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
-                <span className={`block w-9 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
-            </button>
+                {/* Hamburger menu button */}
+                <button type="button" ref={menuButtonRef} aria-expanded={isMenuOpen} aria-controls="mobile-menu"
+                    className="lg:hidden absolute right-5 sm:right-7 top-2 pointer-events-auto flex flex-col justify-center items-center w-12 h-12 space-y-2 rounded-md cursor-pointer"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setIsMenuOpen(!isMenuOpen);
+                    }}
+                    aria-label={t('sidebar.toggleMenu')}>
+                    <span className={`block w-9 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
+                    <span className={`block w-9 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
+                    <span className={`block w-9 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
+                </button>
+            </header>
 
             {/* Mobile sidebar */}
             {isMenuOpen ? (
@@ -229,7 +232,7 @@ export default function Sidebar() {
                     <span className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-cyan-500/15 blur-3xl" />
                     <span className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-blue-600/15 blur-3xl" />
                 </div>
-                
+
                 {/* Right edge gradient hairline */}
                 <span aria-hidden="true"
                     className="absolute inset-y-0 right-0 w-px bg-linear-to-b from-transparent via-cyan-500/50 to-transparent" />
