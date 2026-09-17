@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
-import { projects } from '../lib/constants';
 import type { GithubRepo, RepoStats } from '../lib/types';
-
-const CACHE_KEY = 'github-stats';
+import { projects, GITHUB_STATS_CACHE_KEY } from '../lib/constants';
 
 // This hook fetches GitHub repository stats for the projects listed in `projects`.
 export function useGithubStats() {
     const [stats, setStats] = useState<Record<string, RepoStats> | null>(() => {
         try {
-            const cached = sessionStorage.getItem(CACHE_KEY);
+            const cached = sessionStorage.getItem(GITHUB_STATS_CACHE_KEY);
             return cached ? (JSON.parse(cached) as Record<string, RepoStats>) : null;
         } catch {
             return null;
@@ -33,7 +31,7 @@ export function useGithubStats() {
                 const result = Object.fromEntries(entries);
                 setStats(result);
                 try {
-                    sessionStorage.setItem(CACHE_KEY, JSON.stringify(result));
+                    sessionStorage.setItem(GITHUB_STATS_CACHE_KEY, JSON.stringify(result));
                 } catch {
                     // Storage unavailable — skip caching
                 }

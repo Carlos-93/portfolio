@@ -1,88 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
-
-// Section ids (in page order) with their Tabler icon paths — rendered in both navs
-const NAV_ITEMS = [
-    {
-        id: 'home',
-        paths: [
-            'M5 12l-2 0l9 -9l9 9l-2 0',
-            'M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7',
-            'M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6',
-        ],
-    },
-    {
-        id: 'about',
-        paths: [
-            'M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0',
-            'M6 21v-2a4 4 0 0 1 4 -4h3',
-            'M16 22l5 -5',
-            'M21 21.5v-4.5h-4.5',
-        ],
-    },
-    {
-        id: 'experience',
-        paths: [
-            'M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z',
-            'M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2',
-            'M12 12l0 .01',
-            'M3 13a20 20 0 0 0 18 0',
-        ],
-    },
-    {
-        id: 'projects',
-        paths: [
-            'M3 4l18 0',
-            'M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-10',
-            'M12 16l0 4',
-            'M9 20l6 0',
-            'M8 12l3 -3l2 2l3 -3',
-        ],
-    },
-    {
-        id: 'skills',
-        paths: [
-            'M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z',
-        ],
-    },
-    {
-        id: 'education',
-        paths: [
-            'M22 9l-10 -4l-10 4l10 4l10 -4v6',
-            'M6 10.6v5.4a6 3 0 0 0 12 0v-5.4',
-        ],
-    },
-    {
-        id: 'certifications',
-        paths: [
-            'M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0',
-            'M13 17.5v4.5l2 -1.5l2 1.5v-4.5',
-            'M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73',
-            'M6 9l12 0',
-            'M6 12l3 0',
-            'M6 15l2 0',
-        ],
-    },
-    {
-        id: 'languages',
-        paths: [
-            'M4 5h7',
-            'M9 3v2c0 4.418 -2.239 8 -5 8',
-            'M5 9c0 2.144 2.952 3.908 6.7 4',
-            'M12 20l4 -9l4 9',
-            'M19.1 18h-6.2',
-        ],
-    },
-    {
-        id: 'contact',
-        paths: [
-            'M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2',
-            'M15 7a2 2 0 0 1 2 2',
-            'M15 3a6 6 0 0 1 6 6',
-        ],
-    },
-];
+import { navItems } from '../lib/constants';
 
 function NavIcon({ paths }: { paths: string[] }) {
     return (
@@ -113,7 +32,7 @@ export default function Sidebar() {
             }
         }, { rootMargin: '-20% 0px -55% 0px' });
 
-        for (const { id } of NAV_ITEMS) {
+        for (const { id } of navItems) {
             const element = document.getElementById(id);
             if (element) observer.observe(element);
         }
@@ -207,7 +126,7 @@ export default function Sidebar() {
                     onClick={() => setIsMenuOpen(false)}>
                     <nav id="mobile-menu" ref={mobileNavRef} aria-label={t('sidebar.toggleMenu')} className="fixed w-full h-full flex justify-center items-center">
                         <ul className="flex flex-col gap-8 sm:gap-14 text-lg sm:text-xl font-medium text-white text-center">
-                            {NAV_ITEMS.map(({ id, paths }) => (
+                            {navItems.map(({ id, paths }) => (
                                 <li key={id}>
                                     <a href={`#${id}`} onClick={() => handleLinkClick(`#${id}`)}
                                         className={`flex items-center justify-center gap-3 rounded-md px-2 transition-all duration-300 ${activeLink === `#${id}` ? 'text-cyan-400' : 'hover:text-cyan-400'}`}>
@@ -239,7 +158,7 @@ export default function Sidebar() {
 
                 {/* Spacing grows with the viewport height; `my-auto` centers it but still lets it scroll if it overflows */}
                 <ul className="relative my-auto flex flex-col gap-1 py-6 font-medium h-md:gap-2 h-md:py-8 h-lg:gap-5 h-lg:py-12 h-xl:gap-8 h-xl:py-16">
-                    {NAV_ITEMS.map(({ id, paths }) => (
+                    {navItems.map(({ id, paths }) => (
                         <li key={id}>
                             <a href={`#${id}`} onClick={() => setActiveLink(`#${id}`)} className={`relative flex items-center gap-3 py-2.5 h-md:py-3.5 pl-14 focus-visible:-outline-offset-2 transition-all ease-in-out duration-300
                                 ${activeLink === `#${id}` ? 'bg-cyan-500/10 text-cyan-400 pl-18' : 'text-slate-300 hover:bg-white/5 hover:text-cyan-400 hover:pl-18'}`}>

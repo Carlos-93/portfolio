@@ -62,6 +62,11 @@ export interface SpokenLanguage {
     flag: string;
 }
 
+export interface NavItem {
+    id: string;
+    paths: string[];
+}
+
 export interface RepoStats {
     stars: number;
     language: string | null;

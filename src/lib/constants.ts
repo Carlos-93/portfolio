@@ -1,4 +1,4 @@
-import type { Skill, Experience, Education, Certificate, Project, SocialNetwork, Language, SpokenLanguage } from "./types";
+import type { Skill, SkillCategory, Experience, Education, Certificate, Project, SocialNetwork, Language, SpokenLanguage, NavItem } from "./types";
 
 // Skills Object
 export const skills: Skill[] = [
@@ -143,5 +143,104 @@ export const spokenLanguages: SpokenLanguage[] = [
     { id: "english", flag: `/assets/images/flags/united-kingdom.webp` },
 ];
 
+// Navigation Object
+export const navItems: NavItem[] = [
+    {
+        id: 'home',
+        paths: [
+            'M5 12l-2 0l9 -9l9 9l-2 0',
+            'M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7',
+            'M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6',
+        ],
+    },
+    {
+        id: 'about',
+        paths: [
+            'M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0',
+            'M6 21v-2a4 4 0 0 1 4 -4h3',
+            'M16 22l5 -5',
+            'M21 21.5v-4.5h-4.5',
+        ],
+    },
+    {
+        id: 'experience',
+        paths: [
+            'M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z',
+            'M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2',
+            'M12 12l0 .01',
+            'M3 13a20 20 0 0 0 18 0',
+        ],
+    },
+    {
+        id: 'projects',
+        paths: [
+            'M3 4l18 0',
+            'M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-10',
+            'M12 16l0 4',
+            'M9 20l6 0',
+            'M8 12l3 -3l2 2l3 -3',
+        ],
+    },
+    {
+        id: 'skills',
+        paths: [
+            'M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z',
+        ],
+    },
+    {
+        id: 'education',
+        paths: [
+            'M22 9l-10 -4l-10 4l10 4l10 -4v6',
+            'M6 10.6v5.4a6 3 0 0 0 12 0v-5.4',
+        ],
+    },
+    {
+        id: 'certifications',
+        paths: [
+            'M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0',
+            'M13 17.5v4.5l2 -1.5l2 1.5v-4.5',
+            'M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73',
+            'M6 9l12 0',
+            'M6 12l3 0',
+            'M6 15l2 0',
+        ],
+    },
+    {
+        id: 'languages',
+        paths: [
+            'M4 5h7',
+            'M9 3v2c0 4.418 -2.239 8 -5 8',
+            'M5 9c0 2.144 2.952 3.908 6.7 4',
+            'M12 20l4 -9l4 9',
+            'M19.1 18h-6.2',
+        ],
+    },
+    {
+        id: 'contact',
+        paths: [
+            'M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2',
+            'M15 7a2 2 0 0 1 2 2',
+            'M15 3a6 6 0 0 1 6 6',
+        ],
+    },
+];
+
+// Skill Categories Object — render order for the skill categories (each maps to an i18n label key)
+export const skillCategories: SkillCategory[] = ['os', 'frontend', 'backend', 'database', 'tools'];
+
+// Language Colors Object — GitHub linguist colors for the languages used in the featured repos
+export const languageColors: Record<string, string> = {
+    JavaScript: '#f1e05a',
+    TypeScript: '#3178c6',
+    HTML: '#e34c26',
+    CSS: '#663399',
+};
+
+// Full name used to build the document title
+export const FULL_NAME = 'Carlos Araujo Galván';
+
 // Storage Key for the dark mode
 export const STORAGE_KEY = 'dark-mode';
+
+// Session Storage Key for the cached GitHub stats
+export const GITHUB_STATS_CACHE_KEY = 'github-stats';

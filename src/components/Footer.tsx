@@ -1,8 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { socialNetworks } from '../lib/constants';
-
-// Section anchors shown in the footer nav — labels reuse the sidebar translations
-const NAV_LINKS = ['home', 'about', 'experience', 'projects', 'skills', 'education', 'certifications', 'contact'] as const;
+import { navItems, socialNetworks } from '../lib/constants';
 
 export default function Footer() {
     // Current year
@@ -53,7 +50,7 @@ export default function Footer() {
                                 </h3>
 
                                 <ul className="grid grid-cols-2 gap-x-8 gap-y-2.5">
-                                    {NAV_LINKS.map((id) => (
+                                    {navItems.map(({ id }) => (
                                         <li key={id}>
                                             <a href={`#${id}`}
                                                 className="relative inline-block text-sm text-white/60 transition-colors duration-300 hover:text-cyan-400 after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-full">

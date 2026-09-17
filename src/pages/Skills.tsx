@@ -1,13 +1,9 @@
-import SectionHeader from '../components/SectionHeader';
-import type { SkillCategory } from '../lib/types';
 import { useTranslation } from 'react-i18next';
-import { skills } from '../lib/constants';
-
-// Render order for the skill categories (each maps to an i18n label key)
-const CATEGORIES: SkillCategory[] = ['os', 'frontend', 'backend', 'database', 'tools'];
+import SectionHeader from '../components/SectionHeader';
+import { skills, skillCategories } from '../lib/constants';
 
 // Group the (static) skills by category once, at module load — not on every render
-const SKILL_GROUPS = CATEGORIES
+const SKILL_GROUPS = skillCategories
     .map((category) => ({ category, items: skills.filter((skill) => skill.category === category) }))
     .filter((group) => group.items.length > 0);
 
