@@ -17,11 +17,11 @@ export default function Languages() {
                             <article className="group relative flex h-45 flex-col justify-end overflow-hidden rounded-2xl border border-slate-200 bg-white/50 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/20 dark:border-white/10 dark:bg-white/5 sm:p-6">
                                 {/* Flag filling the card as a faded background */}
                                 <img src={language.flag} alt="" loading="lazy"
-                                    className="absolute inset-0 h-full w-full opacity-20 transition-all duration-500 group-hover:opacity-40 dark:opacity-20 dark:group-hover:opacity-40" />
+                                    className="absolute inset-0 h-full w-full object-cover transition-all duration-500" />
 
                                 {/* Bottom scrim so the text stays legible over the flag */}
                                 <span aria-hidden="true"
-                                    className="absolute inset-0 bg-linear-to-t from-white via-white/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/40 dark:to-transparent" />
+                                    className="absolute inset-0 bg-linear-to-t from-white via-white/70 to-transparent dark:from-slate-950 dark:via-slate-950/70 dark:to-transparent" />
                                 {/* Top gradient hairline */}
                                 <span aria-hidden="true"
                                     className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-cyan-500/70 to-transparent" />

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import SectionHeader from '../components/SectionHeader';
 import { skills, skillCategories } from '../lib/constants';
+import SectionHeader from '../components/SectionHeader';
 
 // Group the (static) skills by category once, at module load — not on every render
 const SKILL_GROUPS = skillCategories

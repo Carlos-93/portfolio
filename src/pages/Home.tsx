@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { socialNetworks } from '../lib/constants';
+import { useTranslation } from 'react-i18next';
 
 // Typewriter cadence, in milliseconds
 const TYPE_SPEED = 80;

@@ -1,8 +1,8 @@
 import { useActionState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
-import SectionHeader from '../components/SectionHeader';
 import i18n from '../i18n/config';
+import SectionHeader from '../components/SectionHeader';
 
 interface FormState {
     status: 'idle' | 'success' | 'error';
