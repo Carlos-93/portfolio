@@ -7,30 +7,28 @@ export default function DarkMode() {
     // Translation hook
     const { t } = useTranslation();
 
-    // State variables for the dark mode: stored preference first, system preference as fallback
-    const [isDark, setIsDark] = useState(() => {
-        const storedTheme = localStorage.getItem(STORAGE_KEY);
-        if (storedTheme === 'true') return true;
-        if (storedTheme === 'false') return false;
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    });
+    // The blocking script in index.html already resolved the theme and applied it. Read that back
+    // instead of resolving it a second time, so both never disagree.
+    const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'));
 
-    // Effect to add the dark class to the root element
+    // Effect to sync the dark class on the root element
     useEffect(() => {
         const root = document.documentElement;
-        if (isDark) {
-            root.classList.add('dark');
-        } else {
-            root.classList.remove('dark');
-        }
+        root.classList.toggle('dark', isDark);
+        // Hand the background back to the stylesheet, dropping the colour the blocking script inlined
         root.style.removeProperty('background-color');
-        // Save the dark mode to the local storage
-        localStorage.setItem(STORAGE_KEY, isDark ? 'true' : 'false');
     }, [isDark]);
 
-    // Function to switch the theme (dark mode or light mode)
+    // Function to switch the theme (dark mode or light mode). Only a deliberate choice is stored:
+    // until the visitor makes one, the site keeps following the system preference on every visit.
     function switchTheme() {
-        setIsDark(prev => !prev);
+        const next = !isDark;
+        setIsDark(next);
+        try {
+            localStorage.setItem(STORAGE_KEY, next ? 'true' : 'false');
+        } catch {
+            // Storage unavailable — the theme still applies for this visit
+        }
     }
 
     return (

@@ -17,7 +17,9 @@ export function useGithubStats() {
         if (stats) return;
         const controller = new AbortController();
 
-        Promise.all(
+        // `allSettled`, not `all`: one repo that 404s or hits the rate limit must not discard the
+        // stats of the repos that did answer.
+        Promise.allSettled(
             projects
                 .flatMap((project) => project.repoUrl ? [{ id: project.id, repoUrl: project.repoUrl }] : [])
                 .map(async ({ id, repoUrl }) => {
@@ -27,7 +29,14 @@ export function useGithubStats() {
                     return [id, { stars: repo.stargazers_count, language: repo.language }] as const;
                 }),
         )
-            .then((entries) => {
+            .then((outcomes) => {
+                // An aborted effect still settles, so check before touching state
+                if (controller.signal.aborted) return;
+
+                const entries = outcomes.flatMap((outcome) => outcome.status === 'fulfilled' ? [outcome.value] : []);
+                // Every request failed — leave `stats` null so a later visit can retry
+                if (entries.length === 0) return;
+
                 const result = Object.fromEntries(entries);
                 setStats(result);
                 try {

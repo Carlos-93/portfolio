@@ -1,6 +1,11 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { socialNetworks } from '../lib/constants';
+
+// Typewriter cadence, in milliseconds
+const TYPE_SPEED = 80;
+const DELETE_SPEED = 50;
+const PAUSE_TIME = 2000;
 
 // CV download button + social links. Rendered twice: left-aligned under the text on
 // desktop, and centered below the image on mobile/tablet. Layout comes from `className`.
@@ -55,40 +60,34 @@ export default function Home() {
     const roles = useMemo(() => [t('home.softwareRole'), t('home.designerRole')], [t]);
     // Every role as one localized phrase (e.g. "A y B"), for screen readers, search engines and reduced motion
     const rolesText = useMemo(() => new Intl.ListFormat(i18n.language, { type: 'conjunction' }).format(roles), [i18n.language, roles]);
-    // Speed variables
-    const typeSpeed = 80;
-    const deleteSpeed = 50;
-    const pauseTime = 2000;
 
-    // Handle typing
-    const handleTyping = useCallback(() => {
-        const currentRole = roles[roleIndex];
-
-        if (!isDeleting) {
-            if (displayText.length < currentRole.length) {
-                setDisplayText(currentRole.slice(0, displayText.length + 1));
-            } else {
-                setTimeout(() => setIsDeleting(true), pauseTime);
-                return;
-            }
-        } else {
-            if (displayText.length > 0) {
-                setDisplayText(displayText.slice(0, -1));
-            } else {
-                setIsDeleting(false);
-                setRoleIndex((prev) => (prev + 1) % roles.length);
-                return;
-            }
-        }
-    }, [displayText, isDeleting, roleIndex, roles]);
-
-    // Handle typing effect
+    // Handle typing effect. A single timer drives every step, including the pause once a role is
+    // fully typed, so the cleanup below always cancels whatever is pending.
     useEffect(() => {
         if (reduceMotion) return;
-        const speed = isDeleting ? deleteSpeed : typeSpeed;
-        const timer = setTimeout(handleTyping, speed);
+
+        const currentRole = roles[roleIndex];
+        const isTyped = displayText.length >= currentRole.length;
+        const isCleared = displayText.length === 0;
+        const delay = isDeleting ? DELETE_SPEED : isTyped ? PAUSE_TIME : TYPE_SPEED;
+
+        const timer = setTimeout(() => {
+            if (!isDeleting) {
+                if (isTyped) {
+                    setIsDeleting(true);
+                } else {
+                    setDisplayText(currentRole.slice(0, displayText.length + 1));
+                }
+            } else if (isCleared) {
+                setIsDeleting(false);
+                setRoleIndex((prev) => (prev + 1) % roles.length);
+            } else {
+                setDisplayText(displayText.slice(0, -1));
+            }
+        }, delay);
+
         return () => clearTimeout(timer);
-    }, [handleTyping, isDeleting, reduceMotion]);
+    }, [displayText, isDeleting, roleIndex, roles, reduceMotion]);
 
     return (
         <div className="flex flex-col items-center gap-8 lg:gap-0 lg:flex-row">
