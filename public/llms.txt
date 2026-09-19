@@ -1,0 +1,33 @@
+# Carlos Araujo Galván
+
+> Portafolio personal de Carlos Araujo Galván, desarrollador de software y diseñador UX/UI. Es una web de una sola página con navegación por anclas, disponible en español, catalán, inglés, alemán, italiano y francés.
+
+## Secciones
+
+- [Inicio](https://www.carlos-ag.com/#home): presentación y descarga del currículum.
+- [Acerca de mí](https://www.carlos-ag.com/#about): perfil profesional.
+- [Experiencia](https://www.carlos-ag.com/#experience): trayectoria laboral.
+- [Proyectos](https://www.carlos-ag.com/#projects): proyectos personales con demo y código.
+- [Tecnologías](https://www.carlos-ag.com/#skills): lenguajes, frameworks y herramientas.
+- [Educación](https://www.carlos-ag.com/#education): formación académica.
+- [Certificaciones](https://www.carlos-ag.com/#certifications): certificados obtenidos.
+- [Idiomas](https://www.carlos-ag.com/#languages): idiomas y nivel.
+- [Contacto](https://www.carlos-ag.com/#contact): formulario de contacto.
+
+## Proyectos
+
+- [React Pokédex](https://react-pokedex-rose.vercel.app): Pokédex construida con React y la PokeAPI. [Código](https://github.com/Carlos-93/react-pokedex)
+- [React Weather Map](https://react-weather-map-gamma.vercel.app): mapa del tiempo construido con React. [Código](https://github.com/Carlos-93/react-weather-map)
+- [Angular Routing, Services & Forms](https://angular-routing-services-forms.vercel.app): ejemplo de enrutado, servicios y formularios en Angular. [Código](https://github.com/Carlos-93/angular-routing-services-forms)
+
+## Contacto
+
+- [LinkedIn](https://www.linkedin.com/in/carlos-araujo-galvan/)
+- [GitHub](https://www.github.com/Carlos-93)
+- [Instagram](https://www.instagram.com/carloos_93)
+- [Correo electrónico](mailto:ca.galvan@outlook.com)
+
+## Opcional
+
+- [Currículum en PDF](https://www.carlos-ag.com/assets/cv/CV-Carlos-Araujo-Galvan.pdf)
+- [Sitemap](https://www.carlos-ag.com/sitemap.xml)
