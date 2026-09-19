@@ -37,7 +37,7 @@ export default function Portfolio() {
             <div className="flex flex-1">
                 <Sidebar />
                 <main className="flex flex-col gap-8 md:gap-16 lg:gap-20 px-5 py-20 sm:px-8 md:px-14 lg:px-10 lg:py-24 xl:px-16 2xl:px-20 lg:ml-72 w-full">
-                    <section id="home" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Home /></Reveal></section>
+                    <section id="home" className="scroll-mt-20 lg:scroll-mt-24"><Home /></section>
                     <section id="about" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><About /></Reveal></section>
                     <section id="experience" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Experience /></Reveal></section>
                     <section id="projects" className="scroll-mt-20 lg:scroll-mt-24"><Reveal><Projects /></Reveal></section>

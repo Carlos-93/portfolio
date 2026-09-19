@@ -7,16 +7,13 @@ const TYPE_SPEED = 80;
 const DELETE_SPEED = 50;
 const PAUSE_TIME = 2000;
 
-// CV download button + social links. Rendered twice: left-aligned under the text on
-// desktop, and centered below the image on mobile/tablet. Layout comes from `className`.
+// Actions for the hero section, including the CV download button and social network links
 function HeroActions({ className }: { className?: string }) {
     const { t } = useTranslation();
 
     return (
         <div className={className}>
-            <a
-                href="/assets/cv/CV-Carlos-Araujo-Galvan.pdf"
-                download="CV Carlos Araujo Galván.pdf"
+            <a href="/assets/cv/CV-Carlos-Araujo-Galvan.pdf" download="CV Carlos Araujo Galván.pdf"
                 className="inline-flex w-fit items-center gap-2 rounded-md border-2 border-cyan-600 bg-transparent px-4 py-3 font-semibold text-slate-900 transition-colors duration-400 ease-in-out hover:bg-cyan-600 hover:text-white dark:border-cyan-400 dark:text-white dark:hover:bg-cyan-400 dark:hover:text-slate-900"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-download" aria-hidden="true">
@@ -47,15 +44,15 @@ function HeroActions({ className }: { className?: string }) {
 }
 
 export default function Home() {
+    // Translation hook
+    const { t, i18n } = useTranslation();
     // State variables
     const [loaded, setLoaded] = useState(false);
     const [roleIndex, setRoleIndex] = useState(0);
-    const [displayText, setDisplayText] = useState('');
+    const [displayText, setDisplayText] = useState(() => t('home.softwareRole'));
     const [isDeleting, setIsDeleting] = useState(false);
     // Users who prefer reduced motion get the roles as static text instead of the typewriter
     const [reduceMotion] = useState(() => matchMedia('(prefers-reduced-motion: reduce)').matches);
-    // Translation hook
-    const { t, i18n } = useTranslation();
     // Roles
     const roles = useMemo(() => [t('home.softwareRole'), t('home.designerRole')], [t]);
     // Every role as one localized phrase (e.g. "A y B"), for screen readers, search engines and reduced motion
@@ -97,7 +94,7 @@ export default function Home() {
                     <span className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold'>{t('home.iAm')}
                         &nbsp;<span className="text-cyan-600 dark:text-cyan-400">{t('home.name')}</span>
                     </span>
-                    
+
                     {reduceMotion ? (
                         <span className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold'>{rolesText}</span>
                     ) : (
@@ -117,7 +114,8 @@ export default function Home() {
             </div>
 
             <figure className="shrink-0 w-3xs sm:w-xs md:w-sm lg:w-2xs xl:w-sm 2xl:w-xl aspect-997/1480 lg:mt-10">
-                <img src="/assets/images/me/profile.webp" alt={t('home.profileImageAlt')} width={997} height={1480} onLoad={() => setLoaded(true)}
+                <img src="/assets/images/me/profile.webp" alt={t('home.profileImageAlt')} width={997} height={1480}
+                    fetchPriority="high" decoding="async" onLoad={() => setLoaded(true)}
                     className={`w-full h-auto max-w-full object-contain transition-opacity duration-4000 profile-image-fade ${loaded ? 'opacity-100' : 'opacity-0'}`}
                 />
             </figure>
