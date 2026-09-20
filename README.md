@@ -2,7 +2,7 @@
 
 # Welcome to my personal portfolio
 
-Static site built with React, Vite, TypeScript, and Tailwind CSS. Includes internationalization (i18next) and routing with React Router.
+Static single-page site built with React, Vite, TypeScript, and Tailwind CSS. Navigation is anchor-based scrolling within one page, with no client-side router. Content is available in six languages (es, ca, en, de, it, fr) through i18next.
 
 ## Requirements
 
@@ -42,6 +42,7 @@ Production output is in `dist/`. On platforms like Vercel, the build command is 
 - Vite 8
 - Tailwind CSS 4
 - react-i18next / i18next
+- React Compiler (enabled through `oxc-transform-react`)
 - ESLint 10 (flat config)
 
 ## Learn more
