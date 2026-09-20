@@ -108,41 +108,48 @@ export default function Sidebar() {
 
                 {/* Hamburger menu button */}
                 <button type="button" ref={menuButtonRef} aria-expanded={isMenuOpen} aria-controls="mobile-menu"
-                    className="lg:hidden absolute right-5 sm:right-7 top-2 pointer-events-auto flex flex-col justify-center items-center w-12 h-12 space-y-2 rounded-md cursor-pointer"
+                    className="lg:hidden absolute right-4 sm:right-5 top-2 pointer-events-auto flex flex-col justify-center items-center w-12 h-12 space-y-2 rounded-md cursor-pointer"
                     onClick={(e) => {
                         e.stopPropagation();
                         setIsMenuOpen(!isMenuOpen);
                     }}
                     aria-label={t('sidebar.toggleMenu')}>
-                    <span className={`block w-9 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
-                    <span className={`block w-9 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
-                    <span className={`block w-9 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
+                    <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
+                    <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
+                    <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
                 </button>
             </header>
 
-            {/* Mobile sidebar */}
-            {isMenuOpen ? (
-                <div className="fixed inset-0 z-20 lg:hidden backdrop-blur-xl bg-black/70 transition-all duration-700 ease-in-out"
-                    onClick={() => setIsMenuOpen(false)}>
-                    <nav id="mobile-menu" ref={mobileNavRef} aria-label={t('sidebar.toggleMenu')} className="fixed w-full h-full flex justify-center items-center">
-                        <ul className="flex flex-col gap-8 sm:gap-14 text-lg sm:text-xl font-medium text-white text-center">
-                            {navItems.map(({ id, paths }) => (
-                                <li key={id}>
-                                    <a href={`#${id}`} onClick={() => handleLinkClick(`#${id}`)}
-                                        className={`flex items-center justify-center gap-3 rounded-md px-2 transition-all duration-300 ${activeLink === `#${id}` ? 'text-cyan-400' : 'hover:text-cyan-400'}`}>
-                                        <NavIcon paths={paths} />
-                                        {t(`sidebar.${id}`)}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </nav>
-                </div>
-            ) : (
-                <div className="fixed inset-0 z-10 lg:hidden backdrop-blur-none bg-black/0 transition-all duration-700 ease-in-out opacity-0 pointer-events-none"
-                    onClick={() => setIsMenuOpen(false)}
-                />
-            )}
+            {/* Mobile backdrop: dims and blurs the page behind the drawer */}
+            <div aria-hidden="true" onClick={() => setIsMenuOpen(false)}
+                className={`fixed inset-0 z-20 lg:hidden transition-opacity duration-500 ease-in-out motion-reduce:transition-none
+                    ${isMenuOpen ? 'bg-black/60 opacity-100 backdrop-blur-sm' : 'pointer-events-none opacity-0'}`} />
+
+            {/* Mobile drawer: slides in from the right edge and stops at the middle of the screen */}
+            <nav id="mobile-menu" ref={mobileNavRef} aria-label={t('sidebar.toggleMenu')} inert={!isMenuOpen}
+                className={`fixed inset-y-0 right-0 z-20 flex w-3/5 flex-col justify-center border-l border-white/10 bg-slate-950/90 shadow-2xl shadow-black/50 backdrop-blur-xl transition-transform duration-500 ease-in-out motion-reduce:transition-none lg:hidden
+                    ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+
+                {/* Left edge gradient hairline, mirroring the desktop sidebar */}
+                <span aria-hidden="true"
+                    className="absolute inset-y-0 left-0 w-px bg-linear-to-b from-transparent via-cyan-500/50 to-transparent" />
+
+                <ul className="flex flex-col gap-1 text-base font-medium sm:gap-2 sm:text-lg">
+                    {navItems.map(({ id, paths }) => (
+                        <li key={id}>
+                            <a href={`#${id}`} onClick={() => handleLinkClick(`#${id}`)}
+                                className={`relative flex items-center gap-2.5 py-3 pl-5 leading-tight transition-all duration-300 ease-in-out sm:gap-3
+                                    ${activeLink === `#${id}` ? 'bg-cyan-500/10 pl-7 text-cyan-400' : 'text-slate-300 hover:bg-white/5 hover:pl-7 hover:text-cyan-400'}`}>
+                                {/* Active indicator bar */}
+                                <span aria-hidden="true"
+                                    className={`absolute inset-y-0 left-0 w-1 bg-linear-to-b from-cyan-400 to-cyan-600 transition-opacity duration-300 ${activeLink === `#${id}` ? 'opacity-100' : 'opacity-0'}`} />
+                                <span className="shrink-0"><NavIcon paths={paths} /></span>
+                                {t(`sidebar.${id}`)}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
 
             {/* Desktop sidebar */}
             <nav className="hidden lg:flex flex-col bg-linear-to-b from-slate-900 via-slate-950 to-slate-900 w-72 h-screen text-white text-lg select-none overflow-y-auto fixed z-10">
