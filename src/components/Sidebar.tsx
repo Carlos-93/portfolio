@@ -92,33 +92,34 @@ export default function Sidebar() {
     return (
         <>
             {/* Header background */}
-            <div aria-hidden="true" className="fixed h-16 lg:h-20 backdrop-blur-xl bg-slate-900/70 dark:bg-black/30 z-20 left-0 right-0 lg:left-72" />
+            <div aria-hidden="true" className="fixed h-17 lg:h-20 backdrop-blur-xl bg-slate-900/70 dark:bg-black/30 z-10 left-0 right-0 lg:left-72" />
 
             {/* Header landmark */}
-            <header className="fixed top-0 h-16 lg:h-20 z-30 left-0 right-0 lg:left-72 pointer-events-none">
+            <header className="fixed top-0 h-16 lg:h-20 z-10 left-0 right-0 lg:left-72 pointer-events-none">
                 {/* Language selector for desktop - top right */}
                 <div className="hidden lg:block absolute top-5 right-5 pointer-events-auto">
                     <LanguageSelector />
                 </div>
 
                 {/* Language selector for mobile - top left */}
-                <div className="lg:hidden absolute top-2.5 left-5 sm:left-7 pointer-events-auto">
+                <div inert={isMenuOpen} className="lg:hidden absolute top-3 left-5 sm:left-7 pointer-events-auto">
                     <LanguageSelector />
                 </div>
 
-                {/* Hamburger menu button */}
-                <button type="button" ref={menuButtonRef} aria-expanded={isMenuOpen} aria-controls="mobile-menu"
-                    className="lg:hidden absolute right-4 sm:right-5 top-2 pointer-events-auto flex flex-col justify-center items-center w-12 h-12 space-y-2 rounded-md cursor-pointer"
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        setIsMenuOpen(!isMenuOpen);
-                    }}
-                    aria-label={t('sidebar.toggleMenu')}>
-                    <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
-                    <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
-                    <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
-                </button>
             </header>
+
+            {/* Hamburger menu button */}
+            <button type="button" ref={menuButtonRef} aria-expanded={isMenuOpen} aria-controls="mobile-menu"
+                className="lg:hidden fixed z-30 right-3 sm:right-4 top-2 flex flex-col justify-center items-center w-12 h-12 space-y-2 rounded-md cursor-pointer"
+                onClick={(e) => {
+                    e.stopPropagation();
+                    setIsMenuOpen(!isMenuOpen);
+                }}
+                aria-label={t('sidebar.toggleMenu')}>
+                <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
+                <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
+                <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
+            </button>
 
             {/* Mobile backdrop: dims and blurs the page behind the drawer */}
             <div aria-hidden="true" onClick={() => setIsMenuOpen(false)}
@@ -127,14 +128,14 @@ export default function Sidebar() {
 
             {/* Mobile drawer: slides in from the right edge and stops at the middle of the screen */}
             <nav id="mobile-menu" ref={mobileNavRef} aria-label={t('sidebar.toggleMenu')} inert={!isMenuOpen}
-                className={`fixed inset-y-0 right-0 z-20 flex w-3/5 flex-col justify-center border-l border-white/10 bg-slate-950/90 shadow-2xl shadow-black/50 backdrop-blur-xl transition-transform duration-500 ease-in-out motion-reduce:transition-none lg:hidden
+                className={`fixed inset-y-0 right-0 z-20 flex w-4/5 flex-col justify-center border-l border-white/10 bg-slate-950/90 shadow-2xl shadow-black/50 backdrop-blur-xl transition-transform duration-500 ease-in-out motion-reduce:transition-none lg:hidden
                     ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
 
                 {/* Left edge gradient hairline, mirroring the desktop sidebar */}
                 <span aria-hidden="true"
                     className="absolute inset-y-0 left-0 w-px bg-linear-to-b from-transparent via-cyan-500/50 to-transparent" />
 
-                <ul className="flex flex-col gap-1 text-base font-medium sm:gap-2 sm:text-lg">
+                <ul className="flex flex-col text-base font-medium gap-4 sm:gap-6 sm:text-lg">
                     {navItems.map(({ id, paths }) => (
                         <li key={id}>
                             <a href={`#${id}`} onClick={() => handleLinkClick(`#${id}`)}
