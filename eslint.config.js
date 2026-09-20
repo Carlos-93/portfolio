@@ -16,7 +16,7 @@ export default defineConfig(
       'react-refresh': reactRefresh,
     },
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 'latest',
       globals: globals.browser,
     },
     linterOptions: {

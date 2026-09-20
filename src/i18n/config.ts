@@ -4,11 +4,20 @@ import esTranslation from './locales/es/translation.json';
 import { initReactI18next } from 'react-i18next';
 import i18n from 'i18next';
 
+// Load all translation files except for the default language (Spanish) using Vite's glob import
+const localeLoaders = import.meta.glob<{ default: typeof esTranslation }>([
+    './locales/*/translation.json',
+    '!./locales/es/translation.json',
+]);
+
 i18n
     // Detect browser language
     .use(LanguageDetector)
     // Load the rest of the languages on demand, one dynamic import per language
-    .use(resourcesToBackend((language: string) => import(`./locales/${language}/translation.json`)))
+    .use(resourcesToBackend((language: string) =>
+        // `es` has no loader (excluded from the glob); it is already bundled, so serve it directly
+        localeLoaders[`./locales/${language}/translation.json`]?.() ?? Promise.resolve({ default: esTranslation })
+    ))
     // Pass the i18n instance to react-i18next
     .use(initReactI18next)
     // Initialize i18next
