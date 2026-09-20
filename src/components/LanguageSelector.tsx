@@ -48,7 +48,7 @@ export default function LanguageSelector() {
             <button type="button" ref={triggerRef} onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center gap-3 px-3 py-2 rounded-lg border transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 cursor-pointer
                 bg-white/85 border-slate-300/60 text-slate-800 hover:bg-slate-200 hover:border-slate-400/60 focus-visible:ring-cyan-600 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-200
-                dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus-visible:ring-cyan-400 dark:focus-visible:ring-offset-gray-900"
+                dark:bg-slate-800 dark:hover:bg-slate-700 dark:border-slate-700 dark:hover:border-slate-600 dark:text-slate-200 dark:focus-visible:ring-cyan-400 dark:focus-visible:ring-offset-slate-900"
                 aria-label={t('common.selectLanguage')} aria-haspopup="listbox" aria-expanded={isOpen}
             >
                 <img src={currentLanguage.flag} alt={currentLanguage.name} className="w-6 h-6 object-cover rounded-full" />
@@ -60,14 +60,14 @@ export default function LanguageSelector() {
                     {currentLanguage.name}
                 </span>
 
-                <svg className={`w-4 h-4 text-slate-500 dark:text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={`w-4 h-4 text-slate-500 dark:text-slate-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
 
             {/* Dropdown menu of the selector */}
             <div className={`absolute left-0 lg:left-auto lg:right-0 mt-2 w-48 rounded-lg shadow-xl overflow-hidden z-50 transition-opacity duration-200
-                bg-white border border-slate-200 dark:bg-gray-800 dark:border-gray-700
+                bg-white border border-slate-200 dark:bg-slate-800 dark:border-slate-700
                 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
                 role="listbox" aria-hidden={!isOpen} aria-label={t('common.selectLanguage')} inert={!isOpen} >
 
@@ -77,8 +77,8 @@ export default function LanguageSelector() {
                         <button key={language.code} type="button" role="option" aria-selected={currentLanguage.code === language.code} onClick={() => changeLanguage(language.code)}
                             className={`w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors duration-150 cursor-pointer
                             ${currentLanguage.code === language.code
-                                ? 'bg-slate-200 text-cyan-600 dark:bg-gray-700 dark:text-cyan-400'
-                                : 'text-slate-800 hover:bg-slate-200 dark:text-gray-200 dark:hover:bg-gray-700'}`}
+                                ? 'bg-slate-200 text-cyan-600 dark:bg-slate-700 dark:text-cyan-400'
+                                : 'text-slate-800 hover:bg-slate-200 dark:text-slate-200 dark:hover:bg-slate-700'}`}
                         >
                             <img src={language.flag} alt={language.name} className="w-6 h-6 object-cover rounded-full shrink-0" />
                             <span className="text-sm font-medium">{language.name}</span>

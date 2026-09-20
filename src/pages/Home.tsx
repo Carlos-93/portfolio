@@ -89,7 +89,7 @@ export default function Home() {
     return (
         <div className="flex flex-col items-center gap-8 lg:gap-0 lg:flex-row">
             <div className="flex flex-col justify-center gap-2 lg:gap-10 w-full lg:w-2/3 min-w-0 flex-1">
-                <h1 className="text-slate-900 dark:text-gray-200 flex flex-col gap-2 2xl:gap-6 cursor-default">
+                <h1 className="text-slate-900 dark:text-slate-200 flex flex-col gap-2 2xl:gap-6 cursor-default">
                     <span className='text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium'>{t('home.welcome')}</span>
                     <span className='text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold'>{t('home.iAm')}
                         &nbsp;<span className="text-cyan-600 dark:text-cyan-400">{t('home.name')}</span>

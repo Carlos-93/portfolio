@@ -40,8 +40,8 @@ async function sendMessage(_previous: FormState, formData: FormData): Promise<Fo
 }
 
 // Shared field styles
-const labelClasses = 'text-sm font-medium text-slate-700 dark:text-gray-200';
-const inputClasses = 'w-full rounded-lg border border-slate-200 bg-white/50 px-4 py-2.5 text-sm text-slate-900 outline-none backdrop-blur-sm transition-colors duration-300 placeholder:text-slate-400 focus:border-cyan-500 dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-gray-500 dark:focus:border-cyan-400';
+const labelClasses = 'text-sm font-medium text-slate-700 dark:text-slate-200';
+const inputClasses = 'w-full rounded-lg border border-slate-200 bg-white/50 px-4 py-2.5 text-sm text-slate-900 outline-none backdrop-blur-sm transition-colors duration-300 placeholder:text-slate-400 focus:border-cyan-500 dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-slate-500 dark:focus:border-cyan-400';
 
 export default function Contact() {
     // Translation hook
@@ -53,7 +53,7 @@ export default function Contact() {
         <div className="flex w-full flex-col items-center gap-8 sm:gap-10">
             <SectionHeader title={t('sidebar.contact')} />
 
-            <p className="max-w-2xl text-center text-sm leading-relaxed text-slate-600 dark:text-gray-300 sm:text-base">
+            <p className="max-w-2xl text-center text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">
                 {t('contact.lead')}
             </p>
 
@@ -79,7 +79,7 @@ export default function Contact() {
 
                 <div className="flex flex-col gap-2 sm:col-span-2">
                     <label htmlFor="contact-subject" className={labelClasses}>
-                        {t('contact.form.subject')} <span className="font-normal text-slate-400 dark:text-gray-500">({t('contact.form.optional')})</span>
+                        {t('contact.form.subject')} <span className="font-normal text-slate-400 dark:text-slate-500">({t('contact.form.optional')})</span>
                     </label>
                     <input id="contact-subject" name="subject" type="text" defaultValue={values?.subject}
                         placeholder={t('contact.form.subjectPlaceholder')} className={inputClasses} />

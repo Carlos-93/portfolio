@@ -14,7 +14,7 @@ export default function Languages() {
                 {spokenLanguages.map((language, index) => (
                     <li key={language.id}>
                         <Reveal delay={index * 100}>
-                            <article className="group relative flex h-45 flex-col justify-end overflow-hidden rounded-2xl border border-slate-200 bg-white/50 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/20 dark:border-white/10 dark:bg-white/5 sm:p-6">
+                            <article className="group relative flex h-45 flex-col justify-end overflow-hidden rounded-xl border border-slate-200 bg-white/50 p-5 transition-colors duration-300 hover:border-cyan-500/50 dark:border-white/10 dark:bg-white/5 sm:p-6">
                                 {/* Flag filling the card as a faded background */}
                                 <img src={language.flag} alt="" loading="lazy"
                                     className="absolute inset-0 h-full w-full object-cover transition-all duration-500" />

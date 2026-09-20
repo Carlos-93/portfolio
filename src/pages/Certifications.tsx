@@ -74,7 +74,7 @@ export default function Certifications() {
     const renderArrow = (direction: 1 | -1, className = '') => (
         <button type="button" onClick={() => scrollBy(direction)} disabled={direction === -1 ? !canScrollLeft : !canScrollRight}
             aria-label={t(direction === -1 ? 'certifications.scrollLeft' : 'certifications.scrollRight')}
-            className={`inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors duration-300 hover:border-cyan-500/60 hover:text-cyan-600 disabled:pointer-events-none disabled:opacity-30 dark:border-white/10 dark:text-gray-300 dark:hover:text-cyan-400 sm:h-9 sm:w-9 ${className}`}>
+            className={`inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors duration-300 hover:border-cyan-500/60 hover:text-cyan-600 disabled:pointer-events-none disabled:opacity-30 dark:border-white/10 dark:text-slate-300 dark:hover:text-cyan-400 sm:h-9 sm:w-9 ${className}`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d={direction === -1 ? 'M15 6l-6 6l6 6' : 'M9 6l6 6l-6 6'} />
             </svg>
@@ -111,7 +111,7 @@ export default function Certifications() {
                                             <img src={certificate.logo} alt={certificate.issuer} loading="lazy"
                                                 className="h-12 w-12 shrink-0 object-contain transition-transform duration-300 group-hover:scale-110 sm:h-14 sm:w-14" />
 
-                                            <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/10 dark:text-gray-300 sm:px-2.5 sm:py-1 sm:text-sm">
+                                            <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/10 dark:text-slate-300 sm:px-2.5 sm:py-1 sm:text-sm">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                     <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
@@ -133,7 +133,7 @@ export default function Certifications() {
 
                                         {/* Footer pinned to the bottom: period + certificate link */}
                                         <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-slate-200 pt-4 dark:border-white/10">
-                                            <span className="inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-gray-400 sm:text-sm">
+                                            <span className="inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 sm:text-sm">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                     <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />

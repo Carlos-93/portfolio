@@ -10,12 +10,12 @@ export default function About() {
             <SectionHeader title={t('sidebar.about')} />
 
             {/* Lead: role + experience tagline */}
-            <p className="w-full max-w-4xl text-sm sm:text-lg lg:text-xl font-semibold text-slate-800 dark:text-gray-200">
+            <p className="w-full max-w-4xl text-sm sm:text-lg lg:text-xl font-semibold text-slate-800 dark:text-slate-200">
                 {t('about.lead')}
             </p>
 
             {/* Body: detailed paragraphs, left-aligned and capped at ~90 characters per line for readability */}
-            <div className="flex w-full flex-col max-w-4xl gap-3 sm:gap-4 text-left text-sm sm:text-lg lg:text-xl leading-relaxed text-slate-800 dark:text-gray-300">
+            <div className="flex w-full flex-col max-w-4xl gap-3 sm:gap-4 text-left text-sm sm:text-lg lg:text-xl leading-relaxed text-slate-800 dark:text-slate-300">
                 <p>{t('about.frontend')}</p>
                 <p>{t('about.backend')}</p>
                 <p>{t('about.philosophy')}</p>

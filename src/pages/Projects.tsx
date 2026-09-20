@@ -22,7 +22,11 @@ export default function Projects() {
                     return (
                         <li key={project.id}>
                             <Reveal delay={index * 100} className="h-full">
-                                <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/20 dark:border-white/10 dark:bg-white/5">
+                                <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-300 bg-white/70 shadow-lg shadow-slate-900/5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-500/70 hover:shadow-xl hover:shadow-cyan-500/25 dark:border-white/15 dark:bg-white/8 dark:shadow-black/40">
+                                    {/* Top gradient hairline */}
+                                    <span aria-hidden="true"
+                                        className="absolute inset-x-0 top-0 z-10 h-px bg-linear-to-r from-transparent via-cyan-500/70 to-transparent" />
+
                                     <div className="aspect-video overflow-hidden bg-linear-to-br from-cyan-500/15 to-slate-500/10">
                                         {(project.image ?? (project.demoUrl && previewOf(project.demoUrl))) && (
                                             <img src={project.image ?? previewOf(project.demoUrl!)} alt={project.title} loading="lazy"
@@ -38,7 +42,7 @@ export default function Projects() {
                                                 {project.title}
                                             </h3>
                                             {repo && (
-                                                <div className="flex shrink-0 items-center gap-3 text-xs text-slate-500 dark:text-gray-400 sm:text-sm">
+                                                <div className="flex shrink-0 items-center gap-3 text-xs text-slate-500 dark:text-slate-400 sm:text-sm">
                                                     {repo.language && (
                                                         <span className="inline-flex items-center gap-1.5">
                                                             <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full"
@@ -59,7 +63,7 @@ export default function Projects() {
                                             )}
                                         </div>
 
-                                        <p className="flex-1 text-sm leading-relaxed text-slate-600 dark:text-gray-300">
+                                        <p className="flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                                             {t(`projects.items.${project.id}.description`)}
                                         </p>
 
@@ -74,10 +78,10 @@ export default function Projects() {
                                         </ul>
 
                                         {/* Links */}
-                                        <div className="mt-1 flex justify-end items-center gap-4">
+                                        <div className="mt-1 flex justify-between items-center gap-4">
                                             {project.repoUrl && (
                                                 <a href={project.repoUrl} target="_blank" rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 transition-colors duration-300 hover:text-cyan-600 dark:text-gray-300 dark:hover:text-cyan-400 sm:text-sm">
+                                                    className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 transition-colors duration-300 hover:text-cyan-600 dark:text-slate-300 dark:hover:text-cyan-400 sm:text-sm">
                                                     {t('projects.viewCode')}
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
