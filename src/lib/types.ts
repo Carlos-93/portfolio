@@ -49,6 +49,7 @@ export interface SocialNetwork {
     href: string;
     src: string;
     alt: string;
+    invertOnLight?: boolean;
 }
 
 export interface Language {

@@ -79,19 +79,19 @@ export const educations: Education[] = [
 
 // Certificates Object
 export const certificates: Certificate[] = [
-    { id: "linux", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/lpi.svg", file: "/assets/certificates/certificate-linux.pdf" },
-    { id: "windows", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/windows.svg", file: "/assets/certificates/certificate-windows.pdf" },
-    { id: "aspIntro", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.webp", file: "/assets/certificates/certificate-asp-intro.pdf" },
     { id: "angularTypeScript", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.webp", file: "/assets/certificates/certificate-angular-typescript.pdf" },
-    { id: "oracleSqlFundamentals", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-oracle-sql-fundamentals.pdf" },
-    { id: "oraclePlsql", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-oracle-plsql.pdf" },
-    { id: "javaSeFundamentals", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-java-se-fundamentals.pdf" },
     { id: "javaSeProgramming", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-java-se-programming.pdf" },
-    { id: "udemyHtml5", issuer: "Udemy", logo: "/assets/images/companies/udemy.png", file: "/assets/certificates/certificate-udemy-html5.pdf" },
-    { id: "googleCybersecurity", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-cybersecurity.pdf" },
     { id: "googleWebDev1", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-web-dev-1.pdf" },
     { id: "googleWebDev2", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-web-dev-2.pdf" },
     { id: "googleMobileApps", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-mobile-apps.pdf" },
+    { id: "javaSeFundamentals", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-java-se-fundamentals.pdf" },
+    { id: "oraclePlsql", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-oracle-plsql.pdf" },
+    { id: "oracleSqlFundamentals", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/oracle.svg", file: "/assets/certificates/certificate-oracle-sql-fundamentals.pdf" },
+    { id: "aspIntro", issuer: "Monlau Centre d'Estudis", logo: "/assets/images/companies/monlau.webp", file: "/assets/certificates/certificate-asp-intro.pdf" },
+    { id: "udemyHtml5", issuer: "Udemy", logo: "/assets/images/companies/udemy.png", file: "/assets/certificates/certificate-udemy-html5.pdf" },
+    { id: "linux", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/lpi.svg", file: "/assets/certificates/certificate-linux.pdf" },
+    { id: "windows", issuer: "Monlau Centre d'Estudis", logo: "/assets/icons/windows.svg", file: "/assets/certificates/certificate-windows.pdf" },
+    { id: "googleCybersecurity", issuer: "Google Actívate", logo: "/assets/icons/google.svg", file: "/assets/certificates/certificate-google-cybersecurity.pdf" },
 ];
 
 // Projects Object
@@ -120,10 +120,15 @@ export const projects: Project[] = [
 ];
 
 // Social Networks Object
+
+// Contact email, linked from the hero and the footer
+export const EMAIL = 'ca.galvan@outlook.com';
+
 export const socialNetworks: SocialNetwork[] = [
-    { href: "https://www.instagram.com/carloos_93", src: `/assets/icons/instagram.svg`, alt: "Instagram" },
-    { href: "https://www.github.com/Carlos-93", src: `/assets/icons/github_dark.svg`, alt: "GitHub" },
     { href: "https://www.linkedin.com/in/carlos-araujo-galvan/", src: `/assets/icons/linkedin.svg`, alt: "LinkedIn" },
+    { href: "https://www.github.com/Carlos-93", src: `/assets/icons/github_dark.svg`, alt: "GitHub", invertOnLight: true },
+
+    { href: `mailto:${EMAIL}`, src: `/assets/icons/outlook.svg`, alt: "Outlook" },
 ];
 
 // Languages Object

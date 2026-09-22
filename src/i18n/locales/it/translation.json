@@ -1,6 +1,6 @@
 {
   "common": {
-    "portfolio": "Portafoglio",
+    "portfolio": "Portfolio",
     "switchToLight": "Passa alla modalità chiara",
     "switchToDark": "Passa alla modalità scura",
     "selectLanguage": "Seleziona la lingua"
@@ -21,7 +21,7 @@
     "philosophy": "Difendo e applico il codice pulito e le buone pratiche (SOLID, Clean Architecture), lavorando sempre in ambienti agili con flussi CI/CD su Git/GitLab o GitHub e puntando sul miglioramento continuo e sulla qualità in ogni progetto."
   },
   "skills": {
-    "os": "Sistemi Operativi",
+    "os": "Sistemi operativi",
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Database",
@@ -160,7 +160,7 @@
       },
       "googleCybersecurity": {
         "title": "Proteggi la tua Attività: Cybersicurezza nel Lavoro da Remoto",
-        "duration": "2 ore",
+        "duration": "2 h",
         "period": "Luglio 2022",
         "location": "Online"
       },

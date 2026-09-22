@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { navItems, socialNetworks } from '../lib/constants';
+import { navItems, socialNetworks, EMAIL } from '../lib/constants';
 
 export default function Footer() {
     // Current year
@@ -35,8 +35,10 @@ export default function Footer() {
                                 {/* Social Networks */}
                                 <div className="flex items-center gap-4">
                                     {socialNetworks.map((link) => (
-                                        <a key={link.alt} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.alt}
-                                            className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/60 hover:bg-cyan-400/10">
+                                        <a key={link.alt} href={link.href} aria-label={link.alt}
+                                            target={link.href.startsWith('mailto:') ? undefined : '_blank'}
+                                            rel={link.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+                                            className="group flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/60 hover:bg-cyan-400/10">
                                             <img src={link.src} alt={link.alt} className="w-5 transition-transform duration-300 group-hover:scale-110" />
                                         </a>
                                     ))}
@@ -71,7 +73,7 @@ export default function Footer() {
                                     {t('footer.letsTalkText')}
                                 </p>
 
-                                <a href="mailto:ca.galvan@outlook.com"
+                                <a href={`mailto:${EMAIL}`}
                                     className="inline-flex w-fit items-center gap-2 rounded-md border-2 border-cyan-400 px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-cyan-400 hover:text-slate-900">
                                     {t('footer.contactCta')}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -83,14 +85,14 @@ export default function Footer() {
                                 </a>
 
                                 {/* Direct email */}
-                                <a href="mailto:ca.galvan@outlook.com"
+                                <a href={`mailto:${EMAIL}`}
                                     className="inline-flex items-center gap-2 text-sm text-white/60 transition-colors duration-300 hover:text-cyan-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                         <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
                                         <path d="M3 7l9 6l9 -6" />
                                     </svg>
-                                    ca.galvan@outlook.com
+                                    {EMAIL}
                                 </a>
                             </div>
                         </div>

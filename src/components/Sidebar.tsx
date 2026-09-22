@@ -92,7 +92,7 @@ export default function Sidebar() {
     return (
         <>
             {/* Header background */}
-            <div aria-hidden="true" className="fixed h-17 lg:h-20 backdrop-blur-xl bg-slate-900/70 dark:bg-black/30 z-10 left-0 right-0 lg:left-72" />
+            <div aria-hidden="true" className="fixed h-17 lg:h-20 backdrop-blur-xl bg-slate-100/70 dark:bg-black/30 z-10 left-0 right-0 lg:left-72" />
 
             {/* Header landmark */}
             <header className="fixed top-0 h-16 lg:h-20 z-10 left-0 right-0 lg:left-72 pointer-events-none">
@@ -116,9 +116,9 @@ export default function Sidebar() {
                     setIsMenuOpen(!isMenuOpen);
                 }}
                 aria-label={t('sidebar.toggleMenu')}>
-                <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
-                <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
-                <span className={`block w-8 sm:w-8.5 h-0.5 bg-white transition-all duration-400 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
+                <span className={`block w-8 sm:w-8.5 h-0.5 transition-all duration-400 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2.5 bg-white' : 'bg-slate-800 dark:bg-white'}`} />
+                <span className={`block w-8 sm:w-8.5 h-0.5 transition-all duration-400 ease-in-out ${isMenuOpen ? 'opacity-0 bg-white' : 'opacity-100 bg-slate-800 dark:bg-white'}`} />
+                <span className={`block w-8 sm:w-8.5 h-0.5 transition-all duration-400 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2.5 bg-white' : 'bg-slate-800 dark:bg-white'}`} />
             </button>
 
             {/* Mobile backdrop: dims and blurs the page behind the drawer */}

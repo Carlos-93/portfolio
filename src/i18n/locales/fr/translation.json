@@ -1,6 +1,6 @@
 {
   "common": {
-    "portfolio": "Portefeuille",
+    "portfolio": "Portfolio",
     "switchToLight": "Passer au mode clair",
     "switchToDark": "Passer au mode sombre",
     "selectLanguage": "Choisir la langue"
@@ -88,7 +88,7 @@
         "title": "Technicien Supérieur en Développement d'Applications Web",
         "period": "Sept. 2022 - Juin 2024",
         "location": "Barcelone, Espagne",
-        "description": "Formation supérieure axée sur le développement web full stack : frontend, backend, bases de données et déploiement d'applications, en appliquant les bonnes pratiques et les méthodologies agiles."
+        "description": "Formation supérieure axée sur le développement web full stack : frontend, backend, bases de données et déploiement d'applications, en appliquant les bonnes pratiques et les méthodologies agiles."
       }
     }
   },
@@ -147,7 +147,7 @@
         "location": "En présentiel"
       },
       "udemyHtml5": {
-        "title": "Cours HTML5 depuis Zéro : Le plus Complet en Espagnol",
+        "title": "Cours HTML5 à partir de Zéro : Le plus Complet en Espagnol",
         "duration": "4 h",
         "period": "Juin 2023",
         "location": "En ligne"
@@ -159,8 +159,8 @@
         "location": "En ligne"
       },
       "googleCybersecurity": {
-        "title": "Protégez votre Entreprise : Cybersécurité en Télétravail",
-        "duration": "2 heures",
+        "title": "Protégez votre Entreprise : Cybersécurité en Télétravail",
+        "duration": "2 h",
         "period": "Juillet 2022",
         "location": "En ligne"
       },
@@ -202,14 +202,14 @@
     }
   },
   "contact": {
-    "lead": "Vous avez un projet en tête ou envie que nous travaillions ensemble ? Remplissez le formulaire et je vous répondrai dès que possible.",
+    "lead": "Vous avez un projet en tête ou envie que nous travaillions ensemble ? Remplissez le formulaire et je vous répondrai dès que possible.",
     "form": {
       "name": "Nom",
       "namePlaceholder": "Votre nom",
       "email": "E-mail",
       "emailPlaceholder": "votre@email.com",
       "subject": "Objet",
-      "subjectPlaceholder": "De quoi souhaitez-vous parler ?",
+      "subjectPlaceholder": "De quoi souhaitez-vous parler ?",
       "message": "Message",
       "messagePlaceholder": "Parlez-moi de votre idée...",
       "optional": "facultatif",
@@ -223,9 +223,9 @@
     "tagline": "Développeur Web Full Stack & Designer UX/UI créant des expériences web modernes et accessibles.",
     "navigation": "Navigation",
     "letsTalkTitle": "Discutons",
-    "letsTalkText": "Vous avez un projet en tête ? Je serai ravi de vous aider à le concrétiser.",
+    "letsTalkText": "Vous avez un projet en tête ? Je serai ravi de vous aider à le concrétiser.",
     "contactCta": "Contactez-moi",
     "backToTop": "Retour en haut",
-    "copyright": "Tous les droits réservés."
+    "copyright": "Tous droits réservés."
   }
 }

@@ -28,11 +28,14 @@ function HeroActions({ className }: { className?: string }) {
             {/* Social Networks */}
             <div className="flex items-center gap-8">
                 {socialNetworks.map((link) => (
-                    <a key={link.alt} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.alt}
-                        className="group relative transition-all duration-300">
+                    <a key={link.alt} href={link.href} aria-label={link.alt}
+                        target={link.href.startsWith('mailto:') ? undefined : '_blank'}
+                        rel={link.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+                        className="group relative -m-2 p-2 transition-all duration-300">
+
                         {/* Icons */}
                         <img src={link.src} alt={link.alt}
-                            className="w-7 sm:w-8 transition-transform duration-300 group-hover:scale-110" />
+                            className={`w-7 sm:w-8 transition-transform duration-300 group-hover:scale-110${link.invertOnLight ? ' invert dark:invert-0' : ''}`} />
 
                         {/* Glow effect on hover */}
                         <span className="absolute inset-0 bg-cyan-400/30 opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-300 -z-10" />

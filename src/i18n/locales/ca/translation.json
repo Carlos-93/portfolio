@@ -1,13 +1,13 @@
 {
   "common": {
-    "portfolio": "Portafoli",
+    "portfolio": "Portafolis",
     "switchToLight": "Canviar a mode clar",
     "switchToDark": "Canviar a mode fosc",
     "selectLanguage": "Seleccionar idioma"
   },
   "home": {
     "welcome": "Hola 👋🏻",
-    "iAm": "Soc",
+    "iAm": "Sóc",
     "name": "Carlos Araujo Galván",
     "softwareRole": "Desenvolupador Web Full Stack",
     "designerRole": "Dissenyador UX/UI",
@@ -21,7 +21,7 @@
     "philosophy": "Defenso i aplico el codi net i les bones pràctiques (SOLID, Clean Architecture), treballant sempre en entorns àgils amb fluxos CI/CD sobre Git/GitLab o GitHub i apostant per la millora contínua i la qualitat en cada projecte."
   },
   "skills": {
-    "os": "Sistemes Operatius",
+    "os": "Sistemes operatius",
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Bases de dades",
@@ -147,7 +147,7 @@
         "location": "Presencial"
       },
       "udemyHtml5": {
-        "title": "Curs d'HTML5 des de Zero: El més Complet en Espanyol",
+        "title": "Curs d'HTML5 des de Zero: El més Complet en Castellà",
         "duration": "4 h",
         "period": "Juny 2023",
         "location": "En línia"
@@ -160,7 +160,7 @@
       },
       "googleCybersecurity": {
         "title": "Protegeix el teu Negoci: Ciberseguretat en el Teletreball",
-        "duration": "2 hores",
+        "duration": "2 h",
         "period": "Juliol 2022",
         "location": "En línia"
       },
@@ -223,7 +223,7 @@
     "tagline": "Desenvolupador Web Full Stack & Dissenyador UX/UI creant experiències web modernes i accessibles.",
     "navigation": "Navegació",
     "letsTalkTitle": "Parlem?",
-    "letsTalkText": "Tens un projecte en ment? Estaré encantat d'ajudar-te a fer-lo realitat.",
+    "letsTalkText": "Tens un projecte al cap? Estaré encantat d'ajudar-te a fer-lo realitat.",
     "contactCta": "Contacta'm",
     "backToTop": "Tornar a dalt",
     "copyright": "Tots els drets reservats."
