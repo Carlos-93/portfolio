@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { experiences } from '../lib/constants';
+
 import SectionHeader from '../components/SectionHeader';
+import Reveal from '../components/Reveal';
 
 // Whole-month span between two "YYYY-MM" dates (inclusive, LinkedIn-style). End defaults to today.
 function monthsBetween(start: string, end?: string) {
@@ -39,20 +41,8 @@ export default function Experience() {
 
                     return (
                         <li key={exp.id} className="relative mb-10 last:mb-0">
-                            {/* Branch node: company logo filling the circle */}
-                            <div className="absolute top-1 left-7 z-10 -translate-x-1/2 md:left-1/2">
-                                <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-white p-1.5 shadow-md shadow-cyan-500/20 ring-2 ring-cyan-500/60 transition-transform duration-300 hover:scale-105 md:h-18 md:w-18 md:p-2">
-                                    <img src={exp.logo} alt={exp.company} loading="lazy" className="h-full w-full object-contain"
-                                        style={exp.logoScale ? { transform: `scale(${exp.logoScale})` } : undefined} />
-                                </div>
-                                
-                                {/* Horizontal branch to the card (desktop only) */}
-                                <span aria-hidden="true"
-                                    className={`absolute top-1/2 hidden h-px w-8 -translate-y-1/2 bg-cyan-500/50 md:block ${left ? 'right-full' : 'left-full'}`} />
-                            </div>
-
-                            {/* Card */}
-                            <div className={`ml-20 md:w-[calc(50%-3rem)] ${left ? 'md:ml-0 md:mr-auto' : 'md:ml-auto md:mr-0'}`}>
+                            {/* Card: reveals on its own as it scrolls in */}
+                            <Reveal className={`peer ml-20 md:w-[calc(50%-3rem)] ${left ? 'md:ml-0 md:mr-auto' : 'md:ml-auto md:mr-0'}`}>
                                 <article className="group relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-slate-200 bg-white/50 p-5 backdrop-blur-sm transition-all duration-300 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/20 dark:border-white/10 dark:bg-white/5 sm:p-6">
                                     {/* Top gradient hairline */}
                                     <span aria-hidden="true"
@@ -68,10 +58,12 @@ export default function Experience() {
                                             <h3 className="text-base font-semibold text-slate-900 dark:text-white sm:text-lg">
                                                 {exp.role}
                                             </h3>
+
                                             <p className="text-xs font-medium text-cyan-600 dark:text-cyan-400 sm:text-sm">
                                                 {exp.company}
                                             </p>
                                         </div>
+
                                         <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/10 dark:text-slate-300 sm:px-2.5 sm:py-1 sm:text-sm">
                                             {t(`experience.items.${exp.id}.employment`)}
                                         </span>
@@ -98,6 +90,7 @@ export default function Experience() {
                                                 {duration}
                                             </span>
                                         </div>
+
                                         <span className="inline-flex items-center gap-1.5">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -121,6 +114,18 @@ export default function Experience() {
                                         ))}
                                     </ul>
                                 </article>
+                            </Reveal>
+
+                            {/* Logo: reveals along with the card, but with a slight delay */}
+                            <div className="absolute top-1 left-7 z-10 -translate-x-1/2 opacity-0 transition-opacity duration-1500 ease-out peer-data-revealed:opacity-100 md:left-1/2">
+                                <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-white p-1.5 shadow-md shadow-cyan-500/20 ring-2 ring-cyan-500/60 transition-transform duration-300 hover:scale-105 md:h-18 md:w-18 md:p-2">
+                                    <img src={exp.logo} alt={exp.company} loading="lazy" className="h-full w-full object-contain"
+                                        style={exp.logoScale ? { transform: `scale(${exp.logoScale})` } : undefined} />
+                                </div>
+
+                                {/* Horizontal branch to the card (desktop only) */}
+                                <span aria-hidden="true"
+                                    className={`absolute top-1/2 hidden h-px w-8 -translate-y-1/2 bg-cyan-500/50 md:block ${left ? 'right-full' : 'left-full'}`} />
                             </div>
                         </li>
                     );
