@@ -100,7 +100,7 @@ export const projects: Project[] = [
         id: "reactPokedex",
         title: "React Pokédex",
         tags: ["React", "JavaScript", "PokeAPI", "CSS3"],
-        demoUrl: "https://react-pokedex-rose.vercel.app",
+        demoUrl: "https://pokedex-carlos.vercel.app",
         repoUrl: "https://github.com/Carlos-93/react-pokedex",
     },
     {
