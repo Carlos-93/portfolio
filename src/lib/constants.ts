@@ -98,24 +98,24 @@ export const certificates: Certificate[] = [
 export const projects: Project[] = [
     {
         id: "reactPokedex",
-        title: "React Pokédex",
         tags: ["React", "JavaScript", "PokeAPI", "CSS3"],
         demoUrl: "https://pokedex-carlos.vercel.app",
         repoUrl: "https://github.com/Carlos-93/react-pokedex",
+        language: "React",
     },
     {
         id: "reactWeatherMap",
-        title: "React Weather Map",
         tags: ["React", "JavaScript", "API", "CSS3"],
         demoUrl: "https://weather-radar-map.vercel.app",
         repoUrl: "https://github.com/Carlos-93/react-weather-map",
+        language: "React",
     },
     {
         id: "angularRouting",
-        title: "Angular Routing, Services & Forms",
         tags: ["Angular", "TypeScript", "Tailwind CSS", "HTML5"],
         demoUrl: "https://angular-routing-services-forms.vercel.app",
         repoUrl: "https://github.com/Carlos-93/angular-routing-services-forms",
+        language: "Angular",
     },
 ];
 
@@ -239,6 +239,12 @@ export const languageColors: Record<string, string> = {
     TypeScript: '#3178c6',
     HTML: '#e34c26',
     CSS: '#663399',
+};
+
+// Language Icons Object — logos shown instead of the colour dot (from /assets/icons/)
+export const languageIcons: Record<string, string> = {
+    React: 'react.svg',
+    Angular: 'angular.svg',
 };
 
 // Full name used to build the document title

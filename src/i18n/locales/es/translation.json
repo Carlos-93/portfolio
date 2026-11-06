@@ -191,13 +191,16 @@
     "viewCode": "Ver código",
     "items": {
       "reactPokedex": {
-        "description": "Pokédex interactiva construida con React que consume la PokeAPI para mostrar en tiempo real datos, estadísticas y habilidades de cada Pokémon."
+        "title": "Pokédex",
+        "description": "Pokédex Nacional completa con datos de la PokeAPI: búsqueda, filtro por tipo, favoritos y fichas con estadísticas, habilidades, evoluciones y debilidades de cada Pokémon."
       },
       "reactWeatherMap": {
-        "description": "Aplicación del tiempo desarrollada con React que integra APIs externas para mostrar el clima de cualquier ubicación de forma dinámica."
+        "title": "El Tiempo",
+        "description": "Tiempo actual de cualquier ciudad con datos de OpenWeather: búsqueda con sugerencias, geolocalización, temperatura, viento, humedad, presión y horas de sol, con fondos animados según el clima."
       },
       "angularRouting": {
-        "description": "Sitio web desarrollado con Angular 17 para practicar el enrutamiento, los servicios y los formularios del framework."
+        "title": "Tienda online Apple",
+        "description": "Tienda online basada en la marca Apple con un catálogo por categorías y un panel de control para buscar, filtrar, ordenar y añadir dispositivos mediante formularios."
       }
     }
   },

@@ -191,13 +191,16 @@
     "viewCode": "Veure codi",
     "items": {
       "reactPokedex": {
-        "description": "Pokédex interactiva construïda amb React que consumeix la PokeAPI per mostrar en temps real dades, estadístiques i habilitats de cada Pokémon."
+        "title": "Pokédex",
+        "description": "Pokédex Nacional completa amb dades de la PokeAPI: cerca, filtre per tipus, preferits i fitxes amb estadístiques, habilitats, evolucions i debilitats de cada Pokémon."
       },
       "reactWeatherMap": {
-        "description": "Aplicació del temps desenvolupada amb React que integra APIs externes per mostrar el clima de qualsevol ubicació de manera dinàmica."
+        "title": "El Temps",
+        "description": "Temps actual de qualsevol ciutat amb dades d'OpenWeather: cerca amb suggeriments, geolocalització, temperatura, vent, humitat, pressió i hores de sol, amb fons animats segons el clima."
       },
       "angularRouting": {
-        "description": "Lloc web desenvolupat amb Angular 17 per practicar l'enrutament, els serveis i els formularis del framework."
+        "title": "Comerç electrònic d'Apple",
+        "description": "Botiga en línia basada en la marca Apple amb un catàleg per categories i un tauler de control per cercar, filtrar, ordenar i afegir dispositius mitjançant formularis."
       }
     }
   },

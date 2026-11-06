@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { projects, languageColors } from '../lib/constants';
+import { projects, languageColors, languageIcons } from '../lib/constants';
 import { useGithubStats } from '../hooks/useGithubStats';
 import SectionHeader from '../components/SectionHeader';
 import Reveal from '../components/Reveal';
@@ -19,6 +19,8 @@ export default function Projects() {
             <ul className="grid w-full max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project, index) => {
                     const repo = stats?.[project.id];
+                    const language = project.language ?? repo?.language;
+                    const title = t(`projects.items.${project.id}.title`);
                     return (
                         <li key={project.id}>
                             <Reveal delay={index * 100} className="h-full">
@@ -29,7 +31,7 @@ export default function Projects() {
 
                                     <div className="aspect-video overflow-hidden bg-linear-to-br from-cyan-500/15 to-slate-500/10">
                                         {(project.image ?? (project.demoUrl && previewOf(project.demoUrl))) && (
-                                            <img src={project.image ?? previewOf(project.demoUrl!)} alt={project.title} loading="lazy"
+                                            <img src={project.image ?? previewOf(project.demoUrl!)} alt={title} loading="lazy"
                                                 className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                                             />
                                         )}
@@ -39,15 +41,19 @@ export default function Projects() {
                                     <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
                                         <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
                                             <h3 className="text-base font-semibold text-slate-900 dark:text-white sm:text-lg">
-                                                {project.title}
+                                                {title}
                                             </h3>
                                             {repo && (
                                                 <div className="flex shrink-0 items-center gap-3 text-xs text-slate-500 dark:text-slate-400 sm:text-sm">
-                                                    {repo.language && (
+                                                    {language && (
                                                         <span className="inline-flex items-center gap-1.5">
-                                                            <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full"
-                                                                style={{ backgroundColor: languageColors[repo.language] ?? '#22d3ee' }} />
-                                                            {repo.language}
+                                                            {languageIcons[language] ? (
+                                                                <img src={`/assets/icons/${languageIcons[language]}`} alt="" className="h-3.5 w-auto dark:brightness-150" />
+                                                            ) : (
+                                                                <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full"
+                                                                    style={{ backgroundColor: languageColors[language] ?? '#22d3ee' }} />
+                                                            )}
+                                                            {language}
                                                         </span>
                                                     )}
                                                     {repo.stars > 0 && (

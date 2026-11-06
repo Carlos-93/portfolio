@@ -191,13 +191,16 @@
     "viewCode": "Code ansehen",
     "items": {
       "reactPokedex": {
-        "description": "Interaktiver Pokédex mit React, der die PokeAPI nutzt, um Daten, Statistiken und Fähigkeiten jedes Pokémon in Echtzeit anzuzeigen."
+        "title": "Pokédex",
+        "description": "Vollständiger Nationaler Pokédex mit Daten der PokeAPI: Suche, Typfilter, Favoriten und Detailseiten mit Statuswerten, Fähigkeiten, Entwicklungen und Schwächen jedes Pokémon."
       },
       "reactWeatherMap": {
-        "description": "Mit React entwickelte Wetter-App, die externe APIs integriert, um das Wetter für jeden Ort dynamisch anzuzeigen."
+        "title": "Das Wetter",
+        "description": "Aktuelles Wetter für jede Stadt mit Daten von OpenWeather: Suche mit Vorschlägen, Standortbestimmung, Temperatur, Wind, Luftfeuchtigkeit, Luftdruck, Sonnenauf- und -untergang, mit animierten Hintergründen passend zum Wetter."
       },
       "angularRouting": {
-        "description": "Mit Angular 17 erstellte Website, um Routing, Services und Formulare des Frameworks zu üben."
+        "title": "Apple-Onlineshop",
+        "description": "Onlineshop basierend auf der Marke Apple mit einem Katalog nach Kategorien und einem Dashboard zum Suchen, Filtern, Sortieren und Hinzufügen von Geräten über Formulare."
       }
     }
   },

@@ -38,11 +38,12 @@ export interface Certificate {
 
 export interface Project {
     id: string;
-    title: string;
     image?: string;
     tags: string[];
     demoUrl?: string;
     repoUrl?: string;
+    // Replaces the language GitHub detects with the framework (it reports React as JavaScript and Angular as TypeScript)
+    language?: string;
 }
 
 export interface SocialNetwork {
