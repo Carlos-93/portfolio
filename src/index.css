@@ -2,13 +2,13 @@
 @import '@fontsource-variable/montserrat';
 
 @custom-variant dark (&:where(.dark, .dark *));
+
 @custom-variant h-md (@media (min-height: 760px));
 @custom-variant h-lg (@media (min-height: 900px));
 @custom-variant h-xl (@media (min-height: 1000px));
 
-html {
-    scroll-behavior: smooth;
-    overflow-x: clip;
+@theme {
+    --font-sans: 'Montserrat Variable', sans-serif;
 }
 
 @layer base {
@@ -26,15 +26,21 @@ html {
     *::after {
         transition: background-color 300ms ease, border-color 300ms ease, color 300ms ease;
     }
-}
 
-*::-webkit-scrollbar {
-    display: none;
-}
+    * {
+        scrollbar-width: none;
+    }
 
-* {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
+    img {
+        -webkit-user-drag: none;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+    }
 }
 
 html::before {
@@ -48,96 +54,83 @@ html::before {
     animation: gradient-move 6s linear infinite;
     pointer-events: none;
     z-index: -1;
-}
 
-body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat Variable', sans-serif;
-    min-height: 100vh;
-    width: 100%;
-    background-color: transparent;
-    background-image:
-        linear-gradient(to right, rgba(71, 85, 105, 0.07) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(71, 85, 105, 0.07) 1px, transparent 1px);
-    background-size: 40px 40px, 40px 40px;
-    background-attachment: fixed;
-}
-
-.dark body {
-    background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-}
-
-img {
-    -webkit-user-drag: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+    }
 }
 
 @keyframes gradient-move {
-    0% {
+    0%,
+    100% {
         background-position: 0% 50%;
-    }
-
-    12.5% {
-        background-position: 25% 25%;
     }
 
     25% {
         background-position: 50% 0%;
     }
 
-    37.5% {
-        background-position: 75% 25%;
-    }
-
     50% {
         background-position: 100% 50%;
-    }
-
-    62.5% {
-        background-position: 75% 75%;
     }
 
     75% {
         background-position: 50% 100%;
     }
+}
 
-    87.5% {
-        background-position: 25% 75%;
-    }
+body {
+    --grid-line: rgb(71 85 105 / 0.07);
+    background-image:
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+}
 
-    100% {
-        background-position: 0% 50%;
+.dark body {
+    --grid-line: rgb(255 255 255 / 0.04);
+}
+
+::view-transition-old(root) {
+    animation: none;
+}
+
+::view-transition-new(root) {
+    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><filter id="blur"><feGaussianBlur stdDeviation="2"/></filter></defs><circle cx="40" cy="40" r="18" fill="white" filter="url%28%23blur%29"/></svg>') bottom right / 0 no-repeat;
+    animation: theme-reveal 1s both;
+}
+
+@keyframes theme-reveal {
+    to {
+        mask-size: 350vmax;
     }
 }
 
-.profile-image-fade {
-    -webkit-mask-image: linear-gradient(#000 85%, transparent);
-    mask-image: linear-gradient(#000 85%, transparent);
+::view-transition-old(theme-toggle) {
+    display: none;
+}
+
+::view-transition-new(theme-toggle) {
+    animation: none;
+}
+
+:active-view-transition,
+:active-view-transition :not([data-theme-toggle], [data-theme-toggle] *) {
+    transition: none !important;
 }
 
 .trunk-beam {
     background-image: linear-gradient(to bottom,
             transparent 0%,
-            rgba(34, 211, 238, 0.9) 30%,
-            rgba(6, 182, 212, 0.5) 50%,
-            rgba(34, 211, 238, 0.9) 70%,
+            rgb(34 211 238 / 0.9) 30%,
+            rgb(6 182 212 / 0.5) 50%,
+            rgb(34 211 238 / 0.9) 70%,
             transparent 100%);
     background-size: 100% 200%;
     animation: trunk-beam 5s linear infinite;
-}
 
-@media (prefers-reduced-motion: reduce) {
-    html::before {
-        animation: none;
-    }
-
-    .trunk-beam {
+    @media (prefers-reduced-motion: reduce) {
         display: none;
     }
 }
