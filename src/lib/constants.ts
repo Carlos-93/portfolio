@@ -113,7 +113,7 @@ export const projects: Project[] = [
     {
         id: "angularRouting",
         tags: ["Angular", "TypeScript", "Tailwind CSS", "HTML5"],
-        demoUrl: "https://angular-routing-services-forms.vercel.app",
+        demoUrl: "https://ecommerce-carlos.vercel.app",
         repoUrl: "https://github.com/Carlos-93/angular-routing-services-forms",
         language: "Angular",
     },
