@@ -106,7 +106,7 @@ export const projects: Project[] = [
     {
         id: "reactWeatherMap",
         tags: ["React", "JavaScript", "API", "CSS3"],
-        demoUrl: "https://weather-radar-map.vercel.app",
+        demoUrl: "https://weather-carlos.vercel.app",
         repoUrl: "https://github.com/Carlos-93/react-weather-map",
         language: "React",
     },
