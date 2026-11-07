@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import LanguageSelector from './LanguageSelector';
 import { navItems } from '../lib/constants';
+import LanguageSelector from './LanguageSelector';
 
 function NavIcon({ paths }: { paths: string[] }) {
     return (
@@ -41,10 +41,11 @@ export default function Sidebar() {
 
     // Disable scroll when the mobile menu is open
     useEffect(() => {
-        document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
+        // On <html>, not <body>: its overflow-x-clip stops body overflow reaching the viewport, so body would become a scroller of its own
+        document.documentElement.style.overflow = isMenuOpen ? 'hidden' : '';
         // Restore scroll when the component unmounts
         return () => {
-            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
         };
     }, [isMenuOpen])
 
